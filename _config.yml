@@ -4,15 +4,15 @@
 
 # Site
 title: José Quinto
-subtitle:
-description:
-author: John Doe
+subtitle: Full Stack Developer
+description: Technical Articles
+author: José Quinto
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://jquintozamora.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
