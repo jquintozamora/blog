@@ -1,14 +1,14 @@
 navbar-links:
     Archive: /archives
-    Github: https://github.com/twoyao/beautiful-hexo
+    Github: https://github.com/jquintozamora
     About: /about/
 
-avatar: /hexo.png
-favicon: /hexo.png
+avatar: /devLogo.png
+favicon: /devLogo.png
 
 header:
-    title: "Beautiful Hexo"
-    motto: Build a beautiful and simple website in minutes
+    title: "José Quinto's Blog"
+    motto: Dev
     bigimgs:
         - src: /bigimgs/01.jpg
           desc: beautiful island
@@ -33,14 +33,14 @@ footer:
     link: # your link e.g. https://...
     title: Facebook
     icon: fa-facebook
-    enalbe: false
+    enable: false
   weibo:
     link: 'http://weibo.com/bisyao?is_all=1'
     title: Weibo
     icon: fa-weibo
-    enalbe: true
+    enable: false
   github:
-    link: 'https://github.com/twoyao'
+    link: 'https://github.com/jquintozamora'
     title: GitHub
     icon: fa-github
     enable: true
@@ -50,15 +50,15 @@ footer:
     icon: fa-rss
     enable: true
   twitter:
-    link: 'https://twitter.com/twoyao_'
+    link: 'https://twitter.com/jquintozamora'
     title: Twitter
     icon: fa-twitter
     enable: true
   mail:
-    link: 'mailto:bisyao@gmail.com'
+    link: 'mailto:quintorel@gmail.com'
     title: Email me
     icon: fa-envelope
-    enable: true
+    enable: false
   linkin:
     link: # your link here e.g. http...
     title: LinkedIn
