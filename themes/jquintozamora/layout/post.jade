@@ -14,6 +14,9 @@ block header
                             if page.subtitle
                                 h2.post-subheading= page.subtitle
                             +post_meta(page.date, page.tags)
+                            if page.featuredKeywordsImage
+                                .post-featuredKeywords
+                                    img.post-featuredKeywordsImage(src='./' + page.featuredKeywordsImage )
 
 block content
     .container

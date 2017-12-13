@@ -1,19 +1,20 @@
 ---
 title: How to configure webpack for replacing your API module path by a Mock API Path
-tags:
-  - English
+categories:
+  - TypeScript
+  - WebPack
+language: English
 url: how-to-configure-webpack-for-replacing-your-api-module-path-with-a-mock-api
 id: 1094
-categories:
+tags:
   - api
   - mock
   - TypeScript
   - webpack
   - webpack 2
 date: 2017-07-10 16:19:17
+featuredKeywordsImage: featured.png
 ---
-
-[![image](https://blog.josequinto.com/wp-content/uploads/2017/07/image_thumb.png "image")](https://blog.josequinto.com/wp-content/uploads/2017/07/image.png)
 
 Hi,
 

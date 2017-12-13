@@ -401,6 +401,14 @@ footer .theme-by {
 .intro-header.big-img .post-heading .post-meta {
   color: #EEE;
 }
+.intro-header .post-heading .post-featuredKeywords {
+  text-align: center;
+}
+.intro-header .post-heading .post-featuredKeywordsImage {
+  border: 2px solid black;
+  box-shadow: 5px 10px;
+  padding: 4px;
+}
 .intro-header.big-img .img-desc {
   background: rgba(30, 30, 30, 0.6);
   position: absolute;
