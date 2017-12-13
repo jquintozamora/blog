@@ -98,7 +98,7 @@ cdn:
 
 # Post info settings
 # ---------------
-avatar: 
+avatar: /devLogo.png
 
 top_img: false # false or url of img 
 
