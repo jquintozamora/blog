@@ -1,6 +1,6 @@
 ---
 title: About me
-url: 209.html
+url: about
 id: 209
 date: 2012-05-23 11:11:12
 ---

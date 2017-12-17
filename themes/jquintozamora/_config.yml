@@ -1,14 +1,11 @@
 # html lang
 # ---------------
-language: default
+language: en
 
 # Main menu navigation
 # ---------------
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
+  About: /about
 
 # Favicon
 # ---------------
@@ -27,13 +24,18 @@ highlight_theme: default
 
 # Nav settings
 # ---------------
-#social:
-  #icon_name: url
+social:
+  twitter: https://twitter.com/jquintozamora
+  github: https://github.com/jquintozamora
+  linkedin: https://www.linkedin.com/in/jquintozamora
+  stack-overflow: https://stackoverflow.com/users/5015774/jos%C3%A9-quinto-zamora?tab=profile
+  rss: https://jquintozamora.github.io/atom.xml
+
 
 # Algolia search
 # ---------------
 algolia_search:
-  enable: false
+  enable: true
   hits:
     per_page: 10
   labels:
@@ -44,7 +46,7 @@ algolia_search:
 # Local search
 # ---------------
 local_search:
-  enable: true
+  enable: false
   labels:
     input_placeholder: Search for Posts
     hits_empty: "We didn't find any results for the search: ${query}"
@@ -56,10 +58,6 @@ mathjax:
   enable: false
   cdn: https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
-
-# Toggle fireworks (IE >= 10)
-# ---------------
-fireworks: false
 
 # Analysis
 # ---------------
