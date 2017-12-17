@@ -48,10 +48,7 @@ h6
 .fancybox-caption
   text-align: center
 
-.fireworks
-  position: fixed
-  z-index: -1
-  pointer-events: none
+
 
 hr
   position: relative
@@ -59,21 +56,6 @@ hr
   width: calc(100% - 4px)
   border: 2px dashed $pale-blue
   background: $white
-
-  &:hover
-    &:before
-      left: calc(95% - 20px)
-
-  &:before
-    position: absolute
-    top: -10px
-    left: 5%
-    z-index: 1
-    color: $light-blue
-    content: "\f0c4"
-    font: normal normal normal 14px / 1 FontAwesome
-    font-size: 20px
-    transition: all 1s ease-in-out
 
 table
   overflow: auto
