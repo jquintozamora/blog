@@ -1,12 +1,9 @@
 ---
 title: How to configure webpack for replacing your API module path by a Mock API Path
-categories:
-  - TypeScript
-  - WebPack
 language: English
 url: how-to-configure-webpack-for-replacing-your-api-module-path-with-a-mock-api
 id: 1094
-tags:
+categories:
   - api
   - mock
   - TypeScript
@@ -35,8 +32,6 @@ Let’s say we have a function to get all terms of a given taxonomy term set (in
 My recommendation is using a [NormalModuleReplacementPlugin](https://webpack.js.org/plugins/normal-module-replacement-plugin/) in our development configuration for webpack:
 
 <script src="https://gist.github.com/jquintozamora/35087ed4261334b2f5b18a480bb3684c.js"></script>
-
-### 
 
 ### Usage
 

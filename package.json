@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "hexo clean && hexo generate && hexo server",
-    "deploy": "hexo algolia && hexo deploy"
+    "deploy": "hexo deploy",
+    "deploy:all": "hexo algolia && npm run deploy"
   },
   "dependencies": {
     "hexo": "3.2.0",
