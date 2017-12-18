@@ -10,7 +10,7 @@ categories:
   - webpack
   - webpack 2
 date: 2017-07-10 16:19:17
-featuredKeywordsImage: featured.png
+featuredImage: featured.png
 ---
 
 I’ve been working with **React**, **webpack** and **TypeScript** for almost two years, and it still surprise me when I look for a really custom solution and I end up with a generic solution which will solve my specific problem in a generic way.
@@ -38,5 +38,3 @@ My recommendation is using a [NormalModuleReplacementPlugin](https://webpack.js.
 <script src="https://gist.github.com/jquintozamora/d6ae4af0d2c3d5158cee887cac9993f1.js"></script>
 
 Enjoy!
-
-[@jquintozamora](https://twitter.com/jquintozamora)

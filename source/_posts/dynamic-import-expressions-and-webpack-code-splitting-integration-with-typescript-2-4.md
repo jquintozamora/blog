@@ -1,19 +1,17 @@
 ---
-title: >-
-  Dynamic Import Expressions and webpack 2 Code Splitting integration with
-  TypeScript 2.4
-tags:
-  - English
-url: 1084.html
+title: Dynamic Import Expressions and webpack 2 Code Splitting integration with TypeScript 2.4
+language: English
+url: dynamic-import-expressions-and-webpack-code-splitting-integration-with-typescript-2-4
 id: 1084
 categories:
   - Code Splitting
   - TypeScript
   - webpack
 date: 2017-06-29 10:14:41
+featuredImage: featured.png
 ---
 
-[![image](https://blog.josequinto.com/wp-content/uploads/2017/06/image_thumb-23.png "image")](https://blog.josequinto.com/wp-content/uploads/2017/06/image-23.png)
+## Overview 
 
 Two days ago (27/06/2017), was released [TypeScript 2.4.0](https://github.com/Microsoft/TypeScript/wiki/What%27s-new-in-TypeScript#typescript-24). Really good news to see that now dynamic import expressions are supported!.
 > **Dynamic import expressions** are a new feature and part of **ECMAScript** that allows users to asynchronously request a module at any arbitrary point in your program.
@@ -83,8 +81,4 @@ Some TypeScript forums for reference:
 
 &nbsp;
 
-&nbsp;
-
 Enjoy!
-
-[@jquintozamora](https://twitter.com/jquintozamora)
