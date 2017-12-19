@@ -14,13 +14,13 @@ favicon: /favicon.ico
 # PWA
 # ---------------
 pwa:
-  enable: false
-  manifest: 
+  enable: true
+  manifest: /manifest.json
 
 
 # Highlight theme
 # ---------------
-highlight_theme: default
+highlight_theme: light
 
 # Nav settings
 # ---------------
@@ -87,7 +87,6 @@ cdn:
   css:
     fontawesome: https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css
   js:
-    anime: /js/third-party/anime.min.js
     jquery: /js/third-party/jquery.min.js
     fancybox: /js/third-party/jquery.fancybox.min.js
     velocity: /js/third-party/velocity.min.js 

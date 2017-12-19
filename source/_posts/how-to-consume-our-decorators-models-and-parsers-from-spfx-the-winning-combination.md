@@ -11,20 +11,20 @@ date: 2017-06-28 11:33:42
 featuredImage: featured.png
 ---
 
-## Serie List
+## Post Series Index
 
 This is a blog post in the series about working with Custom Business Objects, Parsers and TypeScript decorators in PnP JS Core:
 
-1. [Introduction to Why do we should use Custom Business Objects (Models) in PnP JS Core](https://blog.josequinto.com/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/) 
-2. [Creating select and expand TypeScript Property Decorators to be used in PnP JS Core](https://blog.josequinto.com/2017/05/29/creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core/)
-3. [Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](https://blog.josequinto.com/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes/)  
-4. [Create Custom Parser and Array Parser to unify select and property names](https://blog.josequinto.com/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core/)
+1. [Introduction to Why do we should use Custom Business Objects (Models) in PnP JS Core](/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/) 
+2. [Creating select and expand TypeScript Property Decorators to be used in PnP JS Core](/2017/05/29/creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core/)
+3. [Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes/)  
+4. [Create Custom Parser and Array Parser to unify select and property names](/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core/)
 5. **How to consume our decorators, models and parsers from SPFx, the winning combination (this article)** 
 6. [Github project!](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators) **Please remember to “star” if you liked it!**
 
 ## Introduction
 
-In the previous posts of this series we explained why we should use [**Custom Business Objects in PnP JS Core**](https://blog.josequinto.com/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/) and we implemented **TypeScript decorators,** Custom Business Object **inheriting from Item** and **Items** **PnP JS Core** classes, and **custom Parsers**. In this article, we will see how to use all of them together in order to get the** max benefit from querying PnP JS Core from SharePoint Framework Web Part**.
+In the previous posts of this series we explained why we should use [**Custom Business Objects in PnP JS Core**](/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/) and we implemented **TypeScript decorators,** Custom Business Object **inheriting from Item** and **Items** **PnP JS Core** classes, and **custom Parsers**. In this article, we will see how to use all of them together in order to get the** max benefit from querying PnP JS Core from SharePoint Framework Web Part**.
 
 ## SPFx Web Part sample
 
