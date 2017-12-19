@@ -1,8 +1,8 @@
 ---
+layout: post
 title: Part 1. Why Should we use Custom Business Objects (Models) in PnP JS Core
-tags:
-  - English
-url: 963.html
+language: English
+permalink: why-do-we-should-use-custom-business-objects-models-in-pnp-js-core
 id: 963
 categories:
   - javascript
@@ -10,47 +10,47 @@ categories:
   - PnP JS Core
   - TypeScript
 date: 2017-05-19 17:59:12
+featuredImage: 
+  url: featured.png
+  width: auto
+  height: auto
 ---
 
-[![image](https://blog.josequinto.com/wp-content/uploads/2017/05/image_thumb-2.png "image")](https://blog.josequinto.com/wp-content/uploads/2017/05/image-2.png)
-
+## Post Series Index
 This is a blog post in the series about working with **Custom Business Objects**, **Parsers** and **Decorators** in [PnP JS Core](https://github.com/SharePoint/PnP-JS-Core):
 
-1.  **Introduction to Why should we use Custom Business Objects (Models) in PnP JS Core (this article)**
-2.  [Creating select and expand TypeScript Property Decorators to be used in PnP JS Core](https://blog.josequinto.com/2017/05/29/creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core/) <li>[Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](https://blog.josequinto.com/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes/)3.  [Create Custom Parser and Array Parser to unify select and property names](https://blog.josequinto.com/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core/)
-4.  [How to consume our decorators, models and parsers from SPFx, the winning combination](https://blog.josequinto.com/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination/) <li>[Github project!](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators) **Please remember to “star” if you liked it!**
+1. **Introduction to Why do we should use Custom Business Objects (Models) in PnP JS Core (this article)**
+2. [Creating select and expand TypeScript Property Decorators to be used in PnP JS Core](/2017/05/29/creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core#Post-Series-Index)
+3. [Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes#Post-Series-Index)
+4. [How to consume our decorators, models and parsers from SPFx, the winning combination](/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination#Post-Series-Index)
+5. [How to consume our decorators, models and parsers from SPFx, the winning combination](/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination#Post-Series-Index)
+6. [Github project!](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators) **Please remember to “star” if you liked it!**
+
 
 ## Introduction
-
 The [PnP JS Core library](https://github.com/SharePoint/PnP-JS-Core) was created to help developers to simplify common operations within SharePoint and the SharePoint Framework by providing a fluent API (wrapper) for [SharePoint REST API](https://dev.office.com/sharepoint/docs/apis/rest/get-to-know-the-sharepoint-rest-service).
 
 A few months ago I started to put my hands on PnP JS Core and I created a [new react sample showing the use of it with async / await](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-async-await-sp-pnp-js). By then I noticed how easy accessing to REST API services is by using this library, which even provides an API to cache data in the browser and do query batching.
 
 Then I decided to give it a go for using in a real world application, and then the fun began ;) and I started to look into more advanced concepts like [Extending with Custom Business Objects](https://github.com/SharePoint/PnP-JS-Core/wiki/Extending-with-Custom-Business-Objects) and create [Response Parsers](https://github.com/SharePoint/PnP-JS-Core/wiki/Response-Parsers).
 
-I **especially DO like **[**TypeScript**](https://www.typescriptlang.org/) to develop modern JS Applications and webparts. Moreover, when developing an application we often have defined entities and models representing the data we are manipulating. More in particular in client side development and using TypeScript as a OO Language **we like to have our data as a Typed object instead of using any :)**
+I **especially DO like** [**TypeScript**](https://www.typescriptlang.org/) to develop modern JS Applications and webparts. Moreover, when developing an application we often have defined entities and models representing the data we are manipulating. More in particular in client side development and using TypeScript as a OO Language **we like to have our data as a Typed object instead of using any :)**
 
 > The **PnP JS Core** library provides a base for us to build our custom objects at different levels:
-> 
 > *   **Item**
-> 
 > import { Item } from "sp-pnp-js";
-> 
 > *   **Items** (**ItemCollection**)
-> 
 > import { Items } from "sp-pnp-js";
-> 
 > For the full list see this [PnP JS Core github folder](https://github.com/SharePoint/PnP-JS-Core/tree/master/src/sharepoint).
 
 ## Why do we should use custom business objects in PnP JS Core?
-
 Let's get to the point, quick answer is we **don't strictly need** create custom business objects in order to do queries with **PnP JS Core** library, but if we are using the combination of **TypeScript**, **React** and **PnP JS Core** it will be obvious the benefits it could give to our full development team.
 
 However I would try to show you these benefits by providing two examples solving the same requirement (**Get Specific Item from a Custom SharePoint List**).
 
 Let’s assume we have the following list with four columns:
 
-[![clip_image001](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image001_thumb.png "clip_image001")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image001.png)
+[![clip_image001](./clip_image001.png "clip_image001")](./clip_image001.png)
 
 We are going to use PnP JS Core to query the first item of that list but we will do in two ways:
 
@@ -58,7 +58,6 @@ We are going to use PnP JS Core to query the first item of that list but we will
 2.  PnP JS Core **WITH** custom model
 
 ### PnP JS Core WITHOUT custom model
-
 Let’s assume we already have an environment in which use PnP JS Core, if not you can use [this project as a reference to start with PnP JS Core, TypeScript, React and SPFx](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-async-await-sp-pnp-js).
 
 Then let’s use the following code to query do the query:
@@ -67,19 +66,19 @@ Then let’s use the following code to query do the query:
 
 Here you see an image as well, in order to** illustrate TypeScript compiling errors and intellisense**:
 
-[![clip_image002](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image002_thumb.png "clip_image002")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image002.png)
+[![clip_image002](./clip_image002.png "clip_image002")](./clip_image002.png)
 
 In the sample, we can see clearly the benefits of **type checking** and **intellisense** on TypeScript.
 
 Initially we are using **any** as a Type for **plainItemAsAny** object and **we aren’t receiving help from the TypeScript** **compiler**.
 
-In the following lines, we are using the **“as” operator inside .tsx** file ([introduced in TypeScript 1.6](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-6.html)).&nbsp; We are using it as a workaround to get type checking and intellisense,&nbsp; which help **avoiding some typical developer mistakes **like accessing title property instead of Title with capital letter.
+In the following lines, we are using the **“as” operator inside .tsx** file ([introduced in TypeScript 1.6](https://www.typescriptlang.org/docs/handbook/release-notes/typescript-1-6.html)). We are using it as a workaround to get type checking and intellisense,&nbsp; which help **avoiding some typical developer mistakes **like accessing title property instead of Title with capital letter.
 
 > Actually, “as” operator inside .tsx file is the default way to cast objects (removing any ambiguity between JSX expressions and the TypeScript prefix cast operator).
 
 The next image shows the console output for the previous code:
 
-[![clip_image003](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image003_thumb.png "clip_image003")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image003.png)
+[![clip_image003](./clip_image003.png "clip_image003")](./clip_image003.png)
 
 But, thinking little bit more about this scenario, we **defined the type dynamically** and **only for this part of our code**, which can't be reused elsewhere. In addition, imagine we need to **add some other properties in the model **and we should to **edit several parts** of our code including the **Types**, **.select(..)** method and so on.
 
@@ -103,15 +102,15 @@ How to use this custom object:
 
 Let’s **highlight** how the **TypeScript compiler warns us** if we try do get some properties wrongly:
 
-[![clip_image004](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image004_thumb.png "clip_image004")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image004.png)
+[![clip_image004](./clip_image004.png "clip_image004")](./clip_image004.png)
 
 Let’s remarks how can we use **intellisense** too:
 
-[![clip_image005](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image005_thumb.png "clip_image005")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image005.png)
+[![clip_image005](./clip_image005.png "clip_image005")](./clip_image005.png)
 
 The following image shows the **console output** for this code:
 
-[![clip_image006](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image006_thumb.png "clip_image006")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image006.png)
+[![clip_image006](./clip_image006.png "clip_image006")](./clip_image006.png)
 
 **Note** how the real and final JavaScript object has more properties which inherits directly from Item class plus the own MyItem properties.
 
@@ -133,13 +132,3 @@ We have shown how using our **custom business object in PnP JS Core DO help on**
 *   We have examples to override single Item, but **not for Item Collections,** and there are some features to consider when we implement custom collections. **We can extends Items class instead Item to achieve it!**
 
 We are going to cover each of these improvements in the following posts of this series.
-
-Remember this is a post series about working with Custom Business Objects, Parsers and TypeScript decorators in PnP JS Core:
-
-1.  **Introduction to Why should we use Custom Business Objects (Models) in PnP JS Core (this article)**
-2.  [Creating select and expand TypeScript Property Decorators to be used in PnP JS Core](https://blog.josequinto.com/2017/05/29/creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core/) <li>[Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](https://blog.josequinto.com/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes/)3.  [Create Custom Parser and Array Parser to unify select and property names](https://blog.josequinto.com/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core/)
-4.  [How to consume our decorators, models and parsers from SPFx, the winning combination](https://blog.josequinto.com/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination/) <li>[Github project!](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators) **Please remember to “star” if you liked it!**
-
-Hope that helps!
-
-[@jquintozamora](https://twitter.com/jquintozamora)

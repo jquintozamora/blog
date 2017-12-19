@@ -67,8 +67,10 @@ block content
             span= _p('post.min2read', min2read(page.content, {cn: 350, en: 160}))
     if (page.featuredImage)
       .post-featuredImage
-        img(src=page.featuredImage)
-      //- div#post-featuredImage(style=`background-image: url(${page.featuredImage})` class='featuredImage')
+        if (typeof(page.featuredImage) === 'string') 
+          img(src=page.featuredImage)
+        else
+          img(src=page.featuredImage.url width=page.featuredImage.width height=page.featuredImage.height)
     #post-content!= page.content
     if (theme.post_copyright && theme.post_copyright.enable)
       .post-copyright

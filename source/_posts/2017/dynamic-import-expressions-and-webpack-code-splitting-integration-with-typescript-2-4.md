@@ -1,14 +1,18 @@
 ---
+layout: post
 title: Dynamic Import Expressions and webpack 2 Code Splitting integration with TypeScript 2.4
 language: English
-url: dynamic-import-expressions-and-webpack-code-splitting-integration-with-typescript-2-4
+permalink: dynamic-import-expressions-and-webpack-code-splitting-integration-with-typescript-2-4
 id: 1084
 categories:
   - Code Splitting
   - TypeScript
   - webpack
 date: 2017-06-29 10:14:41
-featuredImage: featured.png
+featuredImage: 
+  url: featured.png
+  width: auto
+  height: auto
 ---
 
 ## Overview 

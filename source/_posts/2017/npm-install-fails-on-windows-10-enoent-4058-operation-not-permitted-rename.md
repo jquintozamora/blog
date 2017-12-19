@@ -1,7 +1,8 @@
 ---
+layout: post
 title: 'npm install fails on Windows 10: ENOENT 4058 operation not permitted, rename'
 language: English
-url: npm-install-fails-on-windows-10-enoent-4058-operation-not-permitted-rename
+permalink: npm-install-fails-on-windows-10-enoent-4058-operation-not-permitted-rename
 id: 1013
 categories:
   - Node.js

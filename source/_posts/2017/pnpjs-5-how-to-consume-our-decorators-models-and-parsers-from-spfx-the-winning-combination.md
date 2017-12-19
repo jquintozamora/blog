@@ -1,24 +1,27 @@
 ---
+layout: post
 title: Part 5. How to consume our decorators, models and parsers from SPFx, the winning combination
 language: English
-url: how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination
+permalink: how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination
 id: 1073
 categories:
   - PnP JS Core
   - SPFx
   - TypeScript
 date: 2017-06-28 11:33:42
-featuredImage: featured.png
+featuredImage: 
+  url: featured.png
+  width: auto
+  height: auto
 ---
 
 ## Post Series Index
+This is a blog post in the series about working with **Custom Business Objects**, **Parsers** and **Decorators** in [PnP JS Core](https://github.com/SharePoint/PnP-JS-Core):
 
-This is a blog post in the series about working with Custom Business Objects, Parsers and TypeScript decorators in PnP JS Core:
-
-1. [Introduction to Why do we should use Custom Business Objects (Models) in PnP JS Core](/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/) 
-2. [Creating select and expand TypeScript Property Decorators to be used in PnP JS Core](/2017/05/29/creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core/)
-3. [Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes/)  
-4. [Create Custom Parser and Array Parser to unify select and property names](/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core/)
+1. [Introduction to Why do we should use Custom Business Objects (Models) in PnP JS Core](/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core#Post-Series-Index) 
+2. [Creating select and expand TypeScript Property Decorators to be used in PnP JS Core](/2017/05/29/creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core#Post-Series-Index)
+3. [Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes#Post-Series-Index)  
+4. [Create Custom Parser and Array Parser to unify select and property names](/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core#Post-Series-Index)
 5. **How to consume our decorators, models and parsers from SPFx, the winning combination (this article)** 
 6. [Github project!](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators) **Please remember to “star” if you liked it!**
 

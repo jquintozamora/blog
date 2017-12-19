@@ -1,10 +1,8 @@
 ---
-title: >-
-  Part 2. Creating select and expand TypeScript Property Decorators to be used
-  in PnP JS Core
-tags:
-  - English
-url: 981.html
+layout: post
+title: Part 2. Creating select and expand TypeScript Property Decorators to be used in PnP JS Core
+language: English
+permalink: creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core
 id: 981
 categories:
   - decorator
@@ -12,28 +10,27 @@ categories:
   - PnP JS Core
   - TypeScript
 date: 2017-05-29 14:19:50
+featuredImage: 
+  url: featured.png
+  width: auto
+  height: auto
 ---
 
-[![clip_image001](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image001_thumb-1.png "clip_image001")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image001-1.png)
+## Post Series Index
+This is a blog post in the series about working with **Custom Business Objects**, **Parsers** and **Decorators** in [PnP JS Core](https://github.com/SharePoint/PnP-JS-Core):
 
-This is a **blog post in the series** about working with Custom Business Objects, Parsers and TypeScript decorators in PnP JS Core:
+1. [Introduction to Why do we should use Custom Business Objects (Models) in PnP JS Core](/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core#Post-Series-Index) 
+2. **Creating select and expand TypeScript Property Decorators to be used in PnP JS Core (this article)**
+3. [Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes#Post-Series-Index)
+4. [How to consume our decorators, models and parsers from SPFx, the winning combination](/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination#Post-Series-Index)
+5. [How to consume our decorators, models and parsers from SPFx, the winning combination](/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination#Post-Series-Index)
+6. [Github project!](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators) **Please remember to “star” if you liked it!**
 
-1.  [Introduction to Why do we should use Custom Business Objects (Models) in PnP JS Core](https://blog.josequinto.com/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/)
-<li>**Creating select and expand TypeScript Property Decorators to be used in PnP JS Core (this article)**
-
-2.  [Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](https://blog.josequinto.com/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes/)3.  [Create Custom Parser and Array Parser to unify select and property names](https://blog.josequinto.com/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core/)
-4.  [How to consume our decorators, models and parsers from SPFx, the winning combination](https://blog.josequinto.com/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination/) <li>[Github project!](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators) **Please remember to “star” if you liked it!**
-
-[
-
-](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image001-1.png)
 
 ## Introduction
-
 In the previous post of this series we explained why we should use **Custom Business Objects in PnP JS Core** and at the end of the article we summarized some improvements to work with Business Objects in a more generic and usable way. In order to achieve it, we propose the usage of TypeScript Decorators in combination with Custom Business Objects and Custom Generic Parsers. In this article, we are going to see what are **TypeScript property decorators** and how to implement them for this specific scenario.
 
 ## What are TypeScript Property Decorators?
-
 Generally speaking, **decorators** are special bindings to easily **provide extra functionality** for classes, methods, accessors, properties and parameters.
 
 [TC39](http://ecma-international.org/memento/TC39.htm) members are working on the definition of a [standard for ECMAScript Decorators](https://tc39.github.io/proposal-decorators/) due to the success of **TypeScript experimental decorators’** **implementation** and to the **good **acceptance ****of them on [Angular](https://angular.io/), [Aurelia](http://aurelia.io/) and [Ember](https://www.emberjs.com/) frameworks.
@@ -51,8 +48,7 @@ For example, see how the class **MyDocument** could have a select decorator to q
 <script src="https://gist.github.com/jquintozamora/20d715203186a3e9463ba76ca270142d.js"></script>
 
 ## How could Decorators help to Custom Business Objects in PnP JS Core 
-
-As we described in [the previous post of this series](https://blog.josequinto.com/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/), we can define a **Custom Business Object with this code**:
+As we described in [the previous post of this series](/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/), we can define a **Custom Business Object with this code**:
 
 <script src="https://gist.github.com/jquintozamora/43d61763771078d72a81890a63605ebc.js"></script>
 
@@ -62,10 +58,9 @@ The idea of decorators in this scenario is achieve something like:
 
 <script src="https://gist.github.com/jquintozamora/dce0f50d7cce5870ed90e2c0172629c0.js"></script>
 
-&nbsp;
 
-## **Property Decorators’ implementation **for select and expand in PnP JS Core 
 
+## Property Decorators’ implementation for select and expand in PnP JS Core 
 Once we have more context about what is a decorator intended for, let´s see **how to implement property decorators and property **[**decorator factory**](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Decorators.md#decorator-factories)**.** Basically, a decorator factory is a function that returns a function of type [PropertyDecorator](https://github.com/Microsoft/TypeScript/blob/v2.3.3/src/lib/es5.d.ts#L1297).
 
 Have a look into the [TypeScript type definitions for decorators](https://github.com/Microsoft/TypeScript/blob/v2.3.3/src/lib/es5.d.ts#L1296-L1299) and note how all of them are different, for example, **PropertyDecorator** type have two parameters target (the class or instance in which the property is) and propertyKey (the name of the property). Also note how **PropertyDecorator** in a way contrary to **MethodDecorator** returns nothing, which means that in order to **add extra functionality** **we can´t return a modified property** as a result of the decorator function, **we should modify the target object itself instead**.
@@ -74,7 +69,7 @@ Now, we are going to describe how to** implement two decorators for select and e
 
 <script src="https://gist.github.com/jquintozamora/9677a70d9698778399c5697ed1c7e2ae.js"></script>
 
-Notes:
+## Importatnt Notes
 
 - **@select** decorator implementation has **queryName as optional,** so if there isn´t queryName, we are getting the** property name itself** to be used in the query.
 
@@ -97,64 +92,28 @@ Apart from that, our custom class also defines two properties called **Title** a
 **/_api/web/lists/getByTitle('PnPJSSample')/items(1)?$select=Title,FileLeafRef**
 
 ### How the metadata is stored using decorators?
-
 Let´s see this example at runtime:
 
 **Property 1: Title**
 
-[![clip_image002](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image002_thumb-1.png "clip_image002")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image002-1.png)
+[![clip_image002](./clip_image002-1.png "clip_image002")](./clip_image002-1.png)
 
 **Property 2: FileLeafRef:**
 
-[![clip_image003](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image003_thumb-1.png "clip_image003")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image003-1.png)
+[![clip_image003](./clip_image003-1.png "clip_image003")](./clip_image003-1.png)
 
 We can see how we use the target object to store the information using **__select__** property. Ideally we should use **ES Symbol** when they have more browser support.
 
 ### When is decorator code executed?
-
 Code for property decorators is executed **when JavaScript engine read (import) our custom class**, **just at the beginning**.
 
 Imagine we define our custom class **MyDocument** as external module and we import this module from our webpart component .tsx file. Then, the code is executed just in the import evaluation, as we can see in the following picture:
 
-[![clip_image004](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image004_thumb-1.png "clip_image004")](https://blog.josequinto.com/wp-content/uploads/2017/05/clip_image004-1.png)
+[![clip_image004](./clip_image004-1.png "clip_image004")](./clip_image004-1.png)
 
-<table border="1" cellspacing="0" cellpadding="2">
-<tbody>
-<tr>
-<td valign="top">1.</td>
-<td valign="top">
-
-** Import** our Custom Object class from our tsx component.
-
-</td>
-</tr>
-<tr>
-<td valign="top">2 and 3\. </td>
-<td valign="top">&nbsp;**When JavaScript** engine **evaluate the import** is when it will **evaluate and execute all decorator functions**</td>
-</tr>
-<tr>
-<td valign="top">4.</td>
-<td valign="top">
-
-** After** evaluating all **decorator functions**, the array of selected properties is already generated and stored on **MyDocument**, then it returns to the execution of out component, just **after the import** instruction.
-
-</td>
-</tr>
-<tr>
-<td valign="top">5\. </td>
-<td valign="top">**In the get method of our PnP JS** Core Custom Object we already have our selectors evaluated and we have the information we need stored in MyDocument object as own property</td>
-</tr>
-</tbody>
-</table>
-
-Remember this is a post series about working with Custom Business Objects, Parsers and TypeScript decorators in PnP JS Core:
-
-1.  [Introduction to Why should we use Custom Business Objects (Models) in PnP JS Core](https://blog.josequinto.com/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/)
-<li>**Creating select and expand TypeScript Property Decorators to be used in PnP JS Core (this article)**
-
-2.  [Creating MyDocument and MyDocumentCollection models extending Item and Items PnP JS Core classes](https://blog.josequinto.com/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes/)3.  [Create Custom Parser and Array Parser to unify select and property names](https://blog.josequinto.com/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core/)
-4.  [How to consume our decorators, models and parsers from SPFx, the winning combination](https://blog.josequinto.com/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination/) <li>[Github project!](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators) **Please remember to “star” if you liked it!**
-
-Hope you like it!
-
-[@jquintozamora](https://twitter.com/jquintozamora)
+| #  | Description  |
+|-------|------|
+|1      | ** Import** our Custom Object class from our tsx component. |
+|2 and 3| **When JavaScript** engine **evaluate the import** is when it will **evaluate and execute all decorator functions** |
+|4      | **After** evaluating all **decorator functions**, the array of selected properties is already generated and stored on **MyDocument**, then it returns to the execution of out component, just **after the import** instruction. |
+|5      | **In the get method of our PnP JS** Core Custom Object we already have our selectors evaluated and we have the information we need stored in MyDocument object as own property |

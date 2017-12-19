@@ -1,7 +1,8 @@
 ---
+layout: post
 title: How to configure webpack for replacing your API module path by a Mock API Path
 language: English
-url: how-to-configure-webpack-for-replacing-your-api-module-path-with-a-mock-api
+permalink: how-to-configure-webpack-for-replacing-your-api-module-path-with-a-mock-api
 id: 1094
 categories:
   - api
@@ -10,7 +11,10 @@ categories:
   - webpack
   - webpack 2
 date: 2017-07-10 16:19:17
-featuredImage: featured.png
+featuredImage: 
+  url: featured.png
+  width: auto
+  height: auto
 ---
 
 I’ve been working with **React**, **webpack** and **TypeScript** for almost two years, and it still surprise me when I look for a really custom solution and I end up with a generic solution which will solve my specific problem in a generic way.
