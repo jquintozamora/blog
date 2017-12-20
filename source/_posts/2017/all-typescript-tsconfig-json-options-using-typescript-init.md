@@ -1,16 +1,19 @@
 ---
+layout: post
 title: All TypeScript 2.3 options for tsconfig.json (tsc --init)
-tags:
-  - English
-url: 928.html
+language: English
+permalink: all-typescript-tsconfig-json-options-using-typescript-init
 id: 928
 categories:
   - TypeScript
 date: 2017-04-28 07:05:52
+featuredImage: 
+  url: featured.png
+  width: auto
+  height: auto
 ---
 
-[![image](https://blog.josequinto.com/wp-content/uploads/2017/04/image_thumb-4.png "image")](https://blog.josequinto.com/wp-content/uploads/2017/04/image-4.png)
-
+## Introduction
 Yesterday [was released TypeScript 2.3](https://blogs.msdn.microsoft.com/typescript/2017/04/27/announcing-typescript-2-3/) and one of the improvements was an easier startup with better help, richer init, and quicker strictness.
 
 It means that TypeScript’s `--init` output so that potential options are explicitly listed out in comments. As an example, `tsconfig.json` output will look something like the following:
@@ -29,8 +32,5 @@ This `--strict` flag represents a set of flags that the TypeScript team believes
 
 You can see the full options in the [official wiki page](https://github.com/Microsoft/TypeScript-Handbook/blob/master/pages/Compiler%20Options.md) as well.
 
-#### Enjoy!
-
+## Read more...
 You can read  [the full list of what’s new in TypeScript](https://github.com/Microsoft/TypeScript/wiki/What) and [read TypeScript’s Roadmap](https://github.com/Microsoft/TypeScript/wiki/Roadmap) to see what’s coming in the future!
-
-[@jquintozamora](https://github.com/jquintozamora)
