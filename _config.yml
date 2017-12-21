@@ -97,12 +97,10 @@ algolia:
   indexName: dev_JQBLOG
   chunkSize: 5000
   fields:
-    - excerpt
-    - excerpt:strip
-    - gallery
     - permalink
-    - photos
     - slug
     - tags
+    - language
+    - description
     - categories
     - title
