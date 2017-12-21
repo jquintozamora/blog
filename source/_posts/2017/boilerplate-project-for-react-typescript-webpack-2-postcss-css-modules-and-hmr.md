@@ -1,7 +1,7 @@
 ---
 title: Boilerplate project for React, TypeScript, Webpack 2, postCSS, CSS-Modules and HMR
 language: English
-url: boilerplate-project-for-react-typescript-webpack-2-postcss-css-modules-and-hmr
+permalink: boilerplate-project-for-react-typescript-webpack-2-postcss-css-modules-and-hmr
 id: 925
 categories:
   - boilerplate
