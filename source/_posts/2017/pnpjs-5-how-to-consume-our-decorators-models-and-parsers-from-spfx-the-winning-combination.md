@@ -33,7 +33,7 @@ In the previous posts of this series we explained why we should use [**Custom Bu
 
 All code samples we are going to see here, actually, are implemented in this **Github project**: [spfx-react-sp-pnp-js-property-decorators](https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators "https://github.com/jquintozamora/spfx-react-sp-pnp-js-property-decorators").
 > There are some **requisites** to have in order to run this webpart sample. 
-> 1\. Create a list called PnPJSSample with four colums (ID, Title, Category and Quantity).
+> 1\. Create a list called PnPJSSample with four columns (ID, Title, Category and Quantity).
 > 2\. Upload some documents in the Documents library.
 
 In the following code sample, we can see different ways to consume and query against PnP JS Core using different combinations of decorators, models and parsers:

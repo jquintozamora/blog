@@ -69,7 +69,7 @@ Now, we are going to describe how to** implement two decorators for select and e
 
 <script src="https://gist.github.com/jquintozamora/9677a70d9698778399c5697ed1c7e2ae.js"></script>
 
-## Importatnt Notes
+## Important Notes
 
 - **@select** decorator implementation has **queryName as optional,** so if there isn´t queryName, we are getting the** property name itself** to be used in the query.
 

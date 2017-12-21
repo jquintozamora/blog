@@ -21,7 +21,7 @@ I’ve been working with **React**, **webpack** and **TypeScript** for almost tw
 
 Today, I am going to write about how to configure webpack to provide different Module path depending on our configuration. In my scenario I have two different APIs one is the “**REAL**” one and other is the “**MOCK**”. And I’d like to use the mocked API for development configuration and the real one for Production.
 
-Let’s say we have a function to get all terms of a given taxonomy term set (in SharePoint Online) in order to display them in a React application. We are going to describe how to create the real&nbsp; API, Mock API, how to configure webpack to do the “**generic replacement**” and how to use the API.
+Let’s say we have a function to get all terms of a given taxonomy term set (in SharePoint Online) in order to display them in a React application. We are going to describe how to create the real API, Mock API, how to configure webpack to do the “**generic replacement**” and how to use the API.
 
 ### Real API
 
@@ -40,5 +40,3 @@ My recommendation is using a [NormalModuleReplacementPlugin](https://webpack.js.
 ### Usage
 
 <script src="https://gist.github.com/jquintozamora/d6ae4af0d2c3d5158cee887cac9993f1.js"></script>
-
-Enjoy!

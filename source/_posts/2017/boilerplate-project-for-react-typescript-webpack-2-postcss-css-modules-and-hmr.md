@@ -33,7 +33,6 @@ You can see, download and use freely the boilerplate on this link: [https://gith
 
 [![image](https://blog.josequinto.com/wp-content/uploads/2017/04/image_thumb-1.png "image")](https://blog.josequinto.com/wp-content/uploads/2017/04/image-1.png)
 
-&nbsp;
 
 Lot’s of configurations are happening on this template, but I will recap the main features:
 
@@ -50,7 +49,7 @@ Lot’s of configurations are happening on this template, but I will recap the m
         - Split out css files using [ExtractTextPlugin](https://webpack.js.org/plugins/extract-text-webpack-plugin)
         - [UglifyJsPlugin with options](https://github.com/webpack/webpack/blob/v2.4.1/lib/optimize/UglifyJsPlugin.js)
         - Use include in the loader instead of the exclude. [More info](http://stackoverflow.com/questions/37823764/how-include-and-exclude-works-in-webpack-loader)
-        - More perfomance tips: [here](https://medium.com/@khanght/optimize-webpack-production-build-ec594242b222#.bj3eyg65p)
+        - More performance tips: [here](https://medium.com/@khanght/optimize-webpack-production-build-ec594242b222#.bj3eyg65p)
         - [Webpack stats](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/webpack/webpack.config.stats.js) (bundle optimization helper)
         - Generate stats.json file with profiler. Use [[http://webpack.github.io/analyse/](http://webpack.github.io/analyse/)] to analyze it.
         - [webpack visualizer](https://chrisbateman.github.io/webpack-visualizer/)
