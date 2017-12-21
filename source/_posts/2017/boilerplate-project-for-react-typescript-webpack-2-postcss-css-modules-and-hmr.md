@@ -41,63 +41,64 @@ Lot’s of configurations are happening on this template, but I will recap the m
 
 * [React](https://facebook.github.io/react)
 * [TypeScript](https://www.typescriptlang.org/) (compiling directly to **ES5**)
-    * Using [@types instead of TSD or typings folder](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/tsconfig.json#L14)
+    - Using [@types instead of TSD or typings folder](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/tsconfig.json#L14)
 * [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader 3](https://github.com/gaearon/react-hot-loader/issues/243))
 * [Webpack 2](https://webpack.js.org/)
-    * [Webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
-    * [Webpack configuration for HMR](https://webpack.js.org/concepts/hot-module-replacement/)
-    * Webpack production configuration
-        * Split out css files using [ExtractTextPlugin](https://webpack.js.org/plugins/extract-text-webpack-plugin)
-        * [UglifyJsPlugin with options](https://github.com/webpack/webpack/blob/v2.4.1/lib/optimize/UglifyJsPlugin.js)
-        * Use include in the loader instead of the exclude. [More info](http://stackoverflow.com/questions/37823764/how-include-and-exclude-works-in-webpack-loader)
-        * More perfomance tips: [here](https://medium.com/@khanght/optimize-webpack-production-build-ec594242b222#.bj3eyg65p)
-        * [Webpack stats](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/webpack/webpack.config.stats.js) (bundle optimization helper)
-        * Generate stats.json file with profiler. Use [[http://webpack.github.io/analyse/](http://webpack.github.io/analyse/)] to analyze it.
-        * [webpack visualizer](https://chrisbateman.github.io/webpack-visualizer/)
+    - [Webpack-dev-server](https://webpack.js.org/configuration/dev-server/)
+    - [Webpack configuration for HMR](https://webpack.js.org/concepts/hot-module-replacement/)
+    - Webpack production configuration
+        - Split out css files using [ExtractTextPlugin](https://webpack.js.org/plugins/extract-text-webpack-plugin)
+        - [UglifyJsPlugin with options](https://github.com/webpack/webpack/blob/v2.4.1/lib/optimize/UglifyJsPlugin.js)
+        - Use include in the loader instead of the exclude. [More info](http://stackoverflow.com/questions/37823764/how-include-and-exclude-works-in-webpack-loader)
+        - More perfomance tips: [here](https://medium.com/@khanght/optimize-webpack-production-build-ec594242b222#.bj3eyg65p)
+        - [Webpack stats](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/webpack/webpack.config.stats.js) (bundle optimization helper)
+        - Generate stats.json file with profiler. Use [[http://webpack.github.io/analyse/](http://webpack.github.io/analyse/)] to analyze it.
+        - [webpack visualizer](https://chrisbateman.github.io/webpack-visualizer/)
 * [EditorConfig](http://editorconfig.org/)
 * **Styling**
-    * **General Styling** (app/stylesheets):
-        * To include variables, generic CSS, normalize, reset, type selectors, ...
-        * Methodology: [ITCSS](http://itcss.io/)
-        * Tools: [postCSS](http://postcss.org/) with [import](https://github.com/postcss/postcss-import), [nesting](https://www.npmjs.com/package/postcss-nesting), [custom properties](https://github.com/postcss/postcss-custom-properties) and [autoprefixer](https://github.com/postcss/autoprefixer).
+    - **General Styling** (app/stylesheets):
+        - To include variables, generic CSS, normalize, reset, type selectors, ...
+        - Methodology: [ITCSS](http://itcss.io/)
+        - Tools: [postCSS](http://postcss.org/) with [import](https://github.com/postcss/postcss-import), [nesting](https://www.npmjs.com/package/postcss-nesting), [custom properties](https://github.com/postcss/postcss-custom-properties) and [autoprefixer](https://github.com/postcss/autoprefixer).
 
-    * **Components Styling** (app/src/components/...):
-        * To be the module's CSS
-        * Techniques: [CSS Modules](https://github.com/css-modules/css-modules) + [postCSS](http://postcss.org/) ([import](https://github.com/postcss/postcss-import), [nesting](https://www.npmjs.com/package/postcss-nesting), [custom properties](https://github.com/postcss/postcss-custom-properties) and [autoprefixer](https://github.com/postcss/autoprefixer)).
+    - **Components Styling** (app/src/components/...):
+        - To be the module's CSS
+        - Techniques: [CSS Modules](https://github.com/css-modules/css-modules) + [postCSS](http://postcss.org/) ([import](https://github.com/postcss/postcss-import), [nesting](https://www.npmjs.com/package/postcss-nesting), [custom properties](https://github.com/postcss/postcss-custom-properties) and [autoprefixer](https://github.com/postcss/autoprefixer)).
 
 * **Linting**
-    * **TypeScript**:
-        * [TSLint](https://palantir.github.io/tslint): general rules + [react rules](https://github.com/palantir/tslint-react)
-        * [VS Code TSLint extension](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
+    - **TypeScript**:
+        - [TSLint](https://palantir.github.io/tslint): general rules + [react rules](https://github.com/palantir/tslint-react)
+        - [VS Code TSLint extension](https://marketplace.visualstudio.com/items?itemName=eg2.tslint)
 
-    * **Styles**
-        * [Stylint](https://stylelint.io/): CSS rules
-            * Rules are on .stylelintrc.json
-            * [All the rules](https://stylelint.io/user-guide/rules)
-            * Install VS Code extensions:
-                * [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
-                * [stylefmt](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-stylefmt)
-                    * Shift + Alt + F (Format Code)
-                    * Be sure you have these configurations on your .vscode/settings.json:
+    - **Styles**
+        - [Stylint](https://stylelint.io/): CSS rules
+            - Rules are on .stylelintrc.json
+            - [All the rules](https://stylelint.io/user-guide/rules)
+            - Install VS Code extensions:
+                - [stylelint](https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint)
+                - [stylefmt](https://marketplace.visualstudio.com/items?itemName=mrmlnc.vscode-stylefmt)
+                    - Shift + Alt + F (Format Code)
+                    - Be sure you have these configurations on your .vscode/settings.json:
                         * "css.validate": false,
                         * "stylelint.enable": true
 
 ## Stats
-If you run “**npm run stats**” you will generate a HTML file with the bundle stats. That is really helpful to see which npm packages are you including and the size of them.
+If you run `npm run stats` you will generate a HTML file with the bundle stats. That is really helpful to see which npm packages are you including and the size of them.
 
 [![image](./image-2.png "image")](./image-2.png)
 
 
 ## Useful demo
 As part of the **boilerplate**, you will see a **fancy demo** app with two react components already created:
-*   **Viewer**
-    *   [Stateless component](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/Viewer/Viewer.tsx) (no state)
-    *   Use [CSS-Modules](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/Viewer/Viewer.module.css)
+* **Viewer**
+    - [Stateless component](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/Viewer/Viewer.tsx) (no state)
+    - Use [CSS-Modules](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/Viewer/Viewer.module.css)
 
 *   **ViewerItem**
-    *   Create [3 types of Item Card object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItemCardType.ts) (singleton, factory static)
-    *   Use [inline css using a function to assign CSS depending on the object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.inlined.css.ts)
-    *   Render [Table layout compatible with emails](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.tsx)
+    - Create [3 types of Item Card object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItemCardType.ts) (singleton, factory static)
+    - Use [inline css using a function to assign CSS depending on the object](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.inlined.css.ts)
+    - Render [Table layout compatible with emails](https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS/blob/master/app/src/components/ViewerItem/ViewerItem.tsx)
+
 [![image](./image-3.png "image")](./image-3.png)
 
 ## Star it!
