@@ -72,6 +72,9 @@ block content
         else
           img(src=page.featuredImage.url width=page.featuredImage.width height=page.featuredImage.height)
     #post-content!= page.content
+    #post-content-bottom-space
+      p.
+        &nbsp;
     if (theme.post_copyright && theme.post_copyright.enable)
       .post-copyright
         .post-copyright__author
