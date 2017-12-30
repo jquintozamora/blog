@@ -92,33 +92,42 @@ It's not working because two main reasons:
 <script src="https://gist.github.com/jquintozamora/0aca058efe7e18ad1562e1fa002c01bf.js"></script> 
 
 
-## How to test this approach is working 
+## Testing the solution is working properly
  
 1. If we go directly to our REST Service:
-[`http://myapp.azurewebsites.net/api/mycustom/1`]() 
-We will receive this error:  
-[![clip_image003](./clip_image003.png "clip_image003")](./clip_image003.png)  
+  [http://myapp.azurewebsites.net/api/mycustom/1]()
+
+  We will receive this error:  
+  [![clip_image003](./clip_image003.png "clip_image003")](./clip_image003.png)  
 
 2. If we go to our SharePoint Provider-hosted app and we click on our App Launcher we will be redirected to login page and after that to an url like that:
-[`https://myapp.azurewebsites.net/home/index/?SPHostUrl=https%3A%2F%2Fmytenant%2Esharepoint%2Ecom&SPLanguage=en-US&SPClientTag=0&SPProductNumber=16%2E0%2E5625%2E1208&SPAppWebUrl=https%3A%2F%2Fmytenant-appguid%2Esharepoint%2Ecom&SPHasRedirectedToSharePoint=1`]()
-This isn't our Web API, but is our gateway to login into Provider-hosted app. Once logged in, we can change the url "home/index" by our REST call, for example:  
-[`https://myapp.azurewebsites.net/api/mycustom/1/?SPHostUrl=https%3A%2F%2Fmytenant%2Esharepoint%2Ecom&SPLanguage=en-US&SPClientTag=0&SPProductNumber=16%2E0%2E5625%2E1208&SPAppWebUrl=https%3A%2F%2Fmytenant-appguid%2Esharepoint%2Ecom&SPHasRedirectedToSharePoint=1`]()  
-That should give you the information requested in the browser.  
-3. If we are logged in our SharePoint Provider-hosted app and we use F12 (Console) to make an ajax query:
-<script src="https://gist.github.com/jquintozamora/a0f0a5e9a08f2b1a066e5742b079cdd1.js"></script> 
-[![clip_image004](./clip_image004.png "clip_image004")](./clip_image004.png)  
-> If we use ajax we** also need to include the query string (sharepoint context) in the call**:
+  [https://myapp.azurewebsites.net/home/index/?SPHostUrl=https%3A%2F%2Fmytenant%2Esharepoint%2Ecom&SPLanguage=en-US&SPClientTag=0&SPProductNumber=16%2E0%2E5625%2E1208&SPAppWebUrl=https%3A%2F%2Fmytenant-appguid%2Esharepoint%2Ecom&SPHasRedirectedToSharePoint=1]()
 
-<script src="https://gist.github.com/jquintozamora/6e162d8766eb8e00ad69858d75137d94.js"></script> 
-> Using location.search will include all the parameters needed (thank for the tip [Kev](http://sharepointcookies.com/)):  
-[![clip_image005](./clip_image005.png "clip_image005")](./clip_image005.png)  
-And here we have successful ajax query to our Web API REST call from our SharePoint Provider-hosted app page.
+  This isn't our Web API, but is our gateway to login into Provider-hosted app. Once logged in, we can change the url "home/index" by our REST call, for example:
+
+  [https://myapp.azurewebsites.net/api/mycustom/1/?SPHostUrl=https%3A%2F%2Fmytenant%2Esharepoint%2Ecom&SPLanguage=en-US&SPClientTag=0&SPProductNumber=16%2E0%2E5625%2E1208&SPAppWebUrl=https%3A%2F%2Fmytenant-appguid%2Esharepoint%2Ecom&SPHasRedirectedToSharePoint=1]()
+  
+  That should give you the information requested in the browser.  
+
+3. If we are logged in our SharePoint Provider-hosted app and we use F12 (Console) to make an ajax query:
+  <script src="https://gist.github.com/jquintozamora/a0f0a5e9a08f2b1a066e5742b079cdd1.js"></script>
+
+  [![clip_image004](./clip_image004.png "clip_image004")](./clip_image004.png)
+
+  > If we use ajax we** also need to include the query string (SharePoint context) in the call**:
+
+  <script src="https://gist.github.com/jquintozamora/6e162d8766eb8e00ad69858d75137d94.js"></script>
+
+  > Using location.search will include all the parameters needed (thank for the tip [Kev](http://sharepointcookies.com/)):
+  
+  [![clip_image005](./clip_image005.png "clip_image005")](./clip_image005.png)  
+  
+  And here we have successful ajax query to our Web API REST call from our SharePoint Provider-hosted app page.
 
 
 ## Read more...
-References:  
-- Introduction to SharePointContext for Provider-hosted SharePoint Apps: [https://blogs.msdn.microsoft.com/kaevans/2013/09/24/introducing-sharepointcontext-for-provider-hosted-sharepoint-apps/](https://blogs.msdn.microsoft.com/kaevans/2013/09/24/introducing-sharepointcontext-for-provider-hosted-sharepoint-apps/)  
+- [Introduction to SharePointContext for Provider-hosted SharePoint Apps](https://blogs.msdn.microsoft.com/kaevans/2013/09/24/introducing-sharepointcontext-for-provider-hosted-sharepoint-apps/)  
 
-- [http://blog.baslijten.com/convert-mvc-application-to-shareptoint-2013-provider-hosted-app/](http://blog.baslijten.com/convert-mvc-application-to-shareptoint-2013-provider-hosted-app/)  
+- [Convert MVC Application to SharePoint 2013 Provider-Hosted App](http://blog.baslijten.com/convert-mvc-application-to-shareptoint-2013-provider-hosted-app/)  
 
-- ASP.NET MVC 4 Custom Action Filters: [http://www.asp.net/mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters](http://www.asp.net/mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters) 
+- [ASP.NET MVC 4 Custom Action Filters](http://www.asp.net/mvc/overview/older-versions/hands-on-labs/aspnet-mvc-4-custom-action-filters) 
