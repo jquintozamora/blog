@@ -9,7 +9,7 @@
     "dev": "hexo clean && hexo generate && hexo server",
     "deploy": "hexo deploy",
     "deploy:search": "hexo algolia",
-    "deploy:all": "npm run deploy:search && npm run deploy"
+    "deploy:all": "npm run deploy && npm run deploy:search"
   },
   "dependencies": {
     "hexo": "3.2.0",
