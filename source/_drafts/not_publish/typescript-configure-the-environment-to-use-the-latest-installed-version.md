@@ -2,7 +2,7 @@
 title: 'TypeScript: Configure the environment to use the latest installed version'
 tags:
   - English
-url: 681.html
+permalink: typescript-configure-the-environment-to-use-the-latest-installed-version/
 id: 681
 categories:
   - TypeScript
