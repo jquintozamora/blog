@@ -14,8 +14,6 @@ featuredImage:
   url: featured.jpg
   width: auto
   height: auto
-categories: 
-  - Problem-Solution
 ---
 
 ## Introduction
