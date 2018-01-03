@@ -4,7 +4,11 @@ title: Dealing with authentication when Developing with multiple Office 365 tena
 language: English
 permalink: dealing-with-authentication-when-developing-with-multiple-office-365-tenants-using-chrome-profiles
 id: 626
-categories:
+categories: 
+  - Quick-Note
+  - Productivity-Tip
+  - Click-Trough
+tags:
   - Chrome
   - Productivity
   - Tip

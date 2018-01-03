@@ -5,6 +5,9 @@ language: English
 permalink: how-to-integrate-pnp-js-core-and-sharepoint-framework-logging-systems
 id: 939
 categories:
+  - How-To
+  - Systems-Integration
+tags:
   - PnP JS Core
   - react
   - SPFx

@@ -5,6 +5,9 @@ language: English
 permalink: how-to-convert-array-of-objects-into-comma-separated-string-extracting-only-one-property
 id: 915
 categories:
+  - How-To
+  - Quick-Reminder
+tags:
   - ES6
   - javascript
   - TypeScript

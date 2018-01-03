@@ -4,7 +4,10 @@ title: How to configure webpack for replacing your API module path by a Mock API
 language: English
 permalink: how-to-configure-webpack-for-replacing-your-api-module-path-with-a-mock-api
 id: 1094
-categories:
+categories: 
+  - How-To
+  - Architecture-Concept
+tags:
   - api
   - mock
   - TypeScript
@@ -17,6 +20,7 @@ featuredImage:
   height: auto
 ---
 
+## Introduction
 I’ve been working with **React**, **webpack** and **TypeScript** for almost two years, and it still surprise me when I look for a really custom solution and I end up with a generic solution which will solve my specific problem in a generic way.
 
 Today, I am going to write about how to configure webpack to provide different Module path depending on our configuration. In my scenario I have two different APIs one is the “**REAL**” one and other is the “**MOCK**”. And I’d like to use the mocked API for development configuration and the real one for Production.

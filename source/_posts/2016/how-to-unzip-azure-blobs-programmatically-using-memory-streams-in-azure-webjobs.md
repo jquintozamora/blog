@@ -5,6 +5,9 @@ language: English
 permalink: how-to-unzip-azure-blobs-programmatically-using-memory-streams-in-azure-webjobs
 id: 814
 categories:
+  - How-To
+  - Code-Reminder
+tags:
   - Azure
   - 'C#'
   - WebJob

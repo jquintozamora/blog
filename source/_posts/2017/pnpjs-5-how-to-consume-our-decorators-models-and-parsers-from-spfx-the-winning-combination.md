@@ -4,7 +4,7 @@ title: Part 5. How to consume our decorators, models and parsers from SPFx, the 
 language: English
 permalink: how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination
 id: 1073
-categories:
+tags:
   - PnP JS Core
   - SPFx
   - TypeScript
@@ -13,6 +13,9 @@ featuredImage:
   url: featured.png
   width: auto
   height: auto
+categories: 
+  - Series
+  - PnPJsCore
 ---
 
 ## Post Series Index

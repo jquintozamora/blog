@@ -4,7 +4,7 @@ title: Part 2. Creating select and expand TypeScript Property Decorators to be u
 language: English
 permalink: creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core
 id: 981
-categories:
+tags:
   - decorator
   - PnP
   - PnP JS Core
@@ -14,6 +14,9 @@ featuredImage:
   url: featured.png
   width: auto
   height: auto
+categories: 
+  - Series
+  - PnPJsCore
 ---
 
 ## Post Series Index

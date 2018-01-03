@@ -5,6 +5,10 @@ language: English
 permalink: how-to-applytheme-using-gulp-task-in-sharepoint-online-projects
 id: 768
 categories:
+  - Article
+  - Concept-Explained
+  - Code-Reminder
+tags:
   - CSS
   - Gulp
   - Office 365

@@ -4,7 +4,7 @@ title: Part 4. Create Custom Parser and Array Parser to generate query and prope
 language: English
 permalink: create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core
 id: 1024
-categories:
+tags:
   - Parser
   - PnP JS Core
   - TypeScript
@@ -13,6 +13,9 @@ featuredImage:
   url: featured.png
   width: auto
   height: auto
+categories: 
+  - Series
+  - PnPJsCore
 ---
 
 ## Post Series Index

@@ -5,11 +5,18 @@ language: English
 permalink: npm-install-fails-on-windows-10-enoent-4058-operation-not-permitted-rename
 id: 1013
 categories:
+  - Problem-Solution
+tags:
   - Node.js
   - NPM
 date: 2017-06-23 15:08:53
+featuredImage: 
+  url: featured.jpg
+  width: auto
+  height: auto
 ---
 
+## Introduction
 Recently, I've faced different issues when tryng `npm install` in some of the project I've been working with.
 
 ## Environment
@@ -21,7 +28,7 @@ Recently, I've faced different issues when tryng `npm install` in some of the pr
 Every time I tried **npm install** or install a isolated package I got errors like this one:
 [![ENOENT 4058](./image-1.png "enoent4058")](./image-1.png)
 
-## Error
+## Problem
 ```bash
 _npm ERR! path \GitHub\react-typescript-webpack2-cssModules-postCSS\node_modules\ts-loader
 npm ERR! code ENOENT

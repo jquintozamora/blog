@@ -5,6 +5,10 @@ language: English
 permalink: how-to-list-all-site-custom-actions-using-csom-and-powershell-in-office-365
 id: 759
 categories:
+  - How-To
+  - Quick-Note
+  - Code-Reminder
+tags:
   - CSOM
   - Custom Action
   - Office 365

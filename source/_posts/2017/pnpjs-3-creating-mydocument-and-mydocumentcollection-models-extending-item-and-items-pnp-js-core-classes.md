@@ -6,7 +6,7 @@ permalink: creating-mydocument-and-mydocumentcollection-models-extending-item-an
 description: Part 3 of a series of blog posts to create a class model for PnP JS Core
 language: English
 date: 2017-06-15 23:22:47
-categories:
+tags:
   - Custom Objects
   - decorator
   - PnP JS Core
@@ -14,6 +14,9 @@ featuredImage:
   url: featured.png
   width: auto
   height: auto
+categories: 
+  - Series
+  - PnPJsCore
 ---
 
 

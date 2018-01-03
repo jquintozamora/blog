@@ -5,6 +5,10 @@ language: English
 permalink: how-to-configure-visual-studio-2015-integration-with-latest-version-of-node-js-and-npm
 id: 670
 categories:
+  - How-To
+  - Quick-Note
+  - Click-Trough
+tags:
   - Node.js
   - NPM
   - Visual Studio

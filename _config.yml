@@ -20,9 +20,9 @@ permalink_defaults:
 # Directory
 source_dir: source
 public_dir: public
-tag_dir: tags
-archive_dir: /   # that's important to keep current url structure blog.josequinto.com
-category_dir: category
+tag_dir: category         # that's important to keep current url structure blog.josequinto.com
+archive_dir: /            # that's important to keep current url structure blog.josequinto.com
+category_dir: taxonomy    # that's important to keep current url structure blog.josequinto.com
 code_dir: downloads/code
 i18n_dir: lang
 skip_render:

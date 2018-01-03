@@ -1,5 +1,5 @@
 ---
-title: SP.Blog.Open(joSharePoint.com);
+title: SP.Blog.Open(blog.josequinto.com);
 tags:
   - Español
 url: 15.html

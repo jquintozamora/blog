@@ -4,7 +4,7 @@ title: Part 1. Why Should we use Custom Business Objects (Models) in PnP JS Core
 language: English
 permalink: why-do-we-should-use-custom-business-objects-models-in-pnp-js-core
 id: 963
-categories:
+tags:
   - javascript
   - PnP
   - PnP JS Core
@@ -14,6 +14,9 @@ featuredImage:
   url: featured.png
   width: auto
   height: auto
+categories: 
+  - Series
+  - PnPJsCore
 ---
 
 ## Post Series Index

@@ -5,6 +5,9 @@ language: English
 permalink: enable-log-and-trace-information-for-pnp-core-provisioning-when-using-console-application
 id: 790
 categories:
+  - How-To
+  - Quick-Note
+tags:
   - log
   - PnP
   - Provisioning

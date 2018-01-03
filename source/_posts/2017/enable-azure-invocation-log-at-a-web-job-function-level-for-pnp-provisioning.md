@@ -5,6 +5,9 @@ language: English
 permalink: enable-azure-invocation-log-at-a-web-job-function-level-for-pnp-provisioning
 id: 886
 categories:
+  - How-To
+  - Click-Trough
+tags:
   - Azure
   - log
   - PnP

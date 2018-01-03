@@ -5,6 +5,10 @@ language: English
 permalink: update-page-layout-by-using-javascript-jsom-in-office-365
 id: 861
 categories:
+  - How-To
+  - Quick-Note
+  - Code-Reminder
+tags:
   - javascript
   - JSOM
   - Office 365

@@ -4,7 +4,10 @@ title: Getting React to Load polyfills only when needed
 language: English
 permalink: getting-react-to-load-polyfills-only-when-needed
 id: 866
-categories:
+categories: 
+  - How-To
+  - Github-Project
+tags:
   - Feature Detection
   - JavaScript
   - Polyfill

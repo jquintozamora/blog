@@ -5,6 +5,10 @@ language: English
 permalink: enable-sql-azure-access-from-azure-webjobs-by-adding-firewall-rules-using-powershell
 id: 818
 categories:
+  - How-To
+  - Research-Options
+  - Code-Reminder
+tags:
   - Azure
   - PowerShell
   - SQL Azure
@@ -54,5 +58,3 @@ Now I will share the PowerShell script that you can configure with your Azure We
 - **Change all the configuration parameters** including Azure Admin, Web App and SQL info.
 - Run the script and enjoy!
 > **Outbound Public URL aren’t Static by default, **so probably they could change over the time (is not usual but can happen). So, I recommend some daily task to check every day and add the new IPs if needed. As the code is ready to update if the IPs are different. (read more [here](https://peter.intheazuresky.com/2016/02/26/azure-web-apps-outgoing-ip-questionanswer/))
-
-&nbsp;

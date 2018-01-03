@@ -5,6 +5,10 @@ language: English
 permalink: how-to-provide-sharepointcontext-to-a-web-api-action-apicontroller-in-a-sharepoint-provider-hosted-app
 id: 807
 categories:
+  - How-To
+  - Concept-Explained
+  - Code-Reminder
+tags:
   - ApiController
   - Azure
   - Office 365

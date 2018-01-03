@@ -5,6 +5,9 @@ language: English
 permalink: dynamic-import-expressions-and-webpack-code-splitting-integration-with-typescript-2-4
 id: 1084
 categories:
+  - New-Feature-Info
+  - Github-Project
+tags:
   - Code Splitting
   - TypeScript
   - webpack

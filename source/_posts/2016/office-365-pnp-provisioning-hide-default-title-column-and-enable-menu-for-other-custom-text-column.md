@@ -5,6 +5,9 @@ language: English
 permalink: office-365-pnp-provisioning-hide-default-title-column-and-enable-menu-for-other-custom-text-column
 id: 778
 categories:
+  - How-To
+  - Click-Through
+tags:
   - PnP
   - Provisioning
 date: 2016-07-11 16:21:26

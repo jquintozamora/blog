@@ -5,6 +5,9 @@ language: English
 permalink: react-use-es6-arrow-functions-in-classes-to-avoid-binding-your-methods-with-the-current-this-object
 id: 845
 categories:
+  - How-To
+  - New-Feature-Info
+tags:
   - arrow functions
   - Babel
   - ES6

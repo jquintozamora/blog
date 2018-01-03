@@ -5,6 +5,8 @@ language: English
 permalink: office-365-cannot-convert-object-problem-when-provisioning-pnpfile-display-template
 id: 765
 categories:
+  - Problem-Solution
+tags:
   - Office 365
   - PnP
 date: 2016-06-14 18:01:51
@@ -19,7 +21,7 @@ When we are using PnP Provisioning Core Engine to deploy SharePoint artifacts, w
 
 My colleague Kevin posted this blog post about this: [http://sharepointcookies.com/2015/07/working-with-display-templates-with-the-new-pnp-provisioning-core-engine/](http://sharepointcookies.com/2015/07/working-with-display-templates-with-the-new-pnp-provisioning-core-engine).
 
-## The problem
+## Problem
 But, some changes has been done in the PnP Provisioning Code and we need to adjust a little bit the code.
 
 I am using PnP Version (v2.4.1605):
@@ -46,7 +48,7 @@ at Microsoft.SharePoint.Client.WebExtensions.ApplyProvisioningTemplate(Web web, 
 
 &nbsp;
 
-## The solution
+## Solution
 
 <script src="https://gist.github.com/jquintozamora/29a288cd94f074446d999a5bd3d57c25.js"></script> 
 

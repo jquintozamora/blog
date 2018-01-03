@@ -5,13 +5,16 @@ language: English
 permalink: using-powershell-to-retrieve-all-sites-web-object-recursively-from-sharepoint-online
 id: 615
 categories:
+  - How-To
+  - Code-Reminder
+tags:
   - CSOM
   - Office 365
   - PowerShell
   - SharePoint Online
 date: 2016-03-17 17:45:49
 featuredImage: 
-  url: featured.png
+  url: featured.jpg
   width: auto
   height: auto
 ---

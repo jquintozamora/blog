@@ -5,6 +5,11 @@ language: English
 permalink: how-to-build-a-new-spa-with-es6-scss-react-webpack-and-hmr-the-beginners-guide
 id: 831
 categories:
+    - Article
+    - Architecture-Concept
+    - Concept-Explained
+    - Github-Project
+tags:
   - ES6
   - HMR
   - javascript

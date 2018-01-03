@@ -5,6 +5,10 @@ language: English
 permalink: convert-from-two-letters-language-code-to-four-letters-language-tag-with-powershell
 id: 647
 categories:
+  - How-To
+  - Concept-Explained
+  - Code-Reminder
+tags:
   - multilingual
   - PowerShell
   - i18n

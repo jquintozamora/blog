@@ -5,6 +5,11 @@ language: English
 permalink: compile-optimize-and-watch-our-less-css-files-with-gulp-tasks-using-visual-studio-2015-in-our-sharepoint-online-solutions
 id: 753
 categories:
+  - Article
+  - Architecture-Concept
+  - Concept-Explained
+  - Download-Project
+tags:
   - CSS
   - Gulp
   - LESS

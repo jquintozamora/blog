@@ -5,6 +5,10 @@ language: English
 permalink: typescript-functions-to-convert-from-base64-to-utf8-and-vice-versa
 id: 907
 categories:
+  - How-To
+  - Quick-Note
+  - Code-Reminder
+tags:
   - javascript
   - TypeScript
 date: 2017-03-08 18:19:58
@@ -14,6 +18,7 @@ featuredImage:
   height: auto
 ---
 
+## Introduction
 Few days ago I wrote a post about [uploading JSON object using JavaScript](/2017/03/03/upload-json-object-as-a-file-into-office-365-using-javascript-jsom). There are some dependencies using this approach, which are b64EncodeUnicode and b64DecodeUnicode functions.
 
 I’d like to share how to write these functions using TypeScript:

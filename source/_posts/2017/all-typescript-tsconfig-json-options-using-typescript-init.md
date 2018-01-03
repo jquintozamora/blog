@@ -4,13 +4,15 @@ title: All TypeScript 2.3 options for tsconfig.json (tsc --init)
 language: English
 permalink: all-typescript-tsconfig-json-options-using-typescript-init
 id: 928
-categories:
+tags:
   - TypeScript
 date: 2017-04-28 07:05:52
 featuredImage: 
   url: featured.png
   width: auto
   height: auto
+categories: 
+  - Release-News
 ---
 
 ## Introduction
