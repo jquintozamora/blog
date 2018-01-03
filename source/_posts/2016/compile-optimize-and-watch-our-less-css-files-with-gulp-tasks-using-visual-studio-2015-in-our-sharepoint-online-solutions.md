@@ -54,7 +54,7 @@ Some note aside this folder structure:
     *   **JQ.Globals.less** is where we define global variables
     *   **JQ.MasterPage.less** is the main file that will be included in our SharePoint pages.
     *   **JQ.Responsive.less** is a file used exclusively to create responsive classes. That will be imported in MasterPage.less.
-    *   **JQ.Themable.less **is a file used for Themable CSS that will be integrated in SharePoint Theme Feature.
+    *   **JQ.Themable.less** is a file used for Themable CSS that will be integrated in SharePoint Theme Feature.
     *   **JQ.Themable.Responsive.less** is used for providing responsive styles and media queries for Themable CSS.
     *   This is an example, I am pretty sure we will have in our projects more files like: Common, WebParts, …
 

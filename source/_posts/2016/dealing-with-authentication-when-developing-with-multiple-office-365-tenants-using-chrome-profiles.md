@@ -2,7 +2,7 @@
 layout: post
 title: Dealing with authentication when Developing with multiple Office 365 tenants using Chrome Profiles
 language: English
-url: dealing-with-authentication-when-developing-with-multiple-office-365-tenants-using-chrome-profiles
+permalink: dealing-with-authentication-when-developing-with-multiple-office-365-tenants-using-chrome-profiles
 id: 626
 categories:
   - Chrome
