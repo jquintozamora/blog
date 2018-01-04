@@ -2,7 +2,7 @@
 title: Get Pages Library by GUID using JSOM in SharePoint 2013 / Office 365
 tags:
   - English
-url: 434.html
+permalink: get-pages-library-by-guid-using-jsom-in-sharepoint-2013-office-365
 id: 434
 categories:
   - javascript
