@@ -2,9 +2,9 @@
 title: Change CSR Render Mode in Office 365 / SharEPoint 2013
 tags:
   - English
-url: 509.html
+permalink: change-csr-render-mode-in-office-365-sharepoint-2013
 id: 509
-categories:
+tags:
   - client side rendering
   - JSLink
   - Office 365
