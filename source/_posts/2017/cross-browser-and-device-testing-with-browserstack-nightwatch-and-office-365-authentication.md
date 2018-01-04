@@ -4,6 +4,9 @@ title: Cross-Browser and Device Testing with BrowserStack, Nightwatch and Office
 language: English
 permalink: cross-browser-and-device-testing-with-browserstack-nightwatch-and-office-365-authentication
 id: 855
+categories: 
+  - Github-Project
+  - Comparison
 tags:
   - BrowserStack
   - javascript

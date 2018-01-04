@@ -6,7 +6,8 @@ permalink: how-to-convert-array-of-objects-into-comma-separated-string-extractin
 id: 915
 categories:
   - How-To
-  - Quick-Reminder
+  - Quick-Note
+  - Code-Reminder
 tags:
   - ES6
   - javascript
