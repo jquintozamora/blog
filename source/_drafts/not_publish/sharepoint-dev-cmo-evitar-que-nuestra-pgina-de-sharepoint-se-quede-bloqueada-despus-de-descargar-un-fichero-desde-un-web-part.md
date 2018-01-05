@@ -4,7 +4,7 @@ title: >-
   bloqueada después de descargar un fichero desde un Web Part
 tags:
   - Español
-url: 152.html
+permalink: sharepoint-dev-cmo-evitar-que-nuestra-pgina-de-sharepoint-se-quede-bloqueada-despus-de-descargar-un-fichero-desde-un-web-part
 id: 152
 categories:
   - Export

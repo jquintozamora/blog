@@ -13,6 +13,10 @@ tags:
   - SharePoint 2010
   - SharePoint 2013
 date: 2014-07-31 16:42:58
+featuredImage: 
+  url: featured.jpg
+  width: auto
+  height: auto
 ---
 
 ## Introducción

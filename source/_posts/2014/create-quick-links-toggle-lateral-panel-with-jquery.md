@@ -1,42 +1,51 @@
 ---
+layout: post
 title: Create Quick Links toggle lateral panel with jQuery
-tags:
-  - English
-url: 161.html
+language: English
+permalink: create-quick-links-toggle-lateral-panel-with-jquery
 id: 161
 categories:
+    - Article
+tags:
   - Branding
   - CSS
   - javascript
   - jQuery
 date: 2014-07-03 14:57:04
+featuredImage: 
+  url: featured.gif
+  width: auto
+  height: auto
 ---
 
-Today, I ‘d like to share with how to make a toggle panel using HTML, CSS and jQuery.
+## Introduction
+Today, I ‘d like to share with how to make a toggle panel using **HTML**, **CSS** and **jQuery**.
 
-After days researching and googling about this topic, I’m really happy with this solution because have clear design, contains fixed area and hyperlinks whatever you want. Even, you can integrate that in SharePoint environment using Client-side rendering if you want. See the below image:
+After days researching and googling about this topic, I’m really happy with this solution because have **clear design**, contains fixed area and hyperlinks whatever you want. Even, you can integrate that in SharePoint environment using **Client-side rendering** if you want. See the below image:
 
-[![image](https://blog.josequinto.com/wp-content/uploads/2014/07/image_thumb.png "image")](https://blog.josequinto.com/wp-content/uploads/2014/07/image.png)&nbsp;&nbsp;&nbsp; [![image](https://blog.josequinto.com/wp-content/uploads/2014/07/image_thumb1.png "image")](https://blog.josequinto.com/wp-content/uploads/2014/07/image1.png)
+![image](./image.png)
 
+![image](./image1.png)
+
+## Head markup
 The head markup (file to include):
 
-<pre class="xhtml">    
+```xml
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-	<title> Toggle Panel Example</title>
-	<script class="rs-file" src="js/jquery-1.11.1.min.js"></script>
-	<script type= "text/javascript" src= "js/toogle-panel.js"></script>
-	<link type="text/css" href="css/toggle-panel.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+    <title> Toggle Panel Example</title>
+    <script class="rs-file" src="js/jquery-1.11.1.min.js"></script>
+    <script type= "text/javascript" src= "js/toogle-panel.js"></script>
+    <link type="text/css" href="css/toggle-panel.css" rel="stylesheet">
 </head>
-</pre>
-
+```
 &nbsp;
 
-The Markup:
 
-<pre class="xhtml">
+## Markup:
 
+```xml
 <div id="togglePanelMain">
    <!-- Panel activation button -->
     <div id="togglePanelSwitcher" >
@@ -44,7 +53,7 @@ The Markup:
             Quick
         </div>
         <div id="togglePanelSwitcherButtonContainer">
-            ![](css/toggle-arrows.png)
+            <img src="css/toggle-arrows.png" />
         </div>
         <div class="togglePanelSwitcherText">
             Links
@@ -55,23 +64,24 @@ The Markup:
         <div class="togglePanelTitle">Quick Links Title</div>
         <div class="togglePanelBody" >
             <div class="togglePanelLinkContainer" >
-                [LinkTitle](http://linkurl)
+                <a href="http://linkurl">LinkTitle</a>
             </div>
         </div>
         <div class="togglePanelBody" >
             <div class="togglePanelLinkContainer" >
-                [Link Title 1 for now is working](http://linkurl)
+                <a href="http://linkurl">Link Title 1 for now is working</a>
             </div>
         </div>
     </div>
 <div>
-</pre>
+```
 
 &nbsp;
 
-CSS:
+## CSS
 
-<pre class="csharpcode">#togglePanelMain
+```css
+#togglePanelMain
 {
     top: 100px; 
     right: -402px; 
@@ -101,7 +111,6 @@ CSS:
     height: 195px; 
     position: absolute; 
     z-index: 9999; 
-    /*background: url("toggle.png") no-repeat center rgb(0, 0, 0); */
     background-color: #888a8b;
 
     display: block; 
@@ -181,17 +190,13 @@ CSS:
 {
     color: white !important;
 }
-
-</pre>
-
+```
 &nbsp;
 
-JavaScript (jQuery):
+## JavaScript (jQuery):
 
-<pre class="csharpcode">
-
+```js
 $(document).ready(function() {
-
     var panel = $('#togglePanelMain'),
     button = $('#togglePanelSwitcher'),
     imgButton = $('#togglePanelSwitcherButton');
@@ -210,22 +215,11 @@ $(document).ready(function() {
         imgButton.stop().animate({left: 0},200, function(){});
         $(this).one("click", first);
     }
-
     button.one("click", first);
-
 });
-</pre>
+```
 
-Note: Using jQuery 1.11.x we need to change the way on we working with .toggle function, because it is not supported to use toggle with two functions, so in the above code toggle function was replaced by first and second functions.
+> Note: Using jQuery 1.11.x we need to change the way on we working with .toggle function, because it is not supported to use toggle with two functions, so in the above code toggle function was replaced by first and second functions.
 
-You can download full project here: [Toogle-Lateral-Panel-Links](https://blog.josequinto.com/wp-content/uploads/2014/07/toogle-lateral-panel-links.zip "Toogle-Lateral-Panel-Links")
-
-&nbsp;
-
-Hope that helps!
-
-Regards!
-
-JQ
-
-@jquintozamora
+## Download
+You can download full project here: [Toogle-Lateral-Panel-Links](./toogle-lateral-panel-links.zip)

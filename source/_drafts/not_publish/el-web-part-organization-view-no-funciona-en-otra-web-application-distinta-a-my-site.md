@@ -4,7 +4,7 @@ title: >-
   My Site
 tags:
   - Español
-url: 172.html
+permalink: el-web-part-organization-view-no-funciona-en-otra-web-application-distinta-a-my-site
 id: 172
 categories:
   - javascript

@@ -4,7 +4,7 @@ title: >-
   Server 2012
 tags:
   - Español
-url: 169.html
+permalink: mejorar-el-rendimiento-del-escritorio-remoto-rdpcuando-usamos-windows-server-2012
 id: 169
 categories:
   - performance
