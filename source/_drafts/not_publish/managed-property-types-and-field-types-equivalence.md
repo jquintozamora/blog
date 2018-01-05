@@ -2,7 +2,7 @@
 title: Managed Property Types and Field Types equivalence
 tags:
   - English
-url: 190.html
+permalink: managed-property-types-and-field-types-equivalence
 id: 190
 categories:
   - Search

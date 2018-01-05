@@ -2,7 +2,7 @@
 title: Filtering Result Source by List or Library Template in SharePoint 2013
 tags:
   - English
-url: 188.html
+permalink: filtering-result-source-by-list-or-library-template-in-sharepoint-2013
 id: 188
 categories:
   - Result Source
