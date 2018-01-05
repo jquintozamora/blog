@@ -2,7 +2,7 @@
 title: 'SharePoint 2013: Filter People Picker by Active Directory Organizational Unit'
 tags:
   - English
-url: 341.html
+permalink: sharepoint-2013-filter-people-picker-by-active-directory-organizational-unit
 id: 341
 categories:
   - security

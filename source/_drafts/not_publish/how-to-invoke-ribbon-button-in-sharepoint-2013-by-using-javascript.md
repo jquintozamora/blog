@@ -2,7 +2,7 @@
 title: How to invoke Ribbon button in SharePoint 2013 by using JavaScript
 tags:
   - English
-url: 331.html
+permalink: how-to-invoke-ribbon-button-in-sharepoint-2013-by-using-javascript
 id: 331
 categories:
   - javascript

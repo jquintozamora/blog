@@ -2,7 +2,7 @@
 title: Add multiple Newsfeed (Site Feed) WebParts in a SharePoint 2013 page
 tags:
   - English
-url: 354.html
+permalink: add-multiple-newsfeeds-site-feed-webparts-in-a-sharepoint-2013-page
 id: 354
 categories:
   - Newsfeed

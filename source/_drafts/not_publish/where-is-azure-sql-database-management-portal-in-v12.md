@@ -2,7 +2,7 @@
 title: Where Azure SQL Database Management Portal is in V12?
 tags:
   - English
-url: 378.html
+permalink: where-is-azure-sql-database-management-portal-in-v12
 id: 378
 categories:
   - Azure

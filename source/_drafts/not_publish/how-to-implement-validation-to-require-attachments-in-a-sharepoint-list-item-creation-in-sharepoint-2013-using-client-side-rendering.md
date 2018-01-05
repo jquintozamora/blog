@@ -4,7 +4,7 @@ title: >-
   creation in SharePoint 2013 using Client-side Rendering
 tags:
   - English
-url: 333.html
+permalink: how-to-implement-validation-to-require-attachments-in-a-sharepoint-list-item-creation-in-sharepoint-2013-using-client-side-rendering
 id: 333
 categories:
   - client side rendering
