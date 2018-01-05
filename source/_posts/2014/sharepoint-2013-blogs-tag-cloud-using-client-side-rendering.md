@@ -36,10 +36,6 @@ But, with SharePoint 2013, we have available **CSR – Client Side Rendering** a
 
 3. We will create js file to use CSR to customize this view
 
-    > More information about Client Side Rendering: 
-    > - [https://blog.josequinto.com/2014/06/12/customize-the-rendering-of-a-xsltlistviewwebpart-with-client-side-rendering-csr-in-sharepoint-2013/](./2014/06/12/customize-the-rendering-of-a-xsltlistviewwebpart-with-client-side-rendering-csr-in-sharepoint-2013)
-    > - [https://blog.josequinto.com/2014/06/24/customize-date-field-style-css-javascript-using-client-side-rendering-in-sharepoint-2013/](./2014/06/24/customize-date-field-style-css-javascript-using-client-side-rendering-in-sharepoint-2013)
-
     So, create myCSRTagCloud.js file:
 
     ```js

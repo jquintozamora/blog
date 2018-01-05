@@ -40,8 +40,6 @@ Theory aside, this will be the aspect of SharePoint library applying this JS Lin
 
 ### How to apply?
 
-To know more about CSR, I wrote an introductory post few months ago: [https://blog.josequinto.com/2014/06/12/customize-the-rendering-of-a-xsltlistviewwebpart-with-client-side-rendering-csr-in-sharepoint-2013/](https://blog.josequinto.com/2014/06/12/customize-the-rendering-of-a-xsltlistviewwebpart-with-client-side-rendering-csr-in-sharepoint-2013/ "https://blog.josequinto.com/2014/06/12/customize-the-rendering-of-a-xsltlistviewwebpart-with-client-side-rendering-csr-in-sharepoint-2013/")
-
 Steps to apply this view:
 
 &nbsp;

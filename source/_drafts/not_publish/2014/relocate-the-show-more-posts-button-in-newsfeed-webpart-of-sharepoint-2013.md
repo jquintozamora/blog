@@ -2,7 +2,7 @@
 title: Relocate the “Show More Posts” button in Newsfeed webpart of SharePoint 2013
 tags:
   - English
-url: 139.html
+permalink: relocate-the-show-more-posts-button-in-newsfeed-webpart-of-sharepoint-2013
 id: 139
 categories:
   - Branding

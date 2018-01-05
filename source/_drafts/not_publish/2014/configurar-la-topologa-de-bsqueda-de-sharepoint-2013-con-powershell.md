@@ -2,7 +2,7 @@
 title: Configurar la topología de Búsqueda de SharePoint 2013 con PowerShell
 tags:
   - Español
-url: 115.html
+permalink: configurar-la-topologa-de-bsqueda-de-sharepoint-2013-con-powershell
 id: 115
 categories:
   - SharePoint

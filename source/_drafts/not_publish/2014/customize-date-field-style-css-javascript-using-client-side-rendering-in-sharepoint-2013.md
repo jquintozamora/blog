@@ -4,7 +4,7 @@ title: >-
   SharePoint 2013
 tags:
   - English
-url: 147.html
+permalink: customize-date-field-style-css-javascript-using-client-side-rendering-in-sharepoint-2013
 id: 147
 categories:
   - Branding

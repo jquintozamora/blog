@@ -1,65 +1,54 @@
 ---
+layout: post
 title: PowerShell to Export / Query all User Profile Properties and AD Mappings
-tags:
-  - English
-url: 122.html
+language: English
+permalink: powershell-to-export-query-all-user-profile-properties-and-ad-mappings
 id: 122
 categories:
+    - Utils
+tags:
   - PowerShell
   - User Profiles
 date: 2014-05-30 18:22:07
+featuredImage: 
+  url: featured.jpg
+  width: auto
+  height: auto
 ---
 
-[<span style="color: #ff0000;">Important Update 09/2016</span>] This script was done and tested with SharePoint Server 2010.
+## Introduction
+> [Important] This script was done and tested with SharePoint Server 2010.
 
-Hi,
+Occasionally there is a need to quickly query User Profile to export all Properties. Maybe, you can see all in `Manage User Properties` section inside `User Profile Service Application` settings:
 
-Occasionally there is a need to quickly query User Profile to export all Properties. Maybe, you can see all in Manage User Properies section inside User Profile Service Application settings:
-
-[![image](https://blog.josequinto.com/wp-content/uploads/2014/05/image_thumb4.png "image")](https://blog.josequinto.com/wp-content/uploads/2014/05/image4.png)
+![image](./image4.png)
 
 But, it is better to have excel file with all properties and descriptions, something like that:
 
-[![image](https://blog.josequinto.com/wp-content/uploads/2014/05/image_thumb5.png "image")](https://blog.josequinto.com/wp-content/uploads/2014/05/image5.png)
+![image](./image5.png)
 
-I’d like to share with you this Powershell file in order to generate a .csv file with these headers:
+I’d like to share with you this **Powershell** file in order to generate a `.csv` file with these headers:
 
-**Name**: Internal name of property inside User Profile database. The name will be used programmatically for the property by the user profile service.
+- **Name**: Internal name of property inside User Profile database. The name will be used programmatically for the property by the user profile service.
+- **Display Name**: is the label used when the property is shown.
+- **AD Name**: Name of property mapping inside Active Directory.
+- **AD Mapping**: boolean indicating if current property is synchronized between AD and SharePoint.
+- **Type**: property type
+- **Policy Setting**: Required, Optional or Disabled in SharePoint User Profile.
+- **Default Private**: Everyone = Public -> All people can see this property inside SharePoint Profiles. Private = Only me -> Only can be for ourselves.
+- **Order**: Display order.
+- **Replicable**: Select the Replicate check box if you want the property to display in the user info list for all sites. If true then this property will be copied to all site collections.
+- **Allow User Edit**: whether **users** can change the values for this property in their user profile
+- **Allow Admin Edit**: whether **admin** can change the values for this property in their user profile
+- **Show in Profile Info**: Show in the profile properties section of the user's profile page
+- **Show in Profile Edit**: Show on the Edit Details page
+- **Indexed**: Indexed properties are crawled by the search engine and become part of the People search scope schema
+- **Imported from AD**: If true, this property will be automatically filled by AD values.
+- **Exported to AD**: If true, this property will be automatically updated from SharePoint to AD. Requires extra configuration. By default it is False.
 
-**Display Name**: is the label used when the property is shown.
-
-**AD Name**: Name of property mapping inside Active Directory.
-
-**AD Mapping**: boolean indicating if current property is synchronized between AD and SharePoint.
-
-**Type**: property type
-
-**Policy Setting**: Required, Optional or Disabled in SharePoint User Profile.
-
-**Default Private**: Everyone = Public -> All people can see this property inside SharePoint Profiles. Private = Only me -> Only can be for ourselves.
-
-**Order**: Display order.
-
-**Replicable**: Select the Replicate check box if you want the property to display in the user info list for all sites. If true then this property will be copied to all site collections.
-
-**Allow User Edit**: whether **users** can change the values for this property in their user profile
-
-**Allow Admin Edit**: whether **admin** can change the values for this property in their user profile
-
-**Show in Profile Info**: Show in the profile properties section of the user's profile page
-
-**Show in Profile Edit**: Show on the Edit Details page
-
-**Indexed**: Indexed properties are crawled by the search engine and become part of the People search scope schema
-
-**Imported from AD**: If true, this property will be automatically filled by AD values.
-
-**Exported to AD**: If true, this property will be automatically updated from SharePoint to AD. Requires extra configuration. By default it is False.
-
-&nbsp;
-
-This is PowerShell code:
-<pre class="ps">#Add Snapin
+## Code
+```bash
+#Add Snapin
 Add-PSSnapin Microsoft.SharePoint.PowerShell -ErrorAction SilentlyContinue 
 
 $AdConnection = "AD-Dev-Connection";
@@ -150,17 +139,7 @@ catch
 {
     Write-Host $_.Exception.ToString()
 }
-</pre>
-&nbsp;
+```
 
-You can download complete code example from here: [AD-Profile-Mapping-Properties](https://blog.josequinto.com/wp-content/uploads/2014/05/ad-profile-mapping-properties.zip "AD-Profile-Mapping-Properties").
-
-&nbsp;
-
-&nbsp;
-
-Hope that helps!
-
-JQ
-
-Regards!
+## Download
+You can download complete code example from here: [AD-Profile-Mapping-Properties](./ad-profile-mapping-properties.zip).

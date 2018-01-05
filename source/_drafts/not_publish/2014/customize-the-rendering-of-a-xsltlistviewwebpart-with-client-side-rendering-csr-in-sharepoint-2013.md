@@ -4,7 +4,7 @@ title: >-
   (CSR) in SharePoint 2013
 tags:
   - English
-url: 132.html
+permalink: customize-the-rendering-of-a-xsltlistviewwebpart-with-client-side-rendering-csr-in-sharepoint-2013
 id: 132
 categories:
   - JSLink
