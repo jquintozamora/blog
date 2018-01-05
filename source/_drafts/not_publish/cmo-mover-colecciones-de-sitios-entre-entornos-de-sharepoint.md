@@ -2,7 +2,7 @@
 title: Cómo mover colecciones de sitios entre entornos de SharePoint
 tags:
   - Español
-url: 225.html
+permalink: cmo-mover-colecciones-de-sitios-entre-entornos-de-sharepoint
 id: 225
 categories:
   - PowerShell

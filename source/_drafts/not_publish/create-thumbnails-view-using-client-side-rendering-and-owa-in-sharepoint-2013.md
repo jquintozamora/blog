@@ -2,7 +2,7 @@
 title: Create Thumbnails view using client-side rendering and OWA in SharePoint 2013
 tags:
   - English
-url: 303.html
+permalink: create-thumbnails-view-using-client-side-rendering-and-owa-in-sharepoint-2013
 id: 303
 categories:
   - client side rendering

@@ -2,7 +2,7 @@
 title: Could not find HostController Service en SharePoint 2013
 tags:
   - Español
-url: 206.html
+permalink: could-not-find-hostcontroller-service-en-sharepoint-2013
 id: 206
 categories:
   - SharePoint 2013

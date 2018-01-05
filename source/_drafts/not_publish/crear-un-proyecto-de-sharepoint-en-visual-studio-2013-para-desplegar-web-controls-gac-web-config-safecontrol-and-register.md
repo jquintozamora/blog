@@ -4,7 +4,7 @@ title: >-
   Controls (GAC, web.config, SafeControl and Register)
 tags:
   - Español
-url: 221.html
+permalink: crear-un-proyecto-de-sharepoint-en-visual-studio-2013-para-desplegar-web-controls-gac-web-config-safecontrol-and-register
 id: 221
 categories:
   - Branding
@@ -109,8 +109,10 @@ namespace XX.Controls
                     string divs = @"<div class='fQuotePhrase'>
                                         <div class='mb-wrap mb-style-3'>
                                             > " + item.Title + @"
-> "> 
->                                                 + divImageString +> 
+> "
+> 
+>                                                 + divImageString +
+> 
 >                                             @"
                                              <div class='mb-attribution'>
                                                 <cite>

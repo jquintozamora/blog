@@ -1,25 +1,32 @@
 ---
-title: Diseño de menu nav bar con CSS en SharePoint 2013
-tags:
-  - Español
-url: 200.html
+layout: post
+title: Three level CSS Navigation Menu for SharePoint 2013
+language: English
+permalink: diseo-de-menu-nav-bar-con-css-en-sharepoint-2013
 id: 200
 categories:
+    - Code-Reminder
+tags:
   - Branding
   - CSS
   - SharePoint
   - SharePoint 2013
 date: 2014-08-04 15:46:33
+featuredImage: 
+  url: featured.png
+  width: auto
+  height: auto
 ---
 
-En el post de hoy quiero mostrar como personalizar el menú de navegación horizontal de SharePoint 2013 utilizando CSS. 
+## Introduction
+This post is intended to show how to customize a SharePoint 2013 navigation menu with 3 levels using CSS.
 
-[![image](https://blog.josequinto.com/wp-content/uploads/2014/08/image_thumb.png "image")](https://blog.josequinto.com/wp-content/uploads/2014/08/image.png)
+![image](./image.png)
 
-Para añadir el menú de navegación en nuestra página maestra de SharePoint, utilizaremos este código HTML:
+## Master Page
+We've to add this code to our master page:
 
-<pre class="xhtml">
-
+```xml
 <!-- ===== STARTER: Global navigation ================== -->
 <div class="globalMenuNavigation">
     <SharePoint:AjaxDelta ID="DeltaTopNavigation" BlockElement="true" CssClass="ms-displayInline ms-core-navigation ms-dialogHidden" runat="server">
@@ -30,36 +37,38 @@ Para añadir el menú de navegación en nuestra página maestra de SharePoint, u
         <SharePoint:AspMenu ID="TopNavigationMenu" Runat="server" EnableViewState="false" DataSourceID="topSiteMap" AccessKey="<%$Resources:wss,navigation_accesskey%>" UseSimpleRendering="true" UseSeparateCss="false" Orientation="Horizontal" StaticDisplayLevels="2" AdjustForShowStartingNode="true" MaximumDynamicDisplayLevels="2" SkipLinkText="" />
     </SharePoint:AjaxDelta>
 </div>
-</pre>
+```
 
-&nbsp;
+After server response this HTML code is returned:
 
-Este código es ejecutado en tiempo de ejecución por el servidor de SharePoint, el cual devuelve al navegador este otro código:
-
-<pre class="xhtml">
-
+```html
 <div class="globalMenuNavigation">
     <div id="DeltaTopNavigation" class="ms-displayInline ms-core-navigation ms-dialogHidden">
         <div id="zz12_TopNavigationMenu" class=" noindex ms-core-listMenu-horizontalBox">
-
-*   [<span class="additional-background ms-navedit-flyoutArrow">
-                        <span class="menu-item-text">Link 1.1 </span></span>](/)
-*   [<span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children">
-                        <span class="menu-item-text">Link 1.2 </span></span>](/)
-
-        *   [<span class="additional-background ms-navedit-flyoutArrow">
-                                <span class="menu-item-text">Link 1.2.1 </span></span>](/team-sites/ito-team-site)
+            <span class="additional-background ms-navedit-flyoutArrow">
+                <span class="menu-item-text">
+                    <a href="/">Link 1.1</a>
+                </span>
+            </span>
+            <span aria-haspopup="true" class="additional-background ms-navedit-flyoutArrow dynamic-children">
+                <span class="menu-item-text">
+                    <a href="/">Link 1.2</a>
+                </span>
+            </span>
+            <span class="additional-background ms-navedit-flyoutArrow">
+                <span class="menu-item-text">
+                    <a href="/team-sites/ito-team-site">Link 1.2.1</a>
+                </span>
+            </span>
         </div>
     </div>
 </div>
-</pre>
+```
+> Note: It's always good to have this rendered code in order to see how to customize the CSS to achieve out goal.
 
-Y es en este otro código renderizado en el que nos fijaremos a la hora de personalizar nuestro CSS. Recomiendo para ello utilizar las Developer Tools de IE o Chrome (pulsando F12).
+## Code
 
-En definitiva, lo mejor que posdemos hacer es copiar algún código ya realizado para los controles propios de SharePoint y luego adaptarlo a nuestros estilos, para ello dejo aquí disponible mi versión del CSS que he utilizado para adaptar a mi estilo:
-
-<pre class="csharpcode">
-
+```css
 /******************************************
     NAV MENU</span>
 *******************************************/
@@ -218,20 +227,6 @@ En definitiva, lo mejor que posdemos hacer es copiar algún código ya realizado
 {
     color: white;
 }
-</pre>
+```
 
-&nbsp;
-
-Notas:
-
-- Con este CSS se están personalizando hasta tres niveles de menú.
-
-- También estamos ocultando el botón Edit Links
-
-&nbsp;
-
-Espero que os sea de ayuda!
-
-Saludos!
-
-@jquintozamora
+> Note we are hiding the `Edit Links` button

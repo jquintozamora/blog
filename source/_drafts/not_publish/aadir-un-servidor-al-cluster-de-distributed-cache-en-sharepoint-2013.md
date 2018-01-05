@@ -2,7 +2,7 @@
 title: Añadir un servidor al cluster de Distributed Cache en SharePoint 2013
 tags:
   - Español
-url: 242.html
+permalink: aadir-un-servidor-al-cluster-de-distributed-cache-en-sharepoint-2013
 id: 242
 categories:
   - IT PRO
