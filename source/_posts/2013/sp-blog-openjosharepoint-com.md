@@ -9,7 +9,7 @@ tags:
   - OffTopic
 date: 2013-10-02 19:34:18
 featuredImage: 
-  url: featured.png
+  url: featured.jpg
   width: auto
   height: auto
 ---
