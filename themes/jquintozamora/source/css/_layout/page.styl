@@ -6,6 +6,10 @@
     margin: 0.6rem
     max-width: 200px
     
+    img
+      width: 200px
+      max-width: 200px
+
   .content
     p
       word-break: break-word
@@ -176,3 +180,31 @@
   .recent-post-item
     .article-title
       font-size: 1rem
+    
+    .recent-post-item-img
+      margin: 0.6rem
+      max-width: 150px
+      
+      img
+        width: 150px
+        max-width: 150px
+
+@media screen and (max-width: $xsm)
+  .recent-post-item
+    flex-direction: column
+
+    .more
+      display: none
+
+    .recent-post-item-img
+      margin: 0.6rem
+      max-width: 100%
+      
+      img
+        width: 100%
+        max-width: 100%
+
+    .recent-post-item-content
+      display: flex
+      align-items: center
+      flex-direction: column

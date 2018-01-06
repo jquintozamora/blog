@@ -6,7 +6,7 @@ each article in page.posts.data
       - var fullImage = url_for(link) + featuredImage
       if (typeof(fullImage) === 'string')
         .recent-post-item-img 
-            img(src=fullImage width=300)
+            img(src=fullImage width=200)
     .recent-post-item-content
       a.article-title(href=url_for(link))= article.title || _p('no_title')
       if (theme.post_meta.date_type)
