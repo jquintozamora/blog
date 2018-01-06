@@ -2,7 +2,7 @@
 title: '[IT Pro] Configurar SQL Alias en SharePoint 2013'
 tags:
   - Español
-url: 88.html
+permalink: it-pro-configurar-sql-alias-en-sharepoint-2013
 id: 88
 categories:
   - Alias

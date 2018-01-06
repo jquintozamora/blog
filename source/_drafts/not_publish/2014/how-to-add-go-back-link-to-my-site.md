@@ -2,7 +2,7 @@
 title: How to add Go Back link to My Site in SharePoint 2013 using PowerShell
 tags:
   - English
-url: 81.html
+permalink: how-to-add-go-back-link-to-my-site/
 id: 81
 categories:
   - SharePoint

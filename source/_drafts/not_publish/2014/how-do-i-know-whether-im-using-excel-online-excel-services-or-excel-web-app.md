@@ -4,7 +4,7 @@ title: >-
   App?
 tags:
   - English
-url: 83.html
+permalink: how-do-i-know-whether-im-using-excel-online-excel-services-or-excel-web-app
 id: 83
 categories:
   - SharePoint

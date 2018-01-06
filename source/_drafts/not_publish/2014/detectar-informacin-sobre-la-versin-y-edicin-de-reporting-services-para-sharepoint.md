@@ -4,7 +4,7 @@ title: >-
   SharePoint
 tags:
   - Español
-url: 79.html
+permalink: detectar-informacin-sobre-la-versin-y-edicin-de-reporting-services-para-sharepoint
 id: 79
 categories:
   - SharePoint 2010

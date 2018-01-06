@@ -2,7 +2,7 @@
 title: Vista DataSheet View no disponible. ¿Cómo habilitarla?
 tags:
   - Español
-url: 77.html
+permalink: vista-datasheet-view-no-disponible-cmo-habilitarla/
 id: 77
 categories:
   - SharePoint

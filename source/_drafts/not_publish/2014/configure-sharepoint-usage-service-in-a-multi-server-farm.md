@@ -2,7 +2,7 @@
 title: Configure SharePoint Usage Service in a multi-server farm
 tags:
   - English
-url: 105.html
+permalink: configure-sharepoint-usage-service-in-a-multi-server-farm/
 id: 105
 categories:
   - SharePoint
