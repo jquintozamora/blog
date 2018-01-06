@@ -2,7 +2,7 @@
 title: Portal Super User y Reader account en SharePoint 2010
 tags:
   - Español
-url: 63.html
+permalink: portal-super-user-y-reader-account-en-sharepoint-2010
 id: 63
 categories:
   - SharePoint 2010

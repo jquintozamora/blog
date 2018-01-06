@@ -4,7 +4,7 @@ title: >-
   (RDB) de Project Server 2010
 tags:
   - Español
-url: 71.html
+permalink: obtener-la-etapa-actual-del-workflow-de-un-proyecto-en-la-reporting-database-rdb-de-project-server-2010
 id: 71
 categories:
   - Project Server 2010
