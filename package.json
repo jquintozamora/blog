@@ -7,7 +7,8 @@
   },
   "scripts": {
     "dev": "hexo clean && hexo generate && hexo server",
-    "deploy": "hexo deploy",
+    "generatesw": "workbox generate:sw",
+    "deploy": "hexo clean && hexo generate && workbox generate:sw && hexo deploy",
     "deploy:search": "hexo algolia",
     "deploy:all": "npm run deploy && npm run deploy:search"
   },
@@ -26,5 +27,8 @@
     "hexo-renderer-marked": "0.3.0",
     "hexo-renderer-stylus": "0.3.3",
     "hexo-server": "0.2.2"
+  },
+  "devDependencies": {
+    "workbox-cli": "2.1.2"
   }
 }

@@ -4,6 +4,7 @@ if theme.algolia_search.enable
 
 if (theme.pwa && theme.pwa.enable)
   link(rel="manifest" href=theme.pwa.manifest)
+  script(src=url_for('/js/registerServiceWorker.js'))
 
 if theme.baidu_analytics
   script.
