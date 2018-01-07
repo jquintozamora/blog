@@ -104,3 +104,18 @@ algolia:
     - description
     - categories
     - title
+
+marked:
+  breaks: false
+
+inline_assets:
+  enabled: true
+  limit: 100000
+
+html_minifier:
+  exclude:
+  collapseWhitespace: true
+  keepClosingSlash: true
+  minifyJS: true
+  removeAttributeQuotes: true
+  sortAttributes: true
