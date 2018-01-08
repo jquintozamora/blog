@@ -5,7 +5,7 @@ language: en
 # Main menu navigation
 # ---------------
 menu:
-  About: /about
+  About: /about.html
 
 # Favicon
 # ---------------
@@ -96,7 +96,7 @@ cdn:
 # ---------------
 avatar: /devLogo.png
 
-top_img: false # false or url of img 
+top_img: /background.svg # false or url of img 
 
 post_meta:
   date_type: created # created or updated 
