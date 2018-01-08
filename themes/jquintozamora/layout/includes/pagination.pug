@@ -1,7 +1,7 @@
 -
   var options = {
-    prev_text: '<i class="fa fa-chevron-left"></i>',
-    next_text: '<i class="fa fa-chevron-right"></i>',
+    prev_text: '<i class="fa fa-chevron-left" title="previous page" aria-hidden="true"></i>',
+    next_text: '<i class="fa fa-chevron-right" title="next page" aria-hidden="true"></i>',
     mid_size: 1
   }
 nav#pagination
@@ -11,12 +11,12 @@ nav#pagination
   else
     if(page.prev)
       .prev-post.pull-left
-        a(href=url_for(page.prev.path))
-          i.fa.fa-chevron-left   
+        a(href=url_for(page.prev.path) title="previous page")
+          i.fa.fa-chevron-left(aria-hidden="true")
           span=page.prev.title
     if(page.next)
       .next-post.pull-right
-        a(href=url_for(page.next.path))
+        a(href=url_for(page.next.path) title="next page")
           span=page.next.title 
-          i.fa.fa-chevron-right
+          i.fa.fa-chevron-right(aria-hidden="true")
 

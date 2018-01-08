@@ -63,7 +63,7 @@ mathjax:
 # ---------------
 baidu_analytics: 
 
-google_analytics:
+google_analytics: UA-44570510-1
 
 # stylesheets loaded in the <head>
 # ---------------
