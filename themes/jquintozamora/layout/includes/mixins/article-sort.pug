@@ -8,5 +8,5 @@ mixin articleSort(posts)
         .article-sort-item.year= year
       .article-sort-item
         time.article-sort-item__time= date(article.date)
-        a.article-sort-item__title(href=url_for(article.path) target="_blank")= article.title || 'No Title'
+        a.article-sort-item__title(href=url_for(article.path) target="_blank" rel="noopener")= article.title || 'No Title'
     - })
