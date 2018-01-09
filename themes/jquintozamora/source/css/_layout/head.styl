@@ -90,9 +90,12 @@
     position: fixed
     top: 0
     z-index: 101
-    background: alpha($white, 0.8)
-    box-shadow: 0 5px 6px -5px alpha($grey, 0.6)
-    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out
+    background-image: url($bg-svg)
+    background-attachment: fixed
+    background-size: cover;
+    // background: alpha($white, 0.8)
+    // box-shadow: 0 5px 6px -5px alpha($grey, 0.6)
+    // transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out
 
     &.open-sidebar
       width: calc(100% - 300px)
@@ -101,14 +104,13 @@
       .site-page
         display: none
         opacity: 0
-    */
-
+    
     a,
     .toggle-menu, .toggle-social
       color: $light-black
       &:hover
         color: $light-blue
-
+    */
   &.visible
     transform: translate3d(0, 100%, 0)
 

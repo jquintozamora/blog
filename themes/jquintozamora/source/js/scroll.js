@@ -1,5 +1,6 @@
 $(function () {
   var initTop = 0
+  var scrollToFixed = 255
   $('.toc-child').hide()
 
   // main of scroll
@@ -12,7 +13,7 @@ $(function () {
       findHeadPosition(currentTop)
     }
     var isUp = scrollDirection(currentTop)
-    if (currentTop > 56) {
+    if (currentTop > scrollToFixed) {
       // if (isUp) {
       //   $('#page-header').hasClass('visible') ? $('#page-header').removeClass('visible') : console.log()
       // } else {
@@ -30,7 +31,7 @@ $(function () {
         })
       }
     } else {
-      if (currentTop === 0) {
+      if (currentTop <= scrollToFixed) {
         $('#page-header').removeClass('fixed').removeClass('visible')
       }
       $('#go-up').velocity('stop').velocity({
