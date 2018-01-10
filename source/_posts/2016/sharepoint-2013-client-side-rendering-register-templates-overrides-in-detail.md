@@ -274,7 +274,7 @@ And, **after `applying _RegisterTemplateInternal`** that would be the **register
 ## SharePoint OOTB Template Overrides
 CSR is a framework, but is not only used by developers to create custom view, it is also used for SharePoint itself in order to create custom views for different list types, for example if we take a look into SharePoint OOTB JS files we can see how the function RegisterTemplateOverrides is used in 20 files:
 
-![image](./image-12.png)
+![image](./image-12.jpg)
 
 
 ## Conclusion

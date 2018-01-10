@@ -9,10 +9,10 @@ date: 2012-05-23 11:11:12
 ## What I do?
 I'm **Software Engineer** (currently focused on `Front End Development`).
 
-I love working everyday building stuff with `React`, `Redux`, `CSS`, `ES6`, `Jest`, `Enzyme`, `git`, ...
+I love working everyday building stuff with `React`, `Redux`, `CSS`, `ES6`, `Jest`, `Enzyme`, `git`, `TDD`, ...
 
 ## Interests?
-I'm learning about `TDD`, `Web Assembly`, `PWA`, `d3js`, `AI` and `React Native`.
+I'm learning about `Web Assembly`, `PWA`, `d3js`, `AI` and `React Native`.
 
 I love **open source**.
 
