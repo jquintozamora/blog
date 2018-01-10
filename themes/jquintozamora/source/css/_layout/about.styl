@@ -12,3 +12,86 @@
 
     &:before
       display: none
+
+
+  .about-technologies
+    h2
+      margin-top: 15px
+
+    ul.tech-list-item
+      display: flex
+      flex-flow: row wrap
+      justify-content: center
+      margin: 1rem 0 0 0
+      padding: 0
+      list-style: none
+      border: 0
+      font-size: 100%
+      font: inherit
+      vertical-align: baseline
+      font-synthesis: none
+      text-rendering: optimizeLegibility
+
+      li.tech-item
+        width: 5rem;
+        display: list-item;
+        text-align: -webkit-match-parent;
+        padding: 0;
+        margin: 0.3rem;
+        border-radius: 2px
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,0.26)
+        background-image: url(/background.svg);
+        background-size: 1000%
+
+        &:before
+          display: none
+
+        &:hover
+          opacity: 0.7
+        
+        a
+          text-decoration: none
+          color: #D3D0CB
+
+          &:hover
+            color: #D3D0CB
+
+
+          figure
+            margin: 1em 15px
+
+            .tech-item-img
+              text-align: center
+              min-height: 50px
+
+              img
+                max-width: 100%
+                max-height: 45px
+                border: none
+
+                &:hover
+                  box-shadow:none
+
+            figcaption
+              text-align: center
+              line-height: 1.4
+
+              cite.tech-item-name
+                font-size: 0.8rem
+
+              p
+                font-weight: bold
+                font-size: 0.6rem
+                padding: 0.3333333333333333rem 0
+
+              .level-green
+                color: #9FE80C
+              .level-blue
+                color: #85B9BF
+              .level-normal
+                color: #FDB813
+              
+              .tech-item-time
+                font-size: 0.6rem
+
+

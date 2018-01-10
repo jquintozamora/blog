@@ -4,27 +4,136 @@ title: About me
 permalink: about
 id: 209
 date: 2012-05-23 11:11:12
+technologies:
+    - name: JavaScript
+      level: Expert
+      time: 5 years
+      imgSrc: about/images/javascript.png
+      techUrl: https://en.wikipedia.org/wiki/JavaScript
+    - name: NodeJs
+      level: Proficient
+      time: 2 years
+      imgSrc: about/images/nodejs.svg
+      techUrl: https://nodejs.org/en
+    - name: React
+      level: Expert
+      time: 2 years
+      imgSrc: about/images/react.svg
+      techUrl: https://reactjs.org
+    - name: GraphQL
+      level: Beginner
+      time: learning
+      imgSrc: about/images/graphql.svg
+      techUrl: http://graphql.org
+    - name: MongoDB
+      level: Beginner
+      time: learning
+      imgSrc: about/images/mongodb.svg
+      techUrl: https://www.mongodb.com
+    - name: Gatsby
+      level: Beginner
+      time: learning
+      imgSrc: about/images/gatsby.svg
+      techUrl: https://www.gatsbyjs.org
+    - name: Docker
+      level: Beginner
+      time: 1 year
+      imgSrc: about/images/docker.png
+      techUrl: https://www.docker.com
+    - name: Ramda
+      level: Proficient
+      time: 2 years
+      imgSrc: about/images/ramda.jpg
+      techUrl: http://ramdajs.com
+    - name: TypeScript
+      level: Proficient
+      time: 2 year
+      imgSrc: about/images/typescript.png
+      techUrl: https://www.typescriptlang.org
+    - name: VSCode
+      level: Expert
+      time: 3 years
+      imgSrc: about/images/vscode.png
+      techUrl: https://code.visualstudio.com
+    - name: Azure
+      level: Proficient
+      time: 2 years
+      imgSrc: about/images/azure.svg
+      techUrl: https://azure.microsoft.com
+    - name: Jest
+      level: Proficient
+      time: 1 year
+      imgSrc: about/images/jest.svg
+      techUrl: https://facebook.github.io/jest
+    - name: ESLint
+      level: Intermediate
+      time: 1 year
+      imgSrc: about/images/eslint.svg
+      techUrl: https://eslint.org
+    - name: Babel
+      level: Proficient
+      time: 2 years
+      imgSrc: about/images/babel.jpg
+      techUrl: https://babeljs.io
+    - name: Webpack
+      level: Expert
+      time: 2 years
+      imgSrc: about/images/webpack.svg
+      techUrl: https://webpack.js.org
+    - name: jQuery
+      level: Expert
+      time: 5 years
+      imgSrc: about/images/jquery.svg
+      techUrl: https://jquery.com
+    - name: HTML
+      level: Expert
+      time: 5 years
+      imgSrc: about/images/html.png
+      techUrl: https://www.w3schools.com/html
+    - name: CSS
+      level: Expert
+      time: 5 years
+      imgSrc: about/images/css.svg
+      techUrl: https://www.w3schools.com/css
+    - name: Redux
+      level: Proficient
+      time: 1 year
+      imgSrc: about/images/redux.png
+      techUrl: 
+    - name: ES6
+      level: Proficient
+      time: 2 years
+      imgSrc: about/images/es6.png
+      techUrl: 
+    - name: Enzyme
+      level: Proficient
+      time: 1 year
+      imgSrc: about/images/enzyme.png
+      techUrl: 
+    - name: git
+      level: Proficient
+      time: 2 years
+      imgSrc: about/images/git.png
+      techUrl: 
+    - name: PWA
+      level: Beginner
+      time: learning
+      imgSrc: about/images/pwa.svg
+      techUrl: 
+    - name: d3js
+      level: Beginner
+      time: learning
+      imgSrc: about/images/d3.svg
+      techUrl: 
 ---
 
-## What I do?
-I'm **Software Engineer** (currently focused on `Front End Development`).
+## Software Engineer ~ José Quinto
+Hello, my name is **José Quinto**, I'm **Software Engineer** (currently focused on `Web Development`). I consider myself a **lucky** person as I work everyday building amazing stuff for making a better web. 
 
-I love working everyday building stuff with `React`, `Redux`, `CSS`, `ES6`, `Jest`, `Enzyme`, `git`, `TDD`, ...
+Originally I'm from **Albatera**, a little town from **Spain**.
 
-## Interests?
-I'm learning about `Web Assembly`, `PWA`, `d3js`, `AI` and `React Native`.
+I'm interested on `Performance`, `Offline first`, `TDD`, `Progressive Web Apps` and `Artificial Intelligence`.
 
-I love **open source**.
-
-I share interesting stuff on my twitter [@jquintozamora](https://github.com/jquintozamora).
-
-## Where?
-I'm based in [London](https://www.google.co.uk/maps/place/London/@51.5285578,-0.242023,11z) for almost 3 years. 
-
-I'm originally from [Albatera (Alicante, Spain)](https://www.google.co.uk/maps/place/03340+Albatera,+Alicante,+Spain/@38.1799115,-0.8800246,15z/data=!4m5!3m4!1s0xd63bd039448201b:0x1608d016a018d869!8m2!3d38.1801605!4d-0.8710884).
-
-## More?
-I'm `Spanish omelette` maker.
-
-I like `Cycling` and play `soccer`.
-
+Also, I like cycling and playing football, and I got some skills for cooking `spanish omelette`.
+  
+Currently I am working as a `Full Stack Developer` at Arcadia in London, United Kingdom.
