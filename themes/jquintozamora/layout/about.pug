@@ -9,10 +9,11 @@ block content
         h2!= "Skills"
         ul.skillCardList
           each item in page.skills
-            - var imgBgColor = item.imgBgColor || 'white'
+            - var imgBgColor = item.img && item.img.color || 'white'
+            - var maxWidth = item.img && item.img.maxWidth || '65px'
             li.skillCard
               i.skillCard__button(style='background-color:'+imgBgColor+';')
-                img(src=url_for(item.imgSrc) alt=item.name)
+                img(src=url_for(item.img && item.img.src) alt=item.name style='max-width:' + maxWidth)
               aside.moreInfoCard
                 - var borderColorClass = item.level=='Expert'?'borderBottomGreen':item.level=='Proficient'?'borderBottomBlue':'borderBottomNormal'
                 b.moreInfoCard__title(class=borderColorClass)!= item.name

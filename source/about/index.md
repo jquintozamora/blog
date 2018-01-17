@@ -8,131 +8,159 @@ skills:
     - name: JavaScript
       level: Expert
       time: 5 years
-      imgSrc: about/images/javascript.svg
-      imgBgColor: '#fbc33d'
+      img:
+        src: about/images/javascript.svg
+        color: '#fbc33d'
+        maxWidth: '55px'
       techUrl: https://en.wikipedia.org/wiki/JavaScript
       projects:
         - url: http://www.topshop.com/
-          name: TOPSHOP
+          name: Arcadia Group (e-commerce)
         - url: https://github.com/jquintozamora/polyfill-io-feature-detection
           name: Polyfill detection 
         - url: https://github.com/jquintozamora/react-es6-webpack-minimal-starter-template
           name: ES6 Starter
-    - name: NodeJs
-      level: Proficient
-      time: 2 years
-      imgSrc: about/images/nodejs.svg
-      techUrl: https://nodejs.org/en
-    - name: React
-      level: Expert
-      time: 2 years
-      imgSrc: about/images/react.svg
-      imgBgColor: 'black'
-      techUrl: https://reactjs.org
-    - name: GraphQL
-      level: Beginner
-      time: learning
-      imgSrc: about/images/graphql.svg
-      techUrl: http://graphql.org
-    - name: MongoDB
-      level: Beginner
-      time: learning
-      imgSrc: about/images/mongodb.svg
-      techUrl: https://www.mongodb.com
-    - name: Gatsby
-      level: Beginner
-      time: learning
-      imgSrc: about/images/gatsby.svg
-      techUrl: https://www.gatsbyjs.org
-    - name: Docker
-      level: Beginner
-      time: 1 year
-      imgSrc: about/images/docker.png
-      techUrl: https://www.docker.com
-    - name: Ramda
-      level: Proficient
-      time: 2 years
-      imgSrc: about/images/ramda.jpg
-      techUrl: http://ramdajs.com
+        - url: https://github.com/cboard-org/cboard
+          name: AAC Board (contributor)
+        - url: https://github.com/jquintozamora
+          name: More ...
     - name: TypeScript
       level: Proficient
       time: 2 year
-      imgSrc: about/images/typescript.png
+      img:
+        src: about/images/typescript.svg
+        color: '#007ACC'
+        maxWidth: '60px'
       techUrl: https://www.typescriptlang.org
-    - name: VSCode
+    - name: React
       level: Expert
-      time: 3 years
-      imgSrc: about/images/vscode.png
-      techUrl: https://code.visualstudio.com
-    - name: Azure
-      level: Proficient
       time: 2 years
-      imgSrc: about/images/azure.svg
-      techUrl: https://azure.microsoft.com
-    - name: Jest
-      level: Proficient
-      time: 1 year
-      imgSrc: about/images/jest.svg
-      techUrl: https://facebook.github.io/jest
-    - name: ESLint
-      level: Intermediate
-      time: 1 year
-      imgSrc: about/images/eslint.svg
-      techUrl: https://eslint.org
-    - name: Babel
-      level: Proficient
-      time: 2 years
-      imgSrc: about/images/babel.jpg
-      techUrl: https://babeljs.io
+      img:
+        src: about/images/react.svg
+        color: 'black'
+        maxWidth: '70px'
+      techUrl: https://reactjs.org
     - name: Webpack
       level: Expert
       time: 2 years
-      imgSrc: about/images/webpack.svg
+      img:
+        src: about/images/webpack.svg
+        maxWidth: '80px'
       techUrl: https://webpack.js.org
-    - name: jQuery
-      level: Expert
-      time: 5 years
-      imgSrc: about/images/jquery.svg
-      techUrl: https://jquery.com
     - name: HTML
       level: Expert
       time: 5 years
-      imgSrc: about/images/html.png
+      img:
+        src: about/images/html.svg
+        color: '#f16529'
+        maxWidth: '53px'
       techUrl: https://www.w3schools.com/html
     - name: CSS
       level: Expert
       time: 5 years
-      imgSrc: about/images/css.svg
+      img:
+        src: about/images/css.svg
+        color: '#33a9dc'
+        maxWidth: '53px'
       techUrl: https://www.w3schools.com/css
     - name: Redux
       level: Proficient
       time: 1 year
-      imgSrc: about/images/redux.png
+      img:
+        src: about/images/redux.svg
+        color: '#7344ba'
+        maxWidth: '80px'
       techUrl: 
-    - name: ES6
+    - name: Jest
+      level: Proficient
+      time: 1 year
+      img: 
+        src: about/images/jest.svg
+        color: '#99424f'
+      techUrl: https://facebook.github.io/jest
+    - name: Babel
       level: Proficient
       time: 2 years
-      imgSrc: about/images/es6.png
-      techUrl: 
+      img:
+        src: about/images/babel.jpg
+      techUrl: https://babeljs.io
     - name: Enzyme
       level: Proficient
       time: 1 year
-      imgSrc: about/images/enzyme.png
+      img:
+        src: about/images/enzyme.png
       techUrl: 
     - name: git
       level: Proficient
       time: 2 years
-      imgSrc: about/images/git.png
+      img:
+        src: about/images/git.png
       techUrl: 
+    - name: NodeJs
+      level: Proficient
+      time: 2 years
+      img: 
+        src: about/images/nodejs.svg
+      techUrl: https://nodejs.org/en
+    - name: GraphQL
+      level: Beginner
+      time: learning
+      img:
+        src: about/images/graphql.svg
+      techUrl: http://graphql.org
+    - name: MongoDB
+      level: Beginner
+      time: learning
+      img:
+        src: about/images/mongodb.svg
+      techUrl: https://www.mongodb.com
+    - name: Gatsby
+      level: Beginner
+      time: learning
+      img:
+        src: about/images/gatsby.svg
+      techUrl: https://www.gatsbyjs.org
+    - name: Ramda
+      level: Proficient
+      time: 2 years
+      img:
+        src: about/images/ramda.jpg
+      techUrl: http://ramdajs.com
+    - name: VSCode
+      level: Expert
+      time: 3 years
+      img:
+        src: about/images/vscode.png
+      techUrl: https://code.visualstudio.com
+    - name: Azure
+      level: Proficient
+      time: 2 years
+      img:
+        src: about/images/azure.svg
+      techUrl: https://azure.microsoft.com
+    - name: ESLint
+      level: Intermediate
+      time: 1 year
+      img:
+        src: about/images/eslint.svg
+      techUrl: https://eslint.org
+    - name: Docker
+      level: Beginner
+      time: 1 year
+      img:
+        src: about/images/docker.png
+      techUrl: https://www.docker.com
     - name: PWA
       level: Beginner
       time: learning
-      imgSrc: about/images/pwa.svg
+      img:
+        src: about/images/pwa.svg
       techUrl: 
     - name: d3js
       level: Beginner
       time: learning
-      imgSrc: about/images/d3.svg
+      img:
+        src: about/images/d3.svg
       techUrl: 
 ---
 
