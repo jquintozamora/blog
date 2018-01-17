@@ -95,3 +95,211 @@
                 font-size: 0.6rem
 
 
+#about .about-technologies .skillCardList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#about .skillCard::before {
+  display: none;
+}
+
+#about .skillCard {
+  position: relative;
+  min-width: 100px;
+  width: 175px;
+  margin: 10px auto;
+  padding: 0;
+}
+
+#about .skillCard__button {
+  margin: 0 auto;
+  height: 100px;
+  width: 100px;
+  display: block;
+  border-radius: 50%;
+  transition: transform 0.25s;
+  overflow: hidden;
+  border: 2px solid silver;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#about .skillCard__button > img {
+  width: 100%;
+  max-width: 60px;
+  border: none;
+}
+#about .skillCard__button > img:hover {
+  border: none;
+  box-shadow: none;
+}
+
+#about .moreInfoCard {
+  opacity: 0;
+  visibility: hidden;
+  transition: 
+    visibility .5s ease-out,
+    opacity .5s ease-out;
+  position: absolute;
+  bottom: calc(100% + 9px);
+  width: calc(100%);
+  z-index: 999;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.2);
+}
+
+#about .moreInfoCard__title {
+  text-align: center;
+  padding: .7em 0 .5em 0;
+  border-bottom: 4px solid #33B0E6;
+  display: block;
+}
+
+#about .moreInfoCard__scrim {
+  position: relative;
+}
+
+#about .moreInfoCard__caret {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 10px;
+}
+#about .moreInfoCard__caret::after {
+  left: calc(50% + 10px);
+  border: 1px solid #d6d6d6;
+  content: " ";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  transform: rotate(135deg);
+  transform-origin: 0% 0;
+  background-color: white;
+}
+
+#about .moreInfoCard__content {
+  padding: .5em .5em;
+}
+
+#about .skillCard__button:hover ~ .moreInfoCard {
+  opacity: 1;
+  visibility: visible;
+  transition: 
+    visibility .3s ease-in, 
+    opacity .3s ease-in;
+}
+
+#about .moreInfoCard:hover {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0s;
+}
+
+#about .skillCard__button:hover {
+  transform: rotate(135deg);
+  transition: transform 0.5s;
+}
+
+
+#about .moreInfoCard__dataList {
+  display: inline;
+}
+#about .moreInfoCard__dataList dt {
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 12px;
+}
+.moreInfoCard__dataList dd {
+  margin: 0;
+  padding: 0 0 .5em 0;
+  padding-left: 25px;
+  color: #33B0E6;
+}
+
+#about .moreInfoCard__dataList dd::before, #about .moreInfoCard__dataList li::before {
+  content: "\f00c";
+  font-family: 'FontAwesome';
+  font-size: 1em;
+  left: 10px;
+  position: absolute;
+  top: auto;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  margin: 0;
+  line-height: inherit;
+}
+#about .moreInfoCard__dataList dd:nth-child(4)::before {
+  content: none;
+}
+#about .moreInfoCard__dataList li:hover:before {
+  transform: none;
+}
+
+#about .moreInfoCard__dataList ul.moreInfoCard__projectList {
+  list-style-type: none;
+  padding: .1em 2px;
+  margin: 0;
+}
+#about .moreInfoCard__dataList li {
+  padding: .1em 0;
+  position: static;
+  margin: 0;
+}
+#about .moreInfoCard__dataList li a {
+  text-decoration: none;
+  color: #000;
+  transition: background-color 0.3s ease;
+}
+#about .moreInfoCard__dataList li a:hover {
+  background: #f6f6f6;
+}
+
+
+#about dd.level-green, span.level-green {
+  color: darkgreen;
+}
+#about dd.level-blue, span.level-blue {
+  color: #85B9BF;
+}
+#about .level-normal {
+  color: #FDB813;
+}
+#about .level-defaultColor {
+  color: black;
+}
+
+#about b.borderBottomGreen {
+  border-bottom-color: darkgreen;
+}
+#about b.borderBottomBlue {
+  border-bottom-color: #85B9BF;
+}
+#about b.borderBottomNormal {
+  border-bottom-color: #FDB813;
+}
+#about b.borderBottomDefaultColor {
+  border-bottom-color: silver;
+}
+
+#about .borderGreen {
+  border-color: darkgreen;
+}
+#about .borderBlue {
+  border-color: #85B9BF;
+}
+#about .borderNormal {
+  border-color: #FDB813;
+}
+#about .borderDefaultColor {
+  border-color: silver;
+}
+

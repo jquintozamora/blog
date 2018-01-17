@@ -4,12 +4,20 @@ title: About me
 permalink: about
 id: 209
 date: 2012-05-23 11:11:12
-technologies:
+skills:
     - name: JavaScript
       level: Expert
       time: 5 years
-      imgSrc: about/images/javascript.png
+      imgSrc: about/images/javascript.svg
+      imgBgColor: '#fbc33d'
       techUrl: https://en.wikipedia.org/wiki/JavaScript
+      projects:
+        - url: http://www.topshop.com/
+          name: TOPSHOP
+        - url: https://github.com/jquintozamora/polyfill-io-feature-detection
+          name: Polyfill detection 
+        - url: https://github.com/jquintozamora/react-es6-webpack-minimal-starter-template
+          name: ES6 Starter
     - name: NodeJs
       level: Proficient
       time: 2 years
@@ -19,6 +27,7 @@ technologies:
       level: Expert
       time: 2 years
       imgSrc: about/images/react.svg
+      imgBgColor: 'black'
       techUrl: https://reactjs.org
     - name: GraphQL
       level: Beginner

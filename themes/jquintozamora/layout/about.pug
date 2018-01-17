@@ -5,16 +5,30 @@ block content
     h1.about-title= page.title
     != page.content
     .about-technologies
-      if (page.technologies)
-        h2!= "Technologies"
-        ul.tech-list-item
-          each item, index in page.technologies
-            li.tech-item
-              a(href=item.techUrl rel=noopener)
-                figure
-                  .tech-item-img
-                    img(src=url_for(item.imgSrc) alt=item.name title=item.name)
-                  figcaption
-                    cite.tech-item-name!= item.name
-                    p(class=item.level=='Expert'?'level-green':item.level=='Proficient'?'level-blue':'level-normal')!= item.level
-                    span.tech-item-time!= item.time
+      if (page.skills)
+        h2!= "Skills"
+        ul.skillCardList
+          each item in page.skills
+            - var imgBgColor = item.imgBgColor || 'white'
+            li.skillCard
+              i.skillCard__button(style='background-color:'+imgBgColor+';')
+                img(src=url_for(item.imgSrc) alt=item.name)
+              aside.moreInfoCard
+                - var borderColorClass = item.level=='Expert'?'borderBottomGreen':item.level=='Proficient'?'borderBottomBlue':'borderBottomNormal'
+                b.moreInfoCard__title(class=borderColorClass)!= item.name
+                div.moreInfoCard__content
+                  dl.moreInfoCard__dataList
+                    - var levelColorClass = item.level=='Expert'?'level-green':item.level=='Proficient'?'level-blue':'level-normal'
+                    dt!= 'Experience'
+                    dd(class=levelColorClass)
+                      span(class='level-defaultColor')!= item.time
+                      span(class=levelColorClass)!= '`' + item.level + '`'
+                    if (item.projects)
+                      dt!= 'Projects (' + item.projects.length + ')'
+                      dd
+                        ul.moreInfoCard__projectList
+                          each project in item.projects
+                            li
+                              a(href=project.url target='_blank' rel=noopener)!= project.name
+                div.moreInfoCard__scrim
+                  span.moreInfoCard__caret
