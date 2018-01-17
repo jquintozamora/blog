@@ -5,6 +5,22 @@ permalink: about
 id: 209
 date: 2012-05-23 11:11:12
 skills:
+    - name: HTML
+      level: Expert
+      time: 5 years
+      img:
+        src: about/images/html.svg
+        color: '#f16529'
+        maxWidth: '53px'
+      techUrl: https://www.w3schools.com/html
+    - name: CSS
+      level: Expert
+      time: 5 years
+      img:
+        src: about/images/css.svg
+        color: '#33a9dc'
+        maxWidth: '53px'
+      techUrl: https://www.w3schools.com/css
     - name: JavaScript
       level: Expert
       time: 5 years
@@ -40,29 +56,6 @@ skills:
         color: 'black'
         maxWidth: '70px'
       techUrl: https://reactjs.org
-    - name: Webpack
-      level: Expert
-      time: 2 years
-      img:
-        src: about/images/webpack.svg
-        maxWidth: '80px'
-      techUrl: https://webpack.js.org
-    - name: HTML
-      level: Expert
-      time: 5 years
-      img:
-        src: about/images/html.svg
-        color: '#f16529'
-        maxWidth: '53px'
-      techUrl: https://www.w3schools.com/html
-    - name: CSS
-      level: Expert
-      time: 5 years
-      img:
-        src: about/images/css.svg
-        color: '#33a9dc'
-        maxWidth: '53px'
-      techUrl: https://www.w3schools.com/css
     - name: Redux
       level: Proficient
       time: 1 year
@@ -70,7 +63,38 @@ skills:
         src: about/images/redux.svg
         color: '#7344ba'
         maxWidth: '80px'
-      techUrl: 
+      techUrl: https://redux.js.org
+    - name: Webpack
+      level: Expert
+      time: 2 years
+      img:
+        src: about/images/webpack.svg
+        maxWidth: '80px'
+      techUrl: https://webpack.js.org
+    - name: Gulp
+      level: Proficient
+      time: 2 year
+      img: 
+        src: about/images/gulp.svg
+        color: 'white'
+        maxWidth: '90px'
+      techUrl: https://gulpjs.com
+    - name: PostCSS
+      level: Proficient
+      time: 2 year
+      img: 
+        src: about/images/postcss.svg
+        color: 'white'
+        maxWidth: '70px'
+      techUrl: http://postcss.org
+    - name: "CSS Modules"
+      level: Proficient
+      time: 1 year
+      img: 
+        src: about/images/cssmodules.svg
+        color: 'white'
+        maxWidth: '85px'
+      techUrl: http://postcss.org
     - name: Jest
       level: Proficient
       time: 1 year
@@ -78,90 +102,72 @@ skills:
         src: about/images/jest.svg
         color: '#99424f'
       techUrl: https://facebook.github.io/jest
-    - name: Babel
-      level: Proficient
-      time: 2 years
-      img:
-        src: about/images/babel.jpg
-      techUrl: https://babeljs.io
-    - name: Enzyme
-      level: Proficient
-      time: 1 year
-      img:
-        src: about/images/enzyme.png
-      techUrl: 
     - name: git
       level: Proficient
       time: 2 years
       img:
-        src: about/images/git.png
-      techUrl: 
+        src: about/images/git.svg
+        color: '#f0efe7'
+        maxWidth: '70px'
+      techUrl: https://git-scm.com
+    - name: Babel
+      level: Proficient
+      time: 2 years
+      img:
+        src: about/images/babel.svg
+        color: '#fbc33d'
+        maxWidth: '70px'
+      techUrl: https://babeljs.io
+    - name: Ramda
+      level: Proficient
+      time: 2 years
+      img:
+        src: about/images/ramda.svg
+        color: '#849'
+        maxWidth: '50px'
+      techUrl: http://ramdajs.com
+    - name: ESLint
+      level: Intermediate
+      time: 1 year
+      img:
+        src: about/images/eslint.svg
+        color: '#fbfbfb'
+        maxWidth: '80px'
+      techUrl: https://eslint.org
     - name: NodeJs
       level: Proficient
       time: 2 years
       img: 
         src: about/images/nodejs.svg
       techUrl: https://nodejs.org/en
-    - name: GraphQL
-      level: Beginner
-      time: learning
-      img:
-        src: about/images/graphql.svg
-      techUrl: http://graphql.org
-    - name: MongoDB
-      level: Beginner
-      time: learning
-      img:
-        src: about/images/mongodb.svg
-      techUrl: https://www.mongodb.com
-    - name: Gatsby
-      level: Beginner
-      time: learning
-      img:
-        src: about/images/gatsby.svg
-      techUrl: https://www.gatsbyjs.org
-    - name: Ramda
-      level: Proficient
-      time: 2 years
-      img:
-        src: about/images/ramda.jpg
-      techUrl: http://ramdajs.com
-    - name: VSCode
+    - name: "Visual Studio Code"
       level: Expert
       time: 3 years
       img:
-        src: about/images/vscode.png
+        src: about/images/vscode.svg
+        color: '#373277'
+        maxWidth: '65px'
       techUrl: https://code.visualstudio.com
-    - name: Azure
-      level: Proficient
-      time: 2 years
-      img:
-        src: about/images/azure.svg
-      techUrl: https://azure.microsoft.com
-    - name: ESLint
-      level: Intermediate
-      time: 1 year
-      img:
-        src: about/images/eslint.svg
-      techUrl: https://eslint.org
-    - name: Docker
-      level: Beginner
-      time: 1 year
-      img:
-        src: about/images/docker.png
-      techUrl: https://www.docker.com
     - name: PWA
       level: Beginner
       time: learning
       img:
         src: about/images/pwa.svg
-      techUrl: 
+        color: 'black'
+        maxWidth: '80px'
+      techUrl: https://developers.google.com/web/progressive-web-apps
     - name: d3js
       level: Beginner
       time: learning
       img:
         src: about/images/d3.svg
-      techUrl: 
+      techUrl: https://d3js.org
+    - name: "Open Layers"
+      level: Intermediate
+      time: 1 year
+      img:
+        src: about/images/openlayers.svg
+      techUrl: https://openlayers.org
 ---
 
 ## Software Engineer ~ José Quinto
