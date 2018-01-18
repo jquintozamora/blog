@@ -28,11 +28,11 @@ But, if we are looking for a way to get one  of all available views inside a Li
 ## Multilingual project and getByTitle
 Bad news here because working in a multilingual project, we should avoid `getByTitle` and working in a generic method that we need to apply to several lists in several webs we have a variable `GUID`.
 
-So, in this scenario, the best option should be `getByURL`, because View URL (like `mod-view.aspx` or `AllItems.aspx`)  in most cases is constant between lists, webs and site collections.
+So, in this scenario, the best option should be `getByURL`, because View URL (like `mod-view.aspx` or `AllItems.aspx`)  in most cases  is constant between lists, webs and site collections.
 
 Until now (September 2015) we haven’t `getByUrl` method available in SharePoint JSOM framework.
 
-# Solution
+## Solution
 I’d like to share a way to implement this method iterating through all views:
 
 ```js
