@@ -20,6 +20,13 @@ $(function () {
       //   $('#page-header').hasClass('visible') ? console.log() : $('#page-header').addClass('visible')
       // }
       $('#page-header').addClass('fixed')
+      $('.sidebar-toc').addClass('fixed')
+      $('.sidebar-toc').velocity('stop').velocity({
+        maxHeight: $(window).height() - 80
+      }, {
+        easing: 'linear',
+        duration: 200
+      })
       if ($('#go-up').css('opacity') === '0') {
         $('#go-up').velocity('stop').velocity({
           translateX: -30,
@@ -33,6 +40,8 @@ $(function () {
     } else {
       if (currentTop <= scrollToFixed) {
         $('#page-header').removeClass('fixed').removeClass('visible')
+        $('.sidebar-toc').removeClass('fixed')
+
       }
       $('#go-up').velocity('stop').velocity({
         translateX: 0,
@@ -74,6 +83,7 @@ $(function () {
   // scroll to a head(anchor)
   function scrollToHead (anchor) {
     $(anchor).velocity('stop').velocity('scroll', {
+      offset: "-70",
       duration: 500,
       easing: 'easeInOutQuart'
     })
@@ -126,7 +136,7 @@ $(function () {
     var currentId = ''
     list.each(function () {
       var head = $(this)
-      if (top > head.offset().top - 25) {
+      if (top > head.offset().top - 25 - 70) {
         currentId = '#' + $(this).attr('id')
       }
     })

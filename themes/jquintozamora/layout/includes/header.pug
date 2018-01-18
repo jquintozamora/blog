@@ -1,6 +1,9 @@
 #page-header
   span.pull-left 
-    a#site-name(href="/") #[='Blog']
+    //- a#site-name(href="/") #[='Blog']
+    a.brand(href="/")
+      img.brand-image(src="/jose-quinto.png")
+      div.brand-name="José Quinto"
   if(theme.social)
     i.fa.fa-share.toggle-social(aria-hidden="true")
     #header-social-icons.socialicons

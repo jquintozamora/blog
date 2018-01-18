@@ -39,8 +39,8 @@ html(lang=config.language)
     include ./head.pug
     include ./config.pug
   body
-    i.fa.fa-arrow-right#toggle-sidebar(aria-hidden="true")
-    include ./sidebar.pug
+    //- i.fa.fa-arrow-right#toggle-sidebar(aria-hidden="true")
+    //- include ./sidebar.pug
     if (!is_post())
       include ./nav.pug
     #content-outer
