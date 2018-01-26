@@ -1,6 +1,6 @@
 # Jose Quinto Blog
 
-This is the source code for my blog [blog.josequinto.com](https://jquintozamora.github.io). 
+This is the source code for my blog [blog.josequinto.com](https://blog.josequinto.com). 
 
 These are some interesting features:
     - [Hexo](https://hexo.io) to generate static pages.
