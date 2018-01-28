@@ -21,6 +21,12 @@
       &:hover
         transform: scale(1.2)
 
+    &:hover ~ .article-title
+      border-bottom: 1px solid $light-blue
+      color: $light-blue
+
+  .recent-post-anchor
+    text-decoration: none
 
   .recent-post-item-content
     margin 0.2rem 1rem
@@ -58,8 +64,8 @@
     cursor: pointer
     transition: all 0.2s ease-in-out
     line-height: 1.3
-    padding-bottom: 0.5rem
     word-wrap: break-word
+    padding: .2em .8em .8em .8em;
 
     &:hover
       border-bottom: 1px solid $light-blue

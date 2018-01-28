@@ -1,14 +1,17 @@
 each article in page.posts.data
-  .recent-post-item
+  div.recent-post-item
     - var link = article.link || article.path
-    - var featuredImage = article.featuredImage.url || page.featuredImage
+    - var featuredImage = article.featuredImage.url || page.featuredImage  
     if (typeof(featuredImage) !== 'undefined')
-      - var fullImage = url_for(link) + featuredImage
-      if (typeof(fullImage) === 'string')
+      - var fullImage = url_for(link) + featuredImage || 'defaultimage'
+      a(href=url_for(link)).recent-post-anchor
         .recent-post-item-img 
-            img(src=fullImage width=200 alt='featured imag')
-    .recent-post-item-content
-      a.article-title(href=url_for(link))= article.title || _p('no_title')
+          img(src=fullImage width=200 alt='featured imag')
+        div.article-title!= article.title
+    else
+      a(href=url_for(link)).recent-post-anchor
+        div.article-title!= article.title
+    div.recent-post-item-content
       if (theme.post_meta.date_type)
         - var date_type = theme.post_meta.date_type == 'updated' ? 'updated' : 'date'
         time.post-meta__date #[i.fa.fa-calendar(aria-hidden="true")] #[=date(article[date_type], config.date_format)]
