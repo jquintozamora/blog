@@ -194,11 +194,16 @@
     &:after
       content: ")"
 
+@media screen and (max-width: $xsm)
+  .recent-post-item
+    margin: 0;
+
 @media screen and (max-width: $sm)
   .recent-post-item
+    margin: 0.2rem 8px 2rem;
     .article-title
       font-size: 1rem
-      
+
 @media screen and (max-width: $xsm)
   .recent-post-item
     width: 100%

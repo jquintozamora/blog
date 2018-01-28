@@ -119,3 +119,13 @@ html_minifier:
   minifyJS: true
   removeAttributeQuotes: true
   sortAttributes: true
+
+feed:
+  type: rss2
+  path: feed.rss
+  limit: 10
+  content_limit: 4000
+  content_limit_delim: ' '
+
+jsonFeed:
+  limit: 25
