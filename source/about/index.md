@@ -283,6 +283,6 @@ I'm interested on `Performance`, `Offline first`, `TDD`, `Progressive Web Apps` 
 
 Also, I like cycling and playing football, and I got some skills for cooking `spanish omelette`.
   
-Currently I am working as a `Full Stack Developer` at Arcadia in London, United Kingdom.
+Currently I'm working as a `Full Stack Developer` at Arcadia in London, United Kingdom.
 
 <br>
