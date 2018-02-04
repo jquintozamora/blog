@@ -1,8 +1,9 @@
 if (theme.algolia_search.enable)
   script(src=url_for('/js/search/algolia.js'))
-if (theme.mathjax && theme.mathjax.enable)
-  if(!is_tag() && !is_category() && !is_archive())
-    include ./third-party/mathjax.pug
-if (theme.local_search && theme.local_search.enable && !is_post())
-  script(src=url_for('/js/search/local-search.js'))
+if theme.google_analytics
+  script.
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+    ga('create', '!{theme.google_analytics}', 'auto');
+    ga('send', 'pageview');
+  script(async src='https://www.google-analytics.com/analytics.js')
   

@@ -44,17 +44,8 @@ algolia_search:
     hits_empty: "We didn't find any results for the search: ${query}"
     hits_stats: "${hits} results found in ${time} ms"
 
-# Local search
-# ---------------
-local_search:
-  enable: false
-  labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
-
 # MathJax
 # ---------------
-
 mathjax:
   enable: false
   cdn: https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML
@@ -76,9 +67,7 @@ stylesheets:
 scripts:
 - /js/utils.js
 - /js/fancybox.js
-- /js/sidebar.js
 - /js/copy.js
-- /js/transition.js
 - /js/scroll.js
 - /js/head.js
 
@@ -139,12 +128,6 @@ ICP:
   #text: 
 
 
-# Sidebar Settings
-# ---------------
-#links_title: Links
-#links:
-  #Name: url
-
 # Version
 # ---------------
-version: 1.3
+version: 1.4

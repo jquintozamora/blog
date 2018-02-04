@@ -10,27 +10,36 @@
 - var pageDescription = page.description || page.title || config.description || ''
 - var pageKeywords = (config.keywords || []).join(',')
 - if (page.tags && page.tags.data) pageKeywords = page.tags.data.map(function(tag) {return tag.name;}).join(',')
-- var pageAuthor = config.author + ',' + config.email
 - var pageCopyright = config.copyright || config.author
 
 doctype html
 html(lang=config.language)
   head
-    meta(charset='UTF-8')
-    meta(http-equiv="X-UA-Compatible" content="IE=edge")
-    meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5")
-    meta(name="description" content=pageDescription)
-    meta(name="keywords" content=pageKeywords)
-    meta(name="author" content=pageAuthor)
-    meta(name="copyright" content=pageCopyright)
-    meta(name="theme-color" content="#ffffff")
-    link(rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon.png")
-    link(rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png")
-    link(rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png")
-    link(rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#5bbad5")
-    if page.permalink
-      link(rel="canonical" href=page.permalink)
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible' content='ie=edge')
+    meta(http-equiv='Accept-CH' content='DPR, Viewport-Width, Width')
     title= pageTitle
+    meta(name="description" content=pageDescription)
+    meta(name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover")
+    if is_post()
+      - var pageImageUrl = page.featuredImage && config.url + '/' + page.path + page.featuredImage.url
+      meta(property="og:image" content=pageImageUrl)
+      meta(name="twitter:image" content=pageImageUrl)
+      meta(property="fb:app_id" content="155567495101835")
+      meta(name="twitter:card" content=page.featuredImage ? "summary_large_image" : "summary")
+      meta(name="twitter:url" content=page.permalink property="og:url")
+      meta(name="twitter:title" content=pageTitle property="og:title")
+      if page.description
+        meta(name="twitter:description" content=page.description property="og:description")
+      meta(name="twitter:site" content="@jquintozamora")
+      meta(property="og:type"   content="article")
+      meta(property="og:url"    content=page.permalink)
+      meta(property="og:title"  content=pageTitle)
+      if page.permalink
+        link(rel="canonical" href=page.permalink)
+    link(rel="author" href="https://plus.google.com/u/0/108403117712061507579")
+    link(rel="alternate" type="application/rss+xml" title="Jose Quinto" href="https://blog.josequinto.com/feed.rss")
+    meta(name="theme-color" content="#ffffff")
     !=favicon_tag(config.favicon || theme.favicon || '/favicon.ico')
     if theme.stylesheets !== undefined && theme.stylesheets.length > 0
       each url in theme.stylesheets

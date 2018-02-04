@@ -40,22 +40,4 @@ $(function () {
         .velocity({left: 0})
     }
   })
-  // $(window).on('resize', function (e) {
-  //   if (!$('.toggle-menu').is(':visible')) {
-  //     if (!$('.menus').is(':visible')) {
-  //       $('.menus')
-  //         .velocity('stop')
-  //         .velocity('transition.slideDownIn', { duration: 300 })
-  //     }
-  //   }
-  //   if (!$('.toggle-social').is(':visible')) {
-  //     if (!$('.socialicons').is(':visible')) {
-  //       var leftOffset = e.currentTarget.offsetLeft - socialIconWidth                     
-  //       $('.socialicons')
-  //         .velocity('stop')
-  //         .velocity({left: leftOffset})
-  //         .velocity('transition.slideDownIn', { duration: 300 })
-  //     }
-  //   }
-  // })
 })

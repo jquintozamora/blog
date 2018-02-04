@@ -5,7 +5,7 @@
 # Site
 title: José Quinto
 subtitle: Software Engineer
-description: Technical Articles
+description: I am a software engineer focused on web development and open-source contributor.
 author: José Quinto
 language: en
 timezone:
@@ -93,7 +93,7 @@ deploy:
 algolia:  
   appId: C7MOFESP3V
   apiKey: cdc4a9b7af864c710f2d3da5caf59eec
-  adminApiKey: ee387c4aa4969b79c26268288e9ce1c1
+  adminApiKey: ee387c4aa4969b79c26268288e9ce1c0
   indexName: dev_JQBLOG
   chunkSize: 5000
   fields:
