@@ -13,6 +13,7 @@
     "deploy:all": "npm run deploy && npm run deploy:search"
   },
   "dependencies": {
+    "clean-css": "4.1.9",
     "hexo": "3.2.0",
     "hexo-algoliasearch": "0.2.3",
     "hexo-browsersync": "0.3.0",

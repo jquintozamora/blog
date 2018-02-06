@@ -254,6 +254,8 @@ skills:
       projects:
         - url: https://github.com/jquintozamora/react-d3-treemap
           name: React D3 TreeMap
+        - url: https://beta.observablehq.com/@jquintozamora/svg-animated-logo-for-blog-josequinto-com
+          name: SVG Animated Logo with D3.js
     - name: "Open Layers"
       level: Beginner
       time: learning
