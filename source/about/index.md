@@ -281,10 +281,10 @@ Hello, my name is **José Quinto**, I'm **Software Engineer** (currently focused
 
 Originally I'm from **Albatera**, a little town from **Spain**.
 
-I'm interested on `Performance`, `Offline first`, `TDD`, `Progressive Web Apps` and `Artificial Intelligence`.
+I'm interested on `Web Performance`, `Offline first`, `TDD`, `Progressive Web Apps`, `D3.js` and `Artificial Intelligence`.
 
 Also, I like cycling and playing football, and I got some skills for cooking `spanish omelette`.
   
-Currently I'm working as a `Full Stack Developer` at Arcadia in London, United Kingdom.
+Currently I'm working as a `Full Stack Developer` at **Arcadia Group** in London, United Kingdom.
 
 <br>
