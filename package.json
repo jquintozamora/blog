@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "hexo": {
-    "version": "3.2.0"
+    "version": "3.5.0"
   },
   "scripts": {
     "dev": "hexo clean && hexo generate && hexo server",
@@ -13,8 +13,7 @@
     "deploy:all": "npm run deploy && npm run deploy:search"
   },
   "dependencies": {
-    "clean-css": "4.1.9",
-    "hexo": "3.2.0",
+    "hexo": "3.5.0",
     "hexo-algoliasearch": "0.2.3",
     "hexo-browsersync": "0.3.0",
     "hexo-deployer-git": "0.3.1",
@@ -26,9 +25,9 @@
     "hexo-generator-sitemap": "1.2.0",
     "hexo-generator-tag": "0.2.0",
     "hexo-renderer-jade": "0.4.1",
-    "hexo-renderer-marked": "0.3.0",
+    "hexo-renderer-marked": "0.3.2",
     "hexo-renderer-stylus": "0.3.3",
-    "hexo-server": "0.2.2"
+    "hexo-server": "0.3.1"
   },
   "devDependencies": {
     "workbox-cli": "2.1.2"
