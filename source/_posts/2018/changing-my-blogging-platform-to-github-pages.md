@@ -25,17 +25,17 @@ featuredImage:
 
 I second that quote of **Jeff Bezos (CEO of Amazon)**. Changes are always good, there is always a lots of learnings when we get our hands dirty changing things and trying to improve something.
 
-I decided to move my Blog from **WordPress** to **Node.js** and **Github Pages**. That wasn't one day decision as it took to me some weeks to investigate about **different platforms**, **hosting types** and **technologies**.
+I decided to move my Blog from **WordPress** to **Node.js** and **Github Pages**. That wasn't quick decision, it took to me some weeks to investigate about **different platforms**, **hosting types** and **technologies**.
 
 I'll try to go through every important point because I'm pretty sure my conclusions can help anyone else in the same situation.
 
 <br >
 ## Hosting
-Everyday is a learning experience 👨🏻‍🏫, I was told by a colleague I could use **GitHub Pages** as a free hosting as long as I used something called `Static Site Generator`. Then, I started to investigate about it, and turned out to be amazing idea 💡. 
+Everyday is a learning experience 👨🏻‍🏫, I was told by a colleague I could use **GitHub Pages** as a free hosting as long as I used something called `Static Site Generator`. Then, I started to investigate, and it turned out to be amazing idea 💡. 
 
 In a nutshell, **GitHub Pages** is able to provide _free_ hosting for **Static Pages** (html, css, js, assets, ...) and our laptop is able to run on-demand server to provide those assets. The only thing we need is a tool to create all the static assets and that's called `Static Site Generator`.
  
-To be honest, that's make a lot of sense to me, as we can save some quids by using our laptop as a on demand server every time we need to publish a new content.
+To be honest, that makes a lot of sense to me, as we can save money by using our laptop as a on demand server every time we need to publish a new content.
 
 > 👉 I chose `GitHub Pages` as a free hosting.
 
@@ -48,7 +48,7 @@ That's quite **personal decision**, as there is a bunch of `Static Site Generato
 - [Hexo](https://hexo.io): Static Site Generator specific for Blogs developed using `JavaScript` and supporting `SWIG`, `EJS`, `HAML` and `PUG` template engines and `Markdown` markup language.
 
 There are more `Static Site Generators`, but my investigation ended here as I hadn't unlimited time for that. 
-What I do like of `Hexo` is the fact it is quite specific for blogging and already have lots of `themes` and `plugings`.
+What I DO like of `Hexo` is the fact it is quite specific for blogging and already have lots of `themes` and `plugings`.
 
 > 👉 I chose Hexo as a Blogging Platform and PUG as a template language. But in the near future I'm going to migrate it to Gatsby using React.
 
@@ -56,7 +56,7 @@ What I do like of `Hexo` is the fact it is quite specific for blogging and alrea
 
 
 ## Markdown
-I _used_ to write my blog post using **Windows Live Writer** because it handles really well copying and pasting from other sources, you could **copy and paste images** as well and its integration with `WordPress` was 👌. 
+I _used_ to write my blog posts using **Windows Live Writer** because it handles really well copying and pasting from code editors, you could **copy and paste images** as well and its integration with `WordPress` was 👌. 
 
 Currently, I use **macOS** at work and **Windows** at home, then I need a multi-device writing platform. 
 
