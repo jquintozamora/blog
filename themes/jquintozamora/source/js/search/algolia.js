@@ -1,11 +1,17 @@
 $(function () {
   $('a.social-icon.search').on('click', function () {
+    $('body').addClass('modal-open')
+    $('#bodyWrapper').addClass('modal-open')
     $('.search-dialog').velocity('stop')
-      .velocity('transition.expandIn', { duration: 300 })
+      .velocity('transition.expandIn', { duration: 300, complete: function(elements) { 
+        $(elements).find('input').select().focus(); 
+    } })
     $('.search-mask').velocity('stop')
       .velocity('transition.fadeIn', { duration: 300 })
   })
   $('.search-mask, .search-close-button').on('click', function () {
+    $('body').removeClass('modal-open')
+    $('#bodyWrapper').removeClass('modal-open')
     $('.search-dialog').velocity('stop')
       .velocity('transition.expandOut', { duration: 300 })
     $('.search-mask').velocity('stop')
@@ -19,7 +25,6 @@ $(function () {
   }
 
   if (typeof instantsearch === 'function') {
-
     var search = instantsearch({
       appId: algolia.appId,
       apiKey: algolia.apiKey,

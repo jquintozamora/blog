@@ -50,20 +50,21 @@ html(lang=config.language)
     include ./head.pug
     include ./config.pug
   body
-    //- i.fa.fa-arrow-right#toggle-sidebar(aria-hidden="true")
-    //- include ./sidebar.pug
-    if (!is_post())
-      include ./nav.pug
-    #content-outer
-      block top_img
-      #content-inner.layout
-        if body
-          div!= body
-        else
-          block content
-    footer
-      include ./footer.pug
-    i.fa.fa-arrow-up#go-up(aria-hidden="true")
+    #bodyWrapper
+      //- i.fa.fa-arrow-right#toggle-sidebar(aria-hidden="true")
+      //- include ./sidebar.pug
+      if (!is_post())
+        include ./nav.pug
+      #content-outer
+        block top_img
+        #content-inner.layout
+          if body
+            div!= body
+          else
+            block content
+      footer
+        include ./footer.pug
+      i.fa.fa-arrow-up#go-up(aria-hidden="true")
     each item in theme.cdn.js
       if item !== undefined
         script(src=item)

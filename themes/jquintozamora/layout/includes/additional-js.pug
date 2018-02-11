@@ -6,4 +6,6 @@ if theme.google_analytics
     ga('create', '!{theme.google_analytics}', 'auto');
     ga('send', 'pageview');
   script(async src='https://www.google-analytics.com/analytics.js')
-  
+if (theme.pwa && theme.pwa.enable)
+  link(rel="manifest" href=theme.pwa.manifest)
+  script(async src=url_for('/js/registerServiceWorker.js'))
