@@ -103,7 +103,7 @@ There are some 🚀 **official boilerplates / code samples** 🚀 to start with.
 
 > **IMPORTANT**: Recently (April 2018), it was publish the V2 for Alexa Skill Kit SDK. So, make sure that the code you are using in your sample is pointing to V2 and not V1. 
 > 
-> ❌ V1 uses `require("alexa-sdk)`
+> ❌ V1 uses `require("alexa-sdk")`
 >
 > ✅ V2 uses `require("ask-sdk-core")`
 
@@ -112,17 +112,17 @@ There are some 🚀 **official boilerplates / code samples** 🚀 to start with.
 ## Problems
 As part of my **up and running** for my first Alexa Skill, I found some **issues** in the process, I documented some solutions:
 
-❗️ Problem 1 ❗️ 
+### ❗ ️Problem 1 ❗️ 
 
 *A valid interaction model is required to test your skill there was an internal server error*
 
-> Solution: Check in **Alexa Skills Kit Developer Console** your Skill builder checklist. Everyone of these 4 items should be chech in green!
-> ![build the model](./building-voice-app-custom-alexa-skill-node-js/build-the-model.png)
+> Solution: Check in **Alexa Skills Kit Developer Console** your Skill builder checklist. Everyone of these 4 items should be check in green!
+> ![build the model](./build-the-model.png)
 
 
 
 
-❗️ Problem 2 ❗️ 
+### ❗️ Problem 2 ❗️ 
 
 *Error parsing the requested content. Please validate the enums in the request, which is a common cause for this exception*
 > Solution: https://forums.developer.amazon.com/questions/165659/error-parsing-the-requested-content-please-validat.html
@@ -135,5 +135,6 @@ As part of my **up and running** for my first Alexa Skill, I found some **issues
 - [Alexa Cookbook](https://github.com/alexa/alexa-cookbook/tree/master/aws)
     
     
-I hope these notes will help on clarify little bit the new concepts on Voice Apps. 
-Stay tunned as I'll be publishing more post about advanced scenarios and deployments for Alexa Custom Skills!
+I **hope** these notes will help on **clarify little bit the new concepts** on **Voice Apps**. 
+
+**Stay tunned** 🤘 as I'll be publishing more post about **advanced scenarios** and deployments for Alexa Custom Skills!
