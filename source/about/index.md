@@ -285,6 +285,6 @@ I'm interested on `Web Performance`, `Offline first`, `TDD`, `Progressive Web Ap
 
 Also, I like cycling and playing football, and I got some skills for cooking `spanish omelette`.
   
-Currently I'm working as a `Full Stack Developer` at **Arcadia Group** in London, United Kingdom.
+Currently I'm working (*Contract*) as a `Sotfware Engineer - Full Stack JavaScript Developer` at **Eurostar**  in London, United Kingdom.
 
 <br>
