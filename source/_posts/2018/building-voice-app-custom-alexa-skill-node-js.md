@@ -101,7 +101,7 @@ There are some 🚀 **official boilerplates / code samples** 🚀 to start with.
 - [Amazon Official Code Samples](https://github.com/alexa/alexa-skills-kit-sdk-for-nodejs#samples)
 
 
-> **IMPORTANT**: Recently (April 2018), it was publish the V2 for Alexa Skill Kit SDK. So, make sure that the code you are using in your sample is pointing to V2 and not V1. 
+> **IMPORTANT**: Recently (April 2018), it was published the V2 for Alexa Skill Kit SDK. So, make sure that the code you are using in your sample is pointing to V2 and not V1. 
 > 
 > ❌ V1 uses `require("alexa-sdk")`
 >
