@@ -20,7 +20,7 @@ featuredImage:
 ## Introduction
 
 First time I heard about [Alexa / Echo](https://www.amazon.co.uk/Echo) 👀 I loved the idea of having an **assistant** at home capable of playing music on demand, setting up alarms, giving the flash briefings, an so on.    
-Currently, I'm working as a **Software Engineer** at [Eurostar](https://www.eurostar.com) (Contractor), and my first project consist of building a **Voice App** using **Amazon Echo - Alexa** and **Google Home** 💻. 
+Currently, I'm building a **Voice App** using **Amazon Echo - Alexa** and **Google Home** 💻. 
 That's quite interesting challenge given the fact I'll be using AWS Lambda function and NodeJS as part of the technology stack.
 
 This post is intended to gather all **my notes** meanwhile I was learning and developing my first Voice App using [Alexa Skills Kit](https://developer.amazon.com/alexa-skills-kit). I thought it will be important to share this notes as I felt quite lost at the beginning.
