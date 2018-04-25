@@ -3,14 +3,15 @@ layout: post
 title: Deploying Alexa Skill using an already created lambda function and role  
 language: English
 permalink: deploy-alexa-skill-using-already-created-lambda-function-and-role
-id: 903
+id: 904
 categories:
   - How-To
 tags:
   - Voice App
-  - Alexa SKill
+  - Alexa Skill
   - AWS Lambda
-date: 2018-04-23 08:00:24
+  - Alexa Skill Deployment
+date: 2018-04-25 08:00:24
 featuredImage: 
   url: featured.png
   width: auto
