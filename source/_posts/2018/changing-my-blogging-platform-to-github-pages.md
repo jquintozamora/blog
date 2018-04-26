@@ -105,7 +105,7 @@ I started with a `Hexo` theme called [melody](https://github.com/Molunerfinn/hex
 - [x] Image optimization (ImageOptim)
 - [x] Integration with Medium
 
-To see further details about the implementation that's the Github Project: ⭐️️️️️ [José Quinto Blog]((https://github.com/jquintozamora/blog) ⭐️️️️️
+To see further details about the implementation that's the Github Project: ⭐️️️️️ [José Quinto Blog](https://github.com/jquintozamora/blog) ⭐️️️️️
 
 <br >
 
