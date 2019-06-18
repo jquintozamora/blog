@@ -13,6 +13,8 @@ skills:
         maxWidth: '110px'
       techUrl: https://developer.amazon.com/alexa
       projects:
+        - url: https://www.certmetrics.com/amazon/public/badge.aspx?i=11&t=c&d=2019-01-12&ci=AWS00484423
+          name: AWS Certified Alexa Skill Builder - Specialty 
         - url: http://bit.ly/AlexaEurostarSkill
           name: Eurostar Alexa Skill
     - name: HTML
@@ -95,7 +97,7 @@ skills:
       techUrl: https://reactjs.org
       projects:
         - url: https://www.eurostar.com
-          name: Eurostar (Chatbot UI)
+          name: Eurostar
         - url: http://www.topshop.com
           name: Arcadia Group (e-commerce)
         - url: https://github.com/jquintozamora/react-d3-treemap
@@ -121,6 +123,8 @@ skills:
         maxWidth: '80px'
       techUrl: https://redux.js.org
       projects:
+        - url: https://www.eurostar.com
+          name: Eurostar
         - url: http://www.topshop.com
           name: Arcadia Group (e-commerce)
     - name: Webpack
@@ -131,6 +135,8 @@ skills:
         maxWidth: '80px'
       techUrl: https://webpack.js.org
       projects:
+        - url: https://www.eurostar.com
+          name: Eurostar
         - url: http://www.topshop.com
           name: Arcadia Group (e-commerce)
         - url: https://github.com/jquintozamora/react-typescript-webpack2-cssModules-postCSS
@@ -163,7 +169,7 @@ skills:
       techUrl: https://nodejs.org/en
       projects:
         - url: https://www.eurostar.com
-          name: Eurostar (Chatbot UI)
+          name: Eurostar
         - url: http://www.topshop.com
           name: Arcadia Group (e-commerce)
     - name: d3js
@@ -184,10 +190,10 @@ Hello, my name is **José Quinto**, I'm **Software Engineer** (currently focused
 
 Originally I'm from **Albatera**, a little town from **Spain**.
 
-I'm also interested on `D3.js`, `Alexa Skills Development`, `VUX` and `Artificial Intelligence`.
+As part of my hobbies I'm interested on `Artificial Intelligence`, `Machine Learning`, and `D3.js`. 
 
 Also, I like cycling and playing football, and I've got some skills for cooking `spanish omelette`.
   
-Currently I'm working (*Contract*) as a `Sotfware Engineer - Full Stack JavaScript Developer` at **Eurostar** in London, United Kingdom.
+Currently I'm working (*Contract*) as a `Software Engineer - Full Stack JavaScript Developer` at **Eurostar** in London, United Kingdom.
 
 <br>
