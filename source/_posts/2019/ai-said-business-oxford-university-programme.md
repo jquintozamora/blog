@@ -3,7 +3,7 @@ layout: post
 title: My experience as Oxford Artificial Intelligence Programme 2019 student
 language: English
 permalink: ai-said-business-oxford-university-programme-2019
-id: 909
+id: 910
 categories:
   - AI
   - Oxford University
