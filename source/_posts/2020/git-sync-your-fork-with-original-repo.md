@@ -16,7 +16,7 @@ featuredImage:
 
 ## Introduction
 
-When collaborating with github projects, normally, you do your changes in your fork and branch and then push these changes to your branch ( and should automatically point to original repo master when you create a PR ). Recently I started collaborating with a github project called [excalidraw](https://github.com/excalidraw/excalidraw) and they use that approach. Even if that sounds a easy thing to do, but specially new developers could struggle to get sync done.
+When collaborating with github projects, normally, you do your changes in your fork / branch and then push these changes to your origin ( and  when you create a PR it should automatically point to original repo master ). Recently I started collaborating with a github project called [excalidraw](https://github.com/excalidraw/excalidraw) and they use that approach. Even if that sounds a easy thing to do, it is not, specially new developers could struggle to get sync done for first time.
 
 ## Sync Fork with Original Repo
 
