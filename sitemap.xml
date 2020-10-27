@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://blog.josequinto.com/manifest.json</loc>
+    
+    <lastmod>2020-10-27T08:12:15.403Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/about.html</loc>
+    
+    <lastmod>2020-10-27T08:12:15.399Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2019/02/24/wrapping-up-2018/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.391Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2020/04/04/git-sync-your-fork-with-original-repo/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.391Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2019/04/18/aws-certified-alexa-skill-builder/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.389Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2019/07/24/ai-said-business-oxford-university-programme-2019/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.388Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.387Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2018/06/11/development-pipeline-alexa-skill-multideveloper-environment/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.386Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2018/04/25/deploy-alexa-skill-using-already-created-lambda-function-and-role/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.383Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2018/06/14/configuring-linter-git-hooks-improve-development-workflow/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2018/08/06/configuring-permissions-to-request-email-access-for-use-in-your-skill-alexa/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.380Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2018/02/08/changing-my-blogging-platform-to-github-pages/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.379Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2018/04/23/building-voice-app-custom-alexa-skill-node-js/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.378Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/03/03/upload-json-object-as-a-file-into-office-365-using-javascript-jsom/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.377Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/01/19/update-page-layout-by-using-javascript-jsom-in-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.376Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/03/09/typescript-functions-to-get-current-domain-site-collection-and-site-urls-with-window-location-fallback/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.375Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/03/08/typescript-functions-to-convert-from-base64-to-utf8-and-vice-versa/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.374Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/06/28/how-to-consume-our-decorators-models-and-parsers-from-spfx-the-winning-combination/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.365Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/06/28/create-custom-parser-and-array-parser-to-generate-query-and-property-names-in-pnp-js-core/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.362Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/06/15/creating-mydocument-and-mydocumentcollection-models-extending-item-and-items-pnp-js-core-classes/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.358Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/05/29/creating-select-and-expand-typescript-property-decorators-to-be-used-in-pnp-js-core/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.356Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/05/19/why-do-we-should-use-custom-business-objects-models-in-pnp-js-core/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.353Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/06/23/npm-install-fails-on-windows-10-enoent-4058-operation-not-permitted-rename/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.352Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/04/30/how-to-integrate-pnp-js-core-and-sharepoint-framework-logging-systems/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.351Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/03/17/how-to-convert-array-of-objects-into-comma-separated-string-extracting-only-one-property/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.350Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/07/10/how-to-configure-webpack-for-replacing-your-api-module-path-with-a-mock-api/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.349Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/01/20/getting-react-to-load-polyfills-only-when-needed/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.348Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/06/29/dynamic-import-expressions-and-webpack-code-splitting-integration-with-typescript-2-4/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.346Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/02/16/enable-azure-invocation-log-at-a-web-job-function-level-for-pnp-provisioning/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.346Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/01/12/cross-browser-and-device-testing-with-browserstack-nightwatch-and-office-365-authentication/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.344Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/04/19/boilerplate-project-for-react-typescript-webpack-2-postcss-css-modules-and-hmr/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.342Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2017/04/28/all-typescript-tsconfig-json-options-using-typescript-init/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.341Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/02/12/using-powershell-to-set-available-web-templates-via-csom-in-sharepoint-online-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.339Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/03/17/using-powershell-to-retrieve-all-sites-web-object-recursively-from-sharepoint-online/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.337Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/02/16/using-powershell-to-add-webpart-to-sharepoint-page-via-csom-in-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.336Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/01/26/sharepoint-online-powershell-problem-cannot-convert-the-microsoft-sharepoint-client-clientcontext/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.335Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/01/14/sharepoint-2013-client-side-rendering-register-templates-overrides-in-detail/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.329Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/12/07/react-use-es6-arrow-functions-in-classes-to-avoid-binding-your-methods-with-the-current-this-object/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.328Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/07/11/office-365-pnp-provisioning-hide-default-title-column-and-enable-menu-for-other-custom-text-column/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.326Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/06/14/office-365-cannot-convert-object-problem-when-provisioning-pnpfile-display-template/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.324Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/09/13/how-to-unzip-azure-blobs-programmatically-using-memory-streams-in-azure-webjobs/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.323Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/06/01/how-to-list-all-site-custom-actions-using-csom-and-powershell-in-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.321Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/09/05/how-to-provide-sharepointcontext-to-a-web-api-action-apicontroller-in-a-sharepoint-provider-hosted-app/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.321Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/05/04/how-to-configure-visual-studio-2015-integration-with-latest-version-of-node-js-and-npm/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.317Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/06/21/how-to-applytheme-using-gulp-task-in-sharepoint-online-projects/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.316Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/11/14/how-to-build-a-new-spa-with-es6-scss-react-webpack-and-hmr-the-beginners-guide/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.316Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/09/19/enable-sql-azure-access-from-azure-webjobs-by-adding-firewall-rules-using-powershell/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.314Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/08/02/enable-log-and-trace-information-for-pnp-core-provisioning-when-using-console-application/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.313Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/04/18/dealing-with-authentication-when-developing-with-multiple-office-365-tenants-using-chrome-profiles/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.310Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/04/21/convert-from-two-letters-language-code-to-four-letters-language-tag-with-powershell/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.308Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2016/05/20/compile-optimize-and-watch-our-less-css-files-with-gulp-tasks-using-visual-studio-2015-in-our-sharepoint-online-solutions/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.266Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/09/30/update-webpart-properties-jslink-using-jsom-in-sharepoint-2013-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.265Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/08/13/understanding-refinement-web-part-in-sharepoint-2013-online-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/01/30/sharepoint-list-site-collection-web-part-aggregator-using-spsitedataquery-and-spgridview/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.261Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.259Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/12/08/retrieve-static-and-internal-field-names-of-a-sharepoint-list-using-javascript-in-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.257Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/09/24/navigation-cache-problems-in-sharepoint-using-the-right-sitemapdatasource/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.256Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/05/19/me-movetolondon/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.255Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/07/22/how-to-include-two-search-box-controls-in-the-same-master-page-sharepoint-2013office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.254Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/12/07/how-to-disable-create-friendly-urls-for-new-pages-behaviour-in-sharepoint-2013-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.253Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/09/10/get-view-by-url-method-implemented-in-jsom-for-sharepoint-2013-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.252Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.250Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/10/26/create-webtemplate-based-on-community-features-on-sharepoint-2013-or-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.248Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/12/02/create-a-new-lookup-field-using-jsom-in-sharepoint-2013-office-365/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.246Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2015/12/17/caml-query-to-filter-lookup-field-by-id-using-jsom-in-office-365-sharepoint-2013/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.244Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/07/31/sharepoint-2013-cambiar-los-alternate-access-mappings-con-powershell/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.242Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/07/14/sharepoint-2013-blogs-tag-cloud-using-client-side-rendering/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.240Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/05/30/powershell-to-export-query-all-user-profile-properties-and-ad-mappings/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.238Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/06/30/meet-our-team-page-design-compilation/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.236Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/11/06/how-to-attach-an-event-receiver-for-an-specific-list-in-sharepoint-2013/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.233Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/12/01/expand-all-events-by-default-on-sharepoint-2013-calendars/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.232Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/08/04/diseo-de-menu-nav-bar-con-css-en-sharepoint-2013/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.230Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/07/14/dealing-with-style-the-sharepoint-2013-blog-template/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.228Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/07/03/create-quick-links-toggle-lateral-panel-with-jquery/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.226Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/11/24/change-site-contents-style-in-sharepoint-2013/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.224Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2014/06/09/branding-tip-custom-style-in-newsfeed-and-site-feed-webpart-in-sharepoint-2013/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.223Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2013/10/02/blog-openjosequinto-com/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.222Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2013/10/03/la-1-iberian-sharepoint-conference-ya-est-aqu/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.221Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/2013/10/10/configurar-bsqueda-de-sharepoint-y-que-adems-sea-eficaz/</loc>
+    
+    <lastmod>2020-10-27T08:12:15.220Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://blog.josequinto.com/404.html</loc>
+    
+    <lastmod>2020-10-27T08:12:15.184Z</lastmod>
+    
+  </url>
+  
+</urlset>
