@@ -2,16 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.josequinto.com/manifest.json</loc>
+    <loc>https://blog.josequinto.com/about.html</loc>
     
-    <lastmod>2020-10-27T08:12:15.403Z</lastmod>
+    <lastmod>2020-10-27T08:55:42.962Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.josequinto.com/about.html</loc>
+    <loc>https://blog.josequinto.com/manifest.json</loc>
     
-    <lastmod>2020-10-27T08:12:15.399Z</lastmod>
+    <lastmod>2020-10-27T08:12:15.403Z</lastmod>
     
   </url>
   
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://blog.josequinto.com/2017/02/16/enable-azure-invocation-log-at-a-web-job-function-level-for-pnp-provisioning/</loc>
+    <loc>https://blog.josequinto.com/2017/06/29/dynamic-import-expressions-and-webpack-code-splitting-integration-with-typescript-2-4/</loc>
     
     <lastmod>2020-10-27T08:12:15.346Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.josequinto.com/2017/06/29/dynamic-import-expressions-and-webpack-code-splitting-integration-with-typescript-2-4/</loc>
+    <loc>https://blog.josequinto.com/2017/02/16/enable-azure-invocation-log-at-a-web-job-function-level-for-pnp-provisioning/</loc>
     
     <lastmod>2020-10-27T08:12:15.346Z</lastmod>
     
@@ -310,14 +310,14 @@
   </url>
   
   <url>
-    <loc>https://blog.josequinto.com/2016/11/14/how-to-build-a-new-spa-with-es6-scss-react-webpack-and-hmr-the-beginners-guide/</loc>
+    <loc>https://blog.josequinto.com/2016/06/21/how-to-applytheme-using-gulp-task-in-sharepoint-online-projects/</loc>
     
     <lastmod>2020-10-27T08:12:15.316Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://blog.josequinto.com/2016/06/21/how-to-applytheme-using-gulp-task-in-sharepoint-online-projects/</loc>
+    <loc>https://blog.josequinto.com/2016/11/14/how-to-build-a-new-spa-with-es6-scss-react-webpack-and-hmr-the-beginners-guide/</loc>
     
     <lastmod>2020-10-27T08:12:15.316Z</lastmod>
     
