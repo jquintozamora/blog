@@ -24,7 +24,7 @@ const fileManifest = [
   },
   {
     "url": "about.html",
-    "revision": "eafb810cc0751257ddea8d679e610288"
+    "revision": "58afb29cc1b72ce2b3f8ea931605d923"
   },
   {
     "url": "googleaf7ef43e6f8dd59c.html",
@@ -32,7 +32,7 @@ const fileManifest = [
   },
   {
     "url": "index.html",
-    "revision": "c4b221d0489d0697dc6fb31aca11eda4"
+    "revision": "868165992bfdbb65839fd4b91d3ecf69"
   },
   {
     "url": "BingSiteAuth.xml",
@@ -44,7 +44,7 @@ const fileManifest = [
   },
   {
     "url": "sitemap.xml",
-    "revision": "94adf517be2c9c8abe23467a1b3b64c2"
+    "revision": "79ae9f869c27d90941ec9d5612103d2e"
   },
   {
     "url": "favicon.ico",
@@ -956,11 +956,11 @@ const fileManifest = [
   },
   {
     "url": "page/6/index.html",
-    "revision": "b91e546000295dcf0f269562aafc85e3"
+    "revision": "5bd253bc06425a7dc287b58d0644c205"
   },
   {
     "url": "page/7/index.html",
-    "revision": "5008d688220399637172138015304b0e"
+    "revision": "59849c2c75496d2bf061f3c359a2016a"
   },
   {
     "url": "page/8/index.html",
