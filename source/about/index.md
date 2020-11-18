@@ -13,7 +13,7 @@ skills:
         maxWidth: '110px'
       techUrl: https://developer.amazon.com/alexa
       projects:
-        - url: https://www.certmetrics.com/amazon/public/badge.aspx?i=11&t=c&d=2019-01-12&ci=AWS00484423
+        - url: https://www.youracclaim.com/badges/7e9331cc-34ba-467c-a5c1-38c2a3e7dcda/public_url
           name: AWS Certified Alexa Skill Builder - Specialty 
         - url: http://bit.ly/AlexaEurostarSkill
           name: Eurostar Alexa Skill
@@ -194,6 +194,6 @@ As part of my hobbies I'm interested on `Artificial Intelligence`, `Machine Lear
 
 Also, I like cycling and playing football, and I've got some skills for cooking `spanish omelette`.
   
-Currently I'm working (*Contract*) as a `Software Engineer - Full Stack JavaScript Developer` at **Eurostar** in London, United Kingdom.
+Currently I'm working (*Contract*) as a `Software Engineer - Full Stack JavaScript Developer` at **Concentra Analytics** in London, United Kingdom.
 
 <br>
