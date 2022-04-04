@@ -1,0 +1,144 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"><title>How to architecture and implement Integration Tests for GraphQL BFF API using docker | José Quinto</title><meta name="description" content="How to architecture and implement Integration Tests for GraphQL BFF API using docker"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"><meta property="og:image" content="https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/featured.png"><meta name="twitter:image" content="https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/featured.png"><meta property="fb:app_id" content="155567495101835"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/" property="og:url"><meta name="twitter:title" content="How to architecture and implement Integration Tests for GraphQL BFF API using docker | José Quinto" property="og:title"><meta name="twitter:site" content="@jquintozamora"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/"><meta property="og:title" content="How to architecture and implement Integration Tests for GraphQL BFF API using docker | José Quinto"><link rel="canonical" href="https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/"><link rel="author" href="https://plus.google.com/u/0/108403117712061507579"><link rel="alternate" type="application/rss+xml" title="Jose Quinto" href="https://blog.josequinto.com/feed.rss"><meta name="theme-color" content="#ffffff"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.1"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js" defer></script><script>var GLOBAL = { 
+  root: '/',
+  algolia: {"appId":"C7MOFESP3V","apiKey":"cdc4a9b7af864c710f2d3da5caf59eec","indexName":"dev_JQBLOG","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><div id="bodyWrapper"><div id="content-outer"><div id="top-container" style="background-image: url(/background.svg)"><div id="page-header"><span class="pull-left"> <a class="brand" href="/"><img class="brand-image" src="/jose-quinto.png"><div class="brand-name">José Quinto</div></a></span><i class="fa fa-share toggle-social" aria-hidden="true"></i><div class="socialicons" id="header-social-icons"><a class="social-icon" href="https://twitter.com/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a><a class="social-icon" href="https://github.com/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-github"></i></a><a class="social-icon" href="https://codepen.io/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-codepen"></i></a><a class="social-icon" href="https://www.linkedin.com/in/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a><a class="social-icon" href="https://stackoverflow.com/users/5015774/jos%C3%A9-quinto-zamora?tab=profile" target="_blank" rel="noopener"><i class="fa fa-stack-overflow"></i></a><a class="social-icon" href="https://blog.josequinto.com/feed.rss" target="_blank" rel="noopener"><i class="fa fa-rss"></i></a></div><a class="social-icon search"><i class="fa fa-search"></i></a><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Search posts:</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/about.html">About</a></span></div><div id="post-info"><div id="post-title">How to architecture and implement Integration Tests for GraphQL BFF API using docker</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2018-07-18</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/taxonomy/Investigation/">Investigation</a><i class="fa fa-angle-right" aria-hidden="true"></i><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/taxonomy/Investigation/Workflow-Performance/">Workflow Performance</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="/2018/07/18/integration-tests-bff-graphql/#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2018/07/18/integration-tests-bff-graphql/"></span></a></div></div></div><div class="layout" id="content-inner"><section class="articlePostContainer"><nav class="sidebar-toc"><div class="sidebar-toc__title">Contents</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#BFF-Backend-for-Frontends"><span class="toc-number">2.</span> <span class="toc-text">BFF (Backend for Frontends)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Technical-Stack"><span class="toc-number">3.</span> <span class="toc-text">Technical Stack</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Integration-Tests"><span class="toc-number">4.</span> <span class="toc-text">Integration Tests</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Integration-Test-Stack"><span class="toc-number">4.1.</span> <span class="toc-text">Integration Test Stack</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Requirements"><span class="toc-number">4.2.</span> <span class="toc-text">Requirements</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Architecture"><span class="toc-number">4.3.</span> <span class="toc-text">Architecture</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Structure"><span class="toc-number">4.4.</span> <span class="toc-text">Structure</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Running-Tests-Development-Mode"><span class="toc-number">5.</span> <span class="toc-text">Running Tests: Development Mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Running-Tests-Production-like-Mode"><span class="toc-number">6.</span> <span class="toc-text">Running Tests: Production-like Mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Docker-help"><span class="toc-number">7.</span> <span class="toc-text">Docker help</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#TODO"><span class="toc-number">8.</span> <span class="toc-text">TODO</span></a></li></ol></div></nav><section class="postArticle"><article id="post"><div class="post-featuredImage"><img src="featured.png" width="auto" height="auto"></div><div id="post-content"><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>I’ve been tasked with an interesting one this time. I’ve to create a <strong>BFF (Backend For Frontends) API</strong>. In this post, I’ll go through the <strong>BFF concept</strong>, <strong>BFF technical stack</strong> and also I’ll explain in detail how to create integration tests for that <strong>BFF API</strong>.</p>
+<h2 id="BFF-Backend-for-Frontends"><a href="#BFF-Backend-for-Frontends" class="headerlink" title="BFF (Backend for Frontends)"></a>BFF (Backend for Frontends)</h2><p>In a nutshell, <strong>BFF</strong> is built to allow client apps to have <strong>more friendly</strong>, <strong>flexible</strong> and <strong>manageable</strong> API to act as a proxy for the <strong>backend services</strong>.
+In a <strong>microservices architecture</strong> that’s quite important as it is also used as a scoped schema for different devices or platforms. For example, we could create a BFF API for <code>Web</code>, <code>Mobile</code> and <code>Voice</code> because each of these need different data and combinations of queries from the microservices.</p>
+<p>For example, an App could need interaction with different type of connectors (database, microservices, REST endpoints, external APIs, and so on)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">App </span><br><span class="line"> |</span><br><span class="line"> |-&gt; BFF Service </span><br><span class="line">       |</span><br><span class="line">       |-&gt; Custom Database</span><br><span class="line">       |-&gt; User Account Microservice</span><br><span class="line">       |-&gt; External Weather API</span><br></pre></td></tr></table></figure>
+<h2 id="Technical-Stack"><a href="#Technical-Stack" class="headerlink" title="Technical Stack"></a>Technical Stack</h2><p>A <strong>BFF service</strong> can be done in hundred different ways, in my case I chose:</p>
+<ul>
+<li><code>NodeJS</code></li>
+<li><code>babel</code> as ES6 compiler</li>
+<li><code>express</code> as a webserver</li>
+<li><code>morgan</code> and <code>winston</code> as a logger tools</li>
+<li><code>helmet</code> as a Security middleware for express</li>
+<li><code>graphql</code> as SDL (Schema Definition Language)</li>
+<li><code>apollo-server-express</code> as a GraphQL Server middleware for express</li>
+<li><code>nodemon</code> as a dev server reload tool</li>
+<li><code>husky</code> and <code>lint-staged</code> as a git hook tool</li>
+<li><code>eslint</code> as a linter tool</li>
+<li><code>jest</code> as a testing framework</li>
+<li><code>circleci</code> as CI tool</li>
+</ul>
+<h2 id="Integration-Tests"><a href="#Integration-Tests" class="headerlink" title="Integration Tests"></a>Integration Tests</h2><p>Integration Tests are really important for the QA of an API. Also, when working on microservices architecture, it is is even more necessary. Normally, when developing big applications it turns out we have 50 different microservices connected between them. As a Integration Test developers we have to make sure we only test our scope of the app (which is our current service). </p>
+<p>In a nutshell, we have inputs and outputs in our BFF layer as well:</p>
+<blockquote>
+<p>Inputs –&gt; Service –&gt; Outputs</p>
+</blockquote>
+<p>Let’s ask some questions I had when started building the Integration Testing Workflow:</p>
+<ul>
+<li>How can we test our API in a <strong>isolated way</strong>?<ul>
+<li>Using <code>docker</code>, we can create isolated environment for our API under test and also for the test framework itself.</li>
+</ul>
+</li>
+<li>How can we test our API using <strong>production-like environment</strong>?<ul>
+<li>Using <code>docker</code>, we can create a container with the same configuration as production using <code>NODE_ENV=production</code>.</li>
+</ul>
+</li>
+<li>How can we provide an <strong>easy</strong> and <strong>automated way</strong> to run <strong>our integration tests</strong>?<ul>
+<li>Using <code>docker-compose</code>, we can easily create a definition for our docker containers and run our integration tests quickly.</li>
+</ul>
+</li>
+<li>How can we improve the <strong>manageability and speed</strong> on developing integration tests?<ul>
+<li>Using <code>jest</code> snapshots to store the expected result (we save some time writing stubs here). So, we choose <code>jest</code> as a testing framework. </li>
+</ul>
+</li>
+<li>How can we <strong>mock HTTP responses</strong> for the <strong>external services</strong> that our API calls?<ul>
+<li>Using <code>mockttp</code> we can easily mock external services within our tests.</li>
+</ul>
+</li>
+<li>When mocking external services HTTP responses, <strong>should we mock changing the behavior on the code</strong> or <strong>should we intercept HTTP responses from the external APIs</strong>?<ul>
+<li>Intercept HTTP responses with <code>mockttp</code>. Then we run the integration tests in a more similar to production environment. That means we test the whole workflow: graphql server, resolvers and data sources.</li>
+</ul>
+</li>
+<li>Are we going to use <strong>Cucumber</strong> and <strong>Gherkin</strong>?<ul>
+<li><code>Gherkin</code> is high level language used on BDD (Behavior Driven Development) helping other stakeholders to define requirements. That is more used for end to end tests than integration tests.</li>
+</ul>
+</li>
+<li><strong>How many integration tests</strong> should we write when testing GraphQL Server?<ul>
+<li>I’m still working on the best approach here, but some ideas:<ul>
+<li>Create one file for each query defined on Query schema.</li>
+<li>Write tests for queries on all levels of the GraphQL Schema.</li>
+<li>Write tests for error queries which will result on a GraphQL Schema error.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>How can we mock the behavior of a <strong>Custom Database</strong>?<ul>
+<li>If you require database queries, use <code>docker-compose</code> to run your local database with <code>seeds</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Integration-Test-Stack"><a href="#Integration-Test-Stack" class="headerlink" title="Integration Test Stack"></a>Integration Test Stack</h3><ul>
+<li><code>NodeJS</code></li>
+<li><code>docker</code> as container service</li>
+<li><code>docker-compose</code> as a admin tool for docker</li>
+<li><code>mockttp</code> as HTTP mock server and proxy  </li>
+<li><code>jest</code> as testing framework (snapshots included)</li>
+<li><code>apollo-boost</code> as apollo client</li>
+</ul>
+<h3 id="Requirements"><a href="#Requirements" class="headerlink" title="Requirements"></a>Requirements</h3><ul>
+<li>NodeJS <strong>version ^8.11.3</strong></li>
+<li><code>docker</code></li>
+<li><code>docker-compose</code> <strong>schema version 3.6</strong></li>
+</ul>
+<h3 id="Architecture"><a href="#Architecture" class="headerlink" title="Architecture"></a>Architecture</h3><p>Integration Tests are going to run in <code>docker</code> containers in order to have similar to production environment in which to run tests.
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">my-bff-service (container)</span><br><span class="line">    - API under test</span><br><span class="line">    - Listening on 5555</span><br><span class="line"></span><br><span class="line">integration-tester (container)</span><br><span class="line">    - Call voice-bff API</span><br><span class="line">    - Use `mockttp` to mock external services calls</span><br><span class="line">        - Listening on 8888</span><br></pre></td></tr></table></figure></p>
+<h3 id="Structure"><a href="#Structure" class="headerlink" title="Structure"></a>Structure</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">my-bff-service</span><br><span class="line">├── test</span><br><span class="line">│   └── integration                         # Integration Test folder for BFF</span><br><span class="line">│       ├── endpoints                       # Tests folder for endpoints (GraphQL methods)</span><br><span class="line">│       │   ├── __snapshots__               # jest snapshots folder (API output snapshots)</span><br><span class="line">│       │   │      └── &lt;name&gt;.test.js.snap  # One snapshot file for each test file</span><br><span class="line">│       │   └── &lt;name&gt;.test.js              # Test files written in JS (jest)</span><br><span class="line">│       ├── queries                         # GraphQL queries to import in our tests</span><br><span class="line">│       │   └── &lt;method&gt;.&lt;param&gt;.gql        # Name queries files with name of the query + params</span><br><span class="line">│       ├── stubs                           # Stubs for external services called in our API under test (mockttp)</span><br><span class="line">│       │   └── &lt;external-API-Name&gt;         # Create a folder for each API to mock</span><br><span class="line">│       │       └── &lt;path&gt;.json             # Create a mock for each path or different query</span><br><span class="line">│       ├── .babelrc                        # jest is using babel behind scenes</span><br><span class="line">│       ├── .dockerignore                   # files to be ignored by docker</span><br><span class="line">│       ├── docker-compose.yml              # docker-compose file where containers will be defined</span><br><span class="line">│       ├── Dockerfile                      # Dockerfile definition for integration-tester container</span><br><span class="line">│       ├── integration.env                 # environment variables used for integration testing</span><br><span class="line">│       ├── package.json                    # integration-tester is a separate project to run in docker </span><br><span class="line">│       └── test.sh                         # script to automate docker containers creation and execution</span><br><span class="line">├── .dockerignore                           # files to be ignored by docker </span><br><span class="line">├── Dockerfile                              # Dockerfile definition for my-bff-service container</span><br><span class="line">└── src                                     # BFF Application (GraphQL Server)</span><br></pre></td></tr></table></figure>
+<h2 id="Running-Tests-Development-Mode"><a href="#Running-Tests-Development-Mode" class="headerlink" title="Running Tests: Development Mode"></a>Running Tests: Development Mode</h2><p>On development mode, we will need <code>watch</code> mode for test files and API under test. That means is not ideal to develop tests using the <code>docker</code> workflow because it would be so slow. We are going to use our local development server configured for integration tests + running our tests locally. After developing the tests, then we will test using the containers architecture.</p>
+<p>There are two steps to run integration tests in development mode:</p>
+<ol>
+<li>Start BFF on Integration Test mode<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;root of the project&gt;</span><br><span class="line">npm run dev:integration-tester</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>Note: Running using dev config is going to restart the server is we do some changes.</p>
+</blockquote>
+<ol start="2">
+<li>Run Integration Tests locally<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./<span class="built_in">test</span>/integration</span><br><span class="line">npm install</span><br><span class="line">npm run <span class="built_in">test</span> -- --watch</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<blockquote>
+<p>Note: Running jest on watch mode is going to restart the test result each time we save changes.</p>
+</blockquote>
+<h2 id="Running-Tests-Production-like-Mode"><a href="#Running-Tests-Production-like-Mode" class="headerlink" title="Running Tests: Production-like Mode"></a>Running Tests: Production-like Mode</h2><p>That’s the moment of the truth. We will be running our tests inside of a docker container against our API under test which also is going to be inside of other docker container. Then we have isolated environments. </p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> &lt;root of the project&gt;</span><br><span class="line">sudo npm run <span class="built_in">test</span>:integration</span><br></pre></td></tr></table></figure>
+<p>OR</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> ./<span class="built_in">test</span>/integration</span><br><span class="line">sudo ./test.sh</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Note: Run commands with sudo because docker-compose requires it.</p>
+</blockquote>
+<h2 id="Docker-help"><a href="#Docker-help" class="headerlink" title="Docker help"></a>Docker help</h2><ul>
+<li><p>Build and Run docker-compose definition</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker-compose up --build</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Stop and Remove docker-compose containers, images, networks, …</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker-compose down --rmi &apos;local&apos;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Remove non-used docker images</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker image prune -fa</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>See all docker images</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo docker images -a</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><ul>
+<li>Use <a href="https://github.com/ruyadorno/snapstub" target="_blank" rel="noopener">snapstub</a> to automate the creation of stubs for external services mocks</li>
+</ul>
+</div><div id="post-content-bottom-space"><p>&nbsp;</p></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://twitter.com/jquintozamora" target="_blank">José Quinto</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/">https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/category/NodeJS/">NodeJS</a><a class="post-meta__tags" href="/category/BFF-Layer/">BFF Layer</a><a class="post-meta__tags" href="/category/GraphQL/">GraphQL</a></div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2018/08/06/configuring-permissions-to-request-email-access-for-use-in-your-skill-alexa/" title="previous page"><i class="fa fa-chevron-left" aria-hidden="true"></i><span>Configuring permissions to request email access for use in your Alexa Skill</span></a></div><div class="next-post pull-right"><a href="/2018/06/14/configuring-linter-git-hooks-improve-development-workflow/" title="next page"><span>Configuring linter, git hooks and auto-format to improve our development workflow</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></nav><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://blog.josequinto.com/2018/07/18/integration-tests-bff-graphql/';
+  this.page.identifier = '907';
+  this.page.title = 'How to architecture and implement Integration Tests for GraphQL BFF API using docker';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://https-blog-josequinto-com.disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-src" src="//https-blog-josequinto-com.disqus.com/count.js" async></script></section></section></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2022 By José Quinto</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i></div><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.1"></script><script src="/js/fancybox.js?version=1.5.1"></script><script src="/js/copy.js?version=1.5.1"></script><script src="/js/scroll.js?version=1.5.1"></script><script src="/js/head.js?version=1.5.1"></script><script src="/js/search/algolia.js"></script><script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-44570510-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.google-analytics.com/analytics.js"></script><link rel="manifest" href="/manifest.json"><script async src="/js/registerServiceWorker.js"></script></body></html>

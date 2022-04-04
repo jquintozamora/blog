@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"><title>SharePoint 2013 JavaScript Search files classes reference - Refinement Web Part classes in detail | José Quinto</title><meta name="description" content="SharePoint 2013 JavaScript Search files classes reference - Refinement Web Part classes in detail"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"><meta property="og:image" content="https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/featured.jpg"><meta name="twitter:image" content="https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/featured.jpg"><meta property="fb:app_id" content="155567495101835"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/" property="og:url"><meta name="twitter:title" content="SharePoint 2013 JavaScript Search files classes reference - Refinement Web Part classes in detail | José Quinto" property="og:title"><meta name="twitter:site" content="@jquintozamora"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/"><meta property="og:title" content="SharePoint 2013 JavaScript Search files classes reference - Refinement Web Part classes in detail | José Quinto"><link rel="canonical" href="https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/"><link rel="author" href="https://plus.google.com/u/0/108403117712061507579"><link rel="alternate" type="application/rss+xml" title="Jose Quinto" href="https://blog.josequinto.com/feed.rss"><meta name="theme-color" content="#ffffff"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.1"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js" defer></script><script>var GLOBAL = { 
+  root: '/',
+  algolia: {"appId":"C7MOFESP3V","apiKey":"cdc4a9b7af864c710f2d3da5caf59eec","indexName":"dev_JQBLOG","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><div id="bodyWrapper"><div id="content-outer"><div id="top-container" style="background-image: url(/background.svg)"><div id="page-header"><span class="pull-left"> <a class="brand" href="/"><img class="brand-image" src="/jose-quinto.png"><div class="brand-name">José Quinto</div></a></span><i class="fa fa-share toggle-social" aria-hidden="true"></i><div class="socialicons" id="header-social-icons"><a class="social-icon" href="https://twitter.com/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a><a class="social-icon" href="https://github.com/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-github"></i></a><a class="social-icon" href="https://codepen.io/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-codepen"></i></a><a class="social-icon" href="https://www.linkedin.com/in/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a><a class="social-icon" href="https://stackoverflow.com/users/5015774/jos%C3%A9-quinto-zamora?tab=profile" target="_blank" rel="noopener"><i class="fa fa-stack-overflow"></i></a><a class="social-icon" href="https://blog.josequinto.com/feed.rss" target="_blank" rel="noopener"><i class="fa fa-rss"></i></a></div><a class="social-icon search"><i class="fa fa-search"></i></a><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Search posts:</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/about.html">About</a></span></div><div id="post-info"><div id="post-title">SharePoint 2013 JavaScript Search files classes reference - Refinement Web Part classes in detail</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2015-07-01</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/taxonomy/Article/">Article</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/"></span></a></div></div></div><div class="layout" id="content-inner"><section class="articlePostContainer"><nav class="sidebar-toc"><div class="sidebar-toc__title">Contents</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Path"><span class="toc-number">2.</span> <span class="toc-text">Path</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference-tables"><span class="toc-number">3.</span> <span class="toc-text">Reference tables</span></a></li></ol></div></nav><section class="postArticle"><article id="post"><div class="post-featuredImage"><img src="featured.jpg" width="auto" height="auto"></div><div id="post-content"><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>With <strong>SharePoint 2013</strong>, the search capabilities are heavily invested in and we see a lot of <strong>new JavaScript files</strong> in our pages. For example, in term of <code>Search Result Pages</code>, we have a lot of JavaScript files and functions.</p>
+<p>The goal of this post is to have like a <strong>API reference</strong> about these <strong>Search JS</strong> files. It is annoying to have to go over the files every time we need to remember some which classes we have inside. Later on this post we will go further with Refinement Web Part explaining some of the core classes and functions the have available.</p>
+<p>This could give us the possibility to reuse some functions in <strong>our custom JavaScript solutions</strong>.</p>
+<h2 id="Path"><a href="#Path" class="headerlink" title="Path"></a>Path</h2><p>If you go to Layouts folder <code>C:\Program Files\Common Files\microsoft shared\Web Server Extensions\15\TEMPLATE\LAYOUTS</code> you can find these files:</p>
+<p><img src="./clip_image0034.png" alt="clip_image0034"></p>
+<p><img src="./clip_image0014.png" alt="clip_image0014"></p>
+<p><img src="./clip_image0024.png" alt="clip_image0024"></p>
+<h2 id="Reference-tables"><a href="#Reference-tables" class="headerlink" title="Reference tables"></a>Reference tables</h2><p>This <strong>table</strong> will compile all the js <strong>file descriptions</strong>, <strong>namespaces</strong> and <strong>classes</strong>. That is intended to use as a reference instead to have to open all the JS files each time we need to investigate something.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">File</th>
+<th style="text-align:left">Namespaces</th>
+<th style="text-align:left">Classes</th>
+<th style="text-align:left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">SP<br>.Search<br>.js</td>
+<td style="text-align:left">Microsoft<br>.SharePoint<br>.Client<br>.Search<br>.Query</td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Provide JSOM main to use JavaScript to Query the index. Some examples here:<br><a href="http://www.sharepointnutsandbolts.com/2014/05/office-365-sharepoint-hybrid-combining-results.html" target="_blank" rel="noopener">Combining Results in Hybrid env - COB</a><br><a href="http://www.dotnetmafia.com/blogs/dotnettipoftheday/archive/2013/04/18/how-to-query-search-with-the-sharepoint-2013-javascript-client-object-model.aspx" target="_blank" rel="noopener">Query Search with CSOM</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Search<br>.Configuration<br>.js</td>
+<td style="text-align:left">Search<br>.Configuration</td>
+<td style="text-align:left">CatalogItemPicker<br>ContentBySearch<br>QueryBuilderUtility<br>CustomTab<br>RefinerTab<br>QueryBuilder<br>TokenExpansionData<br>QueryTemplateProperty<br>QueryBuilderResultSourceData<br>QueryBuilderConfigData<br>QueryBuilderState<br>SettingsTab<br>Refinement<br>SortTab<br>TestQueryTab</td>
+<td style="text-align:left">Provide JavaScript to deal with Search Configuration: ContentBySearch, Query Builder,…</td>
+</tr>
+<tr>
+<td style="text-align:left">search<br>.faceted<br>.navigation<br>.tab<br>.js</td>
+<td style="text-align:left">Microsoft<br>.SharePoint<br>.Search<br>.FacetedNavigation</td>
+<td style="text-align:left">TermInfo<br>TermDescendantsInfo<br>TermRefinementInfo<br>TermRefinementInfoWebServiceResult<br>TermDescendantsInfoWebServiceResult<br>FacetedNavigationTab</td>
+<td style="text-align:left">JavaScript engine for Managed Metadata Navigation in SharePoint 2013</td>
+</tr>
+<tr>
+<td style="text-align:left">Search.js</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Sounds like a mix between old format JavaScript and FAST integration. But I don’t really know what is intended for.</td>
+</tr>
+<tr>
+<td style="text-align:left">search<br>.refinement<br>.configuration<br>.js</td>
+<td style="text-align:left">Microsoft<br>.SharePoint<br>.Search<br>.FacetedNavigation</td>
+<td style="text-align:left">RefinementConfigurationDialogArgs<br>RefinementConfiguration<br>RefinerConfiguration<br>RefinerConfigurationUIUtilities<br>ContextDataProviderState</td>
+<td style="text-align:left">Provide JavaScript functionality for Refinement Configuration page showed when Click on Show Refiners in the Refinement Web Part configuration pane.</td>
+</tr>
+<tr>
+<td style="text-align:left">search<br>.refinement<br>.configuration<br>.dialog<br>.js</td>
+<td style="text-align:left">Microsoft<br>.SharePoint<br>.Search<br>.FacetedNavigation</td>
+<td style="text-align:left">ManagedPropertyDescriptor<br>RefinementWebPartController<br>RefinementPreviewPopupDialogArgs<br>RefinementPreviewPopup<br>RefinementConfigurationDialog</td>
+<td style="text-align:left">Provide JavaScript functionality for the UI of Refinement configuration screen.</td>
+</tr>
+<tr>
+<td style="text-align:left">SearchUI<br>.js</td>
+<td style="text-align:left">Srch</td>
+<td style="text-align:left">Srch.SU<br>Srch.CU<br>Srch.PSU<br>Srch.SiteSearchUtil<br>Srch.SSU</td>
+<td style="text-align:left">It provides common javascript ui functions and definitions, like div ids, guids, image url constants, OOTB field names,…</td>
+</tr>
+<tr>
+<td style="text-align:left">search<br>.CBS<br>.js</td>
+<td style="text-align:left">Srch</td>
+<td style="text-align:left">ContentBySearch</td>
+<td style="text-align:left">JavaScript engine to deal with UI, Display Templates, … for Content By Search Web Part.</td>
+</tr>
+<tr>
+<td style="text-align:left">search<br>.taxonomy<br>.refinement<br>.js</td>
+<td style="text-align:left">Srch</td>
+<td style="text-align:left">TaxonomyRefinement<br>TaxonomyRefinementNodeInfo<br>TaxonomyNodeSearchResult</td>
+<td style="text-align:left">Provide the JavaScript engine to deal with Taxonomy Refiners with methods like <code>get_taxonomyRefinerName</code>, <code>get_currentTaxonomyNodes</code>, <code>get_renderCounts</code>, <code>get_itemTemplateId</code>, …</td>
+</tr>
+<tr>
+<td style="text-align:left">Search<br>.ClientControls<br>.js</td>
+<td style="text-align:left">Srch</td>
+<td style="text-align:left">Srch.EventType<br>Srch.MessageLevel<br>Srch.UserActionType<br>Srch.DateTimeKind<br>Srch.ClientControl<br>Srch.DataProvider<br>Srch.DisplayControl<br>Srch.Refinement<br>Srch.Result<br>Srch.SearchBox<br>Srch.U<br>Srch.U.PropNames<br>Srch.U.Ids<br>Srch.U.LoadScriptsState<br>Srch.ListenedEvent<br>Srch.ScriptApplicationManager<br>Srch.QueryGroup<br>Srch.LanguagePreference<br>Srch.QueryState<br>Srch.RefinementControl<br>Srch.RefinementCategory<br>Srch.DefaultQueryProperties<br>Srch.ResultSort<br>Srch.RankRule<br>Srch.ComplexResultSort<br>Srch.ControlMessage<br>Srch.PagingLink<br>Srch.ResultEventArgs<br>Srch.BatchResultEventArgs<br>Srch.QueryEventArgs<br>Srch.NavigationNode<br>Srch.ClickRecorder<br>Srch.RefinementUtil<br>Srch.ValueInfo<br>Srch.ValueInfo.Parsers<br>Srch.ValueInfo.Renderers<br>Srch.ValueInfo.ValueTypeHandler<br>Srch.ParseJSONUtil<br>Srch.DataConvertUtil</td>
+<td style="text-align:left">Provides the JavaScript engine (prototypes, functions, …) to deal with Filters, Display Templates, Paging, … inside Search Results, Search Box and Refinement WebPart</td>
+</tr>
+</tbody>
+</table>
+<p>Specifically, we will see in detail the <strong>Classes</strong> needed to understand the <code>Refinement Web Part</code> JavaScript client processing. IN the above table we have in bold all the classes that will be explained in the below table:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Class</strong></th>
+<th style="text-align:left"><strong>Important Methods</strong></th>
+<th style="text-align:left"><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Srch.DataProvider</td>
+<td style="text-align:left">get_currentQueryState<br>get_sourceID<br>get_sourceName<br>get_queryGroupName<br>get_rankRules<br>get_initialQueryState<br>set_initialQueryState<br>get_selectedRefiners<br>set_selectedRefiners<br>get_totalRows<br>get_rowCount<br>get_refinementInfo<br>get_resultsUrl<br>set_resultsUrl<br>get_upScopeUrl<br>get_effectiveQueryLanguage<br>raiseQueryIssuingEvent<br>raiseResultReadyEvent<br>add_queryStateChanged<br>remove_queryStateChanged<br>raiseQueryStateChangedEvent<br>getSortRankName<br>getSortName</td>
+<td style="text-align:left">This is the data collector (controller). This Object keeps information about Search Box, Refiners, Results, paging and so more. This is intended to provide data when page status changes in the Search Page.<br>For example, if some results require paging, or require a batch query issuing. When a new query is requested using Search Box, this object can get the information from Search index asynchronousically.</td>
+</tr>
+<tr>
+<td style="text-align:left">Srch.DisplayControl</td>
+<td style="text-align:left">get_queryGroupName<br>set_queryGroupName<br>get_dataProvider<br>get_renderedResult<br>get_currentResultTableCollection<br>scriptApplication_PreLoad<br>add_queryReady<br>dataProvider_QueryIssuing<br>dataProvider_ResultReady<br>refresh<br>render</td>
+<td style="text-align:left">This is the Search Results Web Part manager (model). It is on charge of manage all the process of calling data provider, be sure data provider is on the most updated status and call the render (control and items display templates).</td>
+</tr>
+<tr>
+<td style="text-align:left">ScriptApplicationManager</td>
+<td style="text-align:left">get_current()<br>get_clientRuntimeContext()<br>get_preferencesUrl<br>get_displayTemplatesUrl<br>get_queryRulesUrl<br>get_resultSourcesUrl<br>get_userAdvancedLanguageSettingsUrl<br>get_pagePath<br>add_preLoad(value)<br>remove_preLoad(value)<br>raisePreLoadEvent()<br>add_load(value)<br>remove_load(value)<br>raiseLoadEvent()<br>add_postLoad(value)<br>remove_postLoad(value)<br>raisePostLoadEvent<br>getUserPreferenceLanguages<br>getAllSupportedLanguages<br>getNavigationNodes<br>getDisplayNameByLanguageID(lcid)<br>registerClientControl(cc)<br>navigateTo(url, fullNavigate)</td>
+<td style="text-align:left">This is on charge of manage all the Scripts added, removed, registered and updated inside the overall Search Results Page.<br>It is used to register controls, register display templates, navigate to other views without losing the script context, …</td>
+</tr>
+<tr>
+<td style="text-align:left">Srch.Refinement</td>
+<td style="text-align:left">createRefinementTextbox<br>submitMultiRefinement<br>getRefinementLocalizedTitle<br>getRefinementTitle<br>getExpanded<br>setExpanded<br>multiRefinerSpecifyOtherFilterValue<br>get_selectedRefinementControls<br>set_selectedRefinementControls<br>get_useManagedNavigationRefiners<br>set_useManagedNavigationRefiners<br>addRefinementFilter<br>addRefinementFiltersJSON<br>addRefinementFiltersJSONWithOr<br>addRefinementFilters<br>addRefinementFiltersWithOp<br>removeRefinementFilter<br>removeRefinementFiltersJSON<br>removeRefinementFilters<br>updateRefinementFilters<br>updateRefinersJSON<br>updateRefiners<br>removeRefinementCategory<br>replaceRefinementFilter<br>hasRefinementFilter<br>hasAllRefinementFilters<br>hasRefinementCategory<br>getCurrentRefinementCategory<br>getRefinementControl<br>hasRefiner<br>updateRefinementControls</td>
+<td style="text-align:left">This is the Refinement Web Part manager. It is on charge of manage all the filters and communicate them with the Search Results Web Part.<br>It uses Srch.QueryState object to maintain the consistency between the URL Query filters and the internal status in the Search JavaScript engine (browser memory).<br>As you can see on the right column, it has a lot of methods to add, remove or update refiner filters.<br>For a detailed view of every method you can visit: <a href="http://www.eliostruyf.com/part-5-search-refiner-control-methods-explained/" target="_blank" rel="noopener">Elio’s post</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Srch.QueryState</td>
+<td style="text-align:left">Srch.QueryState.prototype = {<br>k: ‘’, // Keyword<br>o: null, // Sort Orders<br>s: 0, // Start At<br>r: null, // Refiners (RefinementCategory object)<br>l: 0, // Query Language<br>m: ‘’, // Ranking Model ID<br>d: 0, // Trim Duplicates Include ID<br>x: null, // Rank Rules<br>….<br>}</td>
+<td style="text-align:left">Tracks transient search query properties that can be changed by a regular searcher and need to be persisted in url bookmarks.<br>Similar to this one: <a href="https://msdn.microsoft.com/EN-US/library/office/microsoft.office.server.search.webcontrols.querystate.aspx" target="_blank" rel="noopener">MSDN</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Srch.RefinementControl</td>
+<td style="text-align:left">Srch_RefinementControl(propertyName, spec, renderTemplateId)<br>Srch.RefinementControl.prototype = {<br>propertyName: null,<br>spec: null,<br>renderTemplateId: ‘4’,<br>overrideDisplayName: null,<br>useDefaultDateIntervals: false,<br>containerId: null,<br>alternateRenderer: null,<br>alternateRenderContext: null,<br>countDisplay: ‘Both’<br>}</td>
+<td style="text-align:left">Represents a search result property bound to a refinement filter control.<br>Similar to this: <a href="https://msdn.microsoft.com/EN-US/library/office/microsoft.office.server.search.webcontrols.refinementcontrol_members.aspx" target="_blank" rel="noopener">MSDN</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Srch.RefinementCategory</td>
+<td style="text-align:left">Srch_RefinementCategory(refinementName)<br>Srch.RefinementCategory.prototype = {<br>n: null,<br>t: null,<br>o: ‘and’,<br>k: false,<br>m: null,<br>get_tokenCount<br>addToken (refinementToken)<br>removeToken (refinementToken)<br>hasToken(refinementToken)<br>…<br>}</td>
+<td style="text-align:left">Represents a refinement category that consists of a refinement name and a list of refinement tokens.<br>n: refiner name;<br>t: refiner tokens;<br>o: operator (and, or);<br>k: use KQL (Boolean);<br>m: this is the token to display value map. It’s used when a custom refinement value (textbox) is used. This stores the value that you inserted, to visualize it in the refiner. Example: “m”:{“equals(\”Item Value Text Box\”)”:”Item Value Text Box”}<br>Via: <a href="http://www.eliostruyf.com/part-5-search-refiner-control-methods-explained/" target="_blank" rel="noopener">Elio Struyf - Post</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Srch.U</td>
+<td style="text-align:left">isPageInEditMode<br>isPageInMdsMode<br>isPagePartialLoad<br>ensureNotNullOrUndefined(value, context, methodName, paraName)<br>ensureNotNullOrEmptyString(value, context, methodName, paraName)<br>isArray (obj)<br>appendArray (a, item)<br>trimExtraSpaces (text)<br>ensureCSSClassNameExist (e, className)<br>setCookie (name, value, expires, domain, path)<br>getCookie (name)<br>getHostName<br>trace (c, method, message)<br>encodeUrlForHtmlAttributes (url)<br>getUsernameFromAuthorField (authorField)<br>isWebPage (fileExtension)<br>truncateEnd (original, maxChars)<br>toFormattedDate (dateValue, dateTimeFormatId)<br>toFileSizeDisplay (numberOfBytes, showDecimalPart)<br>registerRenderTemplateByName (name, template)<br>getRenderTemplateCollection()<br>getRenderTemplateByName (name, renderCtx)<br>getFormattedTimeFromSeconds (secondsStr)<br>resolveRenderTemplate (renderCtx, component, level)<br>trimTitle (title, maximumLengthInChars, numberOfTermsToUse)<br>hideElement (element)<br>showElement (element)<br>loadScripts (scriptReferences, success, failure, timeout)<br>appendScriptsToLoad (scripts, script)<br>registerLoadedScripts (scripts)<br>collapsibleRefinerTitle(propertyName, idPrefix, title, iconClass, customOnClick)<br>isDefaultSiteSearchPage<br>includeCSS (templateLink, relativeLink)<br>includeScript (templateLink, scriptLink)<br>includeLanguageScript (templateLink, scriptLink)<br>loadResource (id)<br>loadResourceForTemplate (id, templateFunc)<br>registerResourceDictionary (locale, dict)</td>
+<td style="text-align:left">The Srch.Uobject provides a range of JavaScript methods and enumerations to help you in your work with display templates customization in SharePoint 2013:<br>Srch.U object (DisplayTemplatesSrch):<br><a href="https://msdn.microsoft.com/en-us/library/office/dn768292.aspx" target="_blank" rel="noopener">MSDN</a><br><a href="http://www.dotnetmafia.com/blogs/dotnettipoftheday/archive/2014/02/26/useful-javascript-for-working-with-sharepoint-display-templates-spc3000-spc14.aspx" target="_blank" rel="noopener">Display Templates - DotnetMafia</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Srch.RefinementUtil</td>
+<td style="text-align:left">peoplePickerApplyIdPrefix(ctrl)<br>peoplePickerPrep(pickerId, ctrl, cliCtrl)<br>refineByAuthor(pickerId, filterToken)<br>authorRefinerResolved(controlID, pickerValue)<br>escapeTokenStringValue(tokenValue)</td>
+<td style="text-align:left">Refiners utilities almost all to manage people picker and user field.</td>
+</tr>
+</tbody>
+</table>
+</div><div id="post-content-bottom-space"><p>&nbsp;</p></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://twitter.com/jquintozamora" target="_blank">José Quinto</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/">https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/category/SharePoint-2013/">SharePoint 2013</a><a class="post-meta__tags" href="/category/javascript/">javascript</a><a class="post-meta__tags" href="/category/Office-365/">Office 365</a><a class="post-meta__tags" href="/category/JSOM/">JSOM</a><a class="post-meta__tags" href="/category/Search/">Search</a></div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2015/07/22/how-to-include-two-search-box-controls-in-the-same-master-page-sharepoint-2013office-365/" title="previous page"><i class="fa fa-chevron-left" aria-hidden="true"></i><span>How to include two Search Box controls in the same master page - SharePoint 2013</span></a></div><div class="next-post pull-right"><a href="/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/" title="next page"><span>Custom JavaScript function loaded after the UI has been loaded [onLoad] in SharePoint 2013</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></nav><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://blog.josequinto.com/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/';
+  this.page.identifier = '403';
+  this.page.title = 'SharePoint 2013 JavaScript Search files classes reference - Refinement Web Part classes in detail';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://https-blog-josequinto-com.disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-src" src="//https-blog-josequinto-com.disqus.com/count.js" async></script></section></section></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2022 By José Quinto</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i></div><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.1"></script><script src="/js/fancybox.js?version=1.5.1"></script><script src="/js/copy.js?version=1.5.1"></script><script src="/js/scroll.js?version=1.5.1"></script><script src="/js/head.js?version=1.5.1"></script><script src="/js/search/algolia.js"></script><script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-44570510-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.google-analytics.com/analytics.js"></script><link rel="manifest" href="/manifest.json"><script async src="/js/registerServiceWorker.js"></script></body></html>

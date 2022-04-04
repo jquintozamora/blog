@@ -1,0 +1,335 @@
+<!DOCTYPE html><html lang="en"><head><meta name="generator" content="Hexo 3.8.0"><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width"><title>Custom JavaScript function loaded after the UI has been loaded [onLoad] in SharePoint 2013 | José Quinto</title><meta name="description" content="Custom JavaScript function loaded after the UI has been loaded [onLoad] in SharePoint 2013"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"><meta property="og:image" content="https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/featured.jpg"><meta name="twitter:image" content="https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/featured.jpg"><meta property="fb:app_id" content="155567495101835"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:url" content="https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/" property="og:url"><meta name="twitter:title" content="Custom JavaScript function loaded after the UI has been loaded [onLoad] in SharePoint 2013 | José Quinto" property="og:title"><meta name="twitter:site" content="@jquintozamora"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/"><meta property="og:title" content="Custom JavaScript function loaded after the UI has been loaded [onLoad] in SharePoint 2013 | José Quinto"><link rel="canonical" href="https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/"><link rel="author" href="https://plus.google.com/u/0/108403117712061507579"><link rel="alternate" type="application/rss+xml" title="Jose Quinto" href="https://blog.josequinto.com/feed.rss"><meta name="theme-color" content="#ffffff"><link rel="shortcut icon" href="/favicon.ico"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.1"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.css"><script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.3/dist/instantsearch.min.js" defer></script><script>var GLOBAL = { 
+  root: '/',
+  algolia: {"appId":"C7MOFESP3V","apiKey":"cdc4a9b7af864c710f2d3da5caf59eec","indexName":"dev_JQBLOG","hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  }
+} </script></head><body><div id="bodyWrapper"><div id="content-outer"><div id="top-container" style="background-image: url(/background.svg)"><div id="page-header"><span class="pull-left"> <a class="brand" href="/"><img class="brand-image" src="/jose-quinto.png"><div class="brand-name">José Quinto</div></a></span><i class="fa fa-share toggle-social" aria-hidden="true"></i><div class="socialicons" id="header-social-icons"><a class="social-icon" href="https://twitter.com/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-twitter"></i></a><a class="social-icon" href="https://github.com/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-github"></i></a><a class="social-icon" href="https://codepen.io/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-codepen"></i></a><a class="social-icon" href="https://www.linkedin.com/in/jquintozamora" target="_blank" rel="noopener"><i class="fa fa-linkedin"></i></a><a class="social-icon" href="https://stackoverflow.com/users/5015774/jos%C3%A9-quinto-zamora?tab=profile" target="_blank" rel="noopener"><i class="fa fa-stack-overflow"></i></a><a class="social-icon" href="https://blog.josequinto.com/feed.rss" target="_blank" rel="noopener"><i class="fa fa-rss"></i></a></div><a class="social-icon search"><i class="fa fa-search"></i></a><div class="search-dialog" id="algolia-search"><div class="search-dialog__title" id="algolia-search-title">Search posts:</div><div id="algolia-input-panel"><div id="algolia-search-input"></div></div><hr><div id="algolia-search-results"><div id="algolia-hits"></div><div id="algolia-pagination"></div><div id="algolia-stats"></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus"><a class="site-page" href="/about.html">About</a></span></div><div id="post-info"><div id="post-title">Custom JavaScript function loaded after the UI has been loaded [onLoad] in SharePoint 2013</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2015-06-16</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/taxonomy/Article/">Article</a><span class="post-meta__separator">|</span><i class="fa fa-comment-o post-meta__icon" aria-hidden="true"></i><a href="/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/#disqus_thread"><span class="disqus-comment-count" data-disqus-identifier="2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/"></span></a></div></div></div><div class="layout" id="content-inner"><section class="articlePostContainer"><nav class="sidebar-toc"><div class="sidebar-toc__title">Contents</div><div class="sidebar-toc__progress"><span class="progress-notice">You've read</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-number">1.</span> <span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Events"><span class="toc-number">2.</span> <span class="toc-text">Events</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OnLoad"><span class="toc-number">3.</span> <span class="toc-text">OnLoad</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sys-Application-pageLoad"><span class="toc-number">4.</span> <span class="toc-text">Sys.Application.pageLoad</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Events-related"><span class="toc-number">4.1.</span> <span class="toc-text">Events related</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage"><span class="toc-number">4.2.</span> <span class="toc-text">Usage:</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sys-WebForms-PageRequestManager-pageLoaded"><span class="toc-number">5.</span> <span class="toc-text">Sys.WebForms.PageRequestManager.pageLoaded</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Events-related-1"><span class="toc-number">5.1.</span> <span class="toc-text">Events related:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-1"><span class="toc-number">5.2.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery-document-ready"><span class="toc-number">6.</span> <span class="toc-text">jQuery(document).ready</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#spBodyOnLoadFunctionNames-and-spBodyOnLoadFunctions"><span class="toc-number">7.</span> <span class="toc-text">_spBodyOnLoadFunctionNames and _spBodyOnLoadFunctions</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-2"><span class="toc-number">7.1.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ExecuteOrDelayUntilScriptLoaded"><span class="toc-number">8.</span> <span class="toc-text">ExecuteOrDelayUntilScriptLoaded</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#SP-SOD-executeFunc"><span class="toc-number">9.</span> <span class="toc-text">SP.SOD.executeFunc</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-3"><span class="toc-number">9.1.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ExecuteOrDelayUntilBodyLoaded"><span class="toc-number">10.</span> <span class="toc-text">ExecuteOrDelayUntilBodyLoaded</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Usage-4"><span class="toc-number">10.1.</span> <span class="toc-text">Usage</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Download"><span class="toc-number">11.</span> <span class="toc-text">Download</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Experiment-and-Results"><span class="toc-number">12.</span> <span class="toc-text">Experiment and Results</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#On-Prem-IE10-Load-time-in-ms"><span class="toc-number">12.1.</span> <span class="toc-text">On Prem + IE10 (Load time in ms)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#On-Prem-Chrome-43-0-Load-time-in-ms"><span class="toc-number">12.2.</span> <span class="toc-text">On Prem + Chrome 43.0 (Load time in ms)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Publishing-Custom-SP-Online-Chrome-43-0-Load-time-in-ms"><span class="toc-number">12.3.</span> <span class="toc-text">Publishing Custom - SP Online + Chrome 43.0 (Load time in ms)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Publishing-Custom-SP-Online-IE11-Load-time-in-ms"><span class="toc-number">12.4.</span> <span class="toc-text">Publishing Custom - SP Online + IE11 (Load time in ms)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conclusions"><span class="toc-number">13.</span> <span class="toc-text">Conclusions</span></a></li></ol></div></nav><section class="postArticle"><article id="post"><div class="post-featuredImage"><img src="featured.jpg" width="auto" height="auto"></div><div id="post-content"><h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>If you are a front-end developer, like me : ) , it is really important to understand the <strong>client life cycle</strong> (in terms of <strong>JavaScript</strong> <strong>Browser-engine</strong>, <strong>DOM</strong>, etc…).</p>
+<p>In fact, there are some cases in which we need to include our custom JavaScript functions and we <strong>CAN</strong> “decide” in what moment on this life cycle we want to add our code.</p>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>First of all is good to know what happens internally when we, as a users, request a web page to a web server. Behind the curtains there is a lot of events like <strong>App Cache</strong>, <strong>DNS</strong>, <strong>TCP</strong>, <strong>Request</strong>, <strong>Response</strong>, <strong>Processing</strong> and <strong>OnLoad</strong>. All of the are executed by the browsers, see the below image:</p>
+<p><img src="./image.png" alt="image"></p>
+<blockquote>
+<p>Source: <a href="http://www.w3.org/TR/navigation-timing/#processing-model" target="_blank" rel="noopener">http://www.w3.org/TR/navigation-timing/#processing-model</a></p>
+</blockquote>
+<h2 id="OnLoad"><a href="#OnLoad" class="headerlink" title="OnLoad"></a>OnLoad</h2><p>As I remarked in the picture, in <strong>this post</strong> we are talking about the <strong>onLoad</strong> subprocess. In fact, when working with SharePoint 2013, there is a lot of events taking place in this subprocess. This is because SharePoint is becoming more JavaScript-oriented.</p>
+<p>For example, there are a lot of <strong>OOTB SharePoint JavaScript files</strong>: see this post series: <a href="http://www.spcaf.com/blog/sharepoint-javascript-context-dev-part-1" target="_blank" rel="noopener">http://www.spcaf.com/blog/sharepoint-javascript-context-dev-part-1/</a>.</p>
+<p>The main goal of this post, apart of refresh the basics of browser engines and processes, is to do a investigation (research task) about the different techniques used to provided our custom JavaScript code loaded before / in the middle / after OnLoad events in SharePoint.</p>
+<p>We will see 8 different techniques evaluating pros and cons and finally we will do a test experiment with all of them.</p>
+<h2 id="Sys-Application-pageLoad"><a href="#Sys-Application-pageLoad" class="headerlink" title="Sys.Application.pageLoad"></a>Sys.Application.pageLoad</h2><p><code>Sys.Application</code> class belongs to <a href="http://msdn.microsoft.com/en-us/library/bb397536(v=VS.90" target="_blank" rel="noopener">ASP.NET AJAX library</a>.aspx), that is built into <strong>ASP.NET 3.5</strong> and is automatically made available behind all pages in a SharePoint Farm. The events are related to the <code>Sys.Application</code> class, which provides a runtime object to take care of client events and to manage client components. This object provides access to all its members without creating an instance for it.</p>
+<h3 id="Events-related"><a href="#Events-related" class="headerlink" title="Events related"></a>Events related</h3><ul>
+<li><code>pageInit</code></li>
+<li><code>pageLoad</code></li>
+<li><code>pageUnload</code></li>
+</ul>
+<blockquote>
+<p>Note that this class can be used because we have in our masterpage the asp:ScriptManager class:
+<code>&lt;asp:ScriptManager ID=&quot;ScriptManager&quot; runat=&quot;server&quot; EnablePageMethods=&quot;false&quot; EnablePartialRendering=&quot;true&quot; EnableScriptGlobalization=&quot;false&quot; EnableScriptLocalization=&quot;true&quot; /&gt;</code></p>
+</blockquote>
+<p>You can simply call the <code>Sys.Application.add_load</code> method from <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> to register a function that will execute right after the HTML elements on the page have been made accessible through the DOM.</p>
+<h3 id="Usage"><a href="#Usage" class="headerlink" title="Usage:"></a>Usage:</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Sys.Application.add_load(MyLoad);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyLoad</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">"Sys.Application.pageLoad. Time: "</span> + ((<span class="built_in">Date</span>.now()) - performance.timing.navigationStart));        </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Source: <a href="http://www.codeproject.com/Articles/26033/The-Page-Life-Cycle-of-Client-Browser" target="_blank" rel="noopener">http://www.codeproject.com/Articles/26033/The-Page-Life-Cycle-of-Client-Browser</a></p>
+</blockquote>
+<h2 id="Sys-WebForms-PageRequestManager-pageLoaded"><a href="#Sys-WebForms-PageRequestManager-pageLoaded" class="headerlink" title="Sys.WebForms.PageRequestManager.pageLoaded"></a>Sys.WebForms.PageRequestManager.pageLoaded</h2><p>This class is responsible for <strong>partial post back</strong>. This object will be initiated on its own, to get this object in client side, the page should have a <code>ScriptManager</code> and minimum one <code>UpdatePanel</code>. This object also has certain events which will be involved in the <strong>client page life cycle</strong>. The full name of the class along with the namespace is <code>Sys.WebForms.PageRequestManager</code>. </p>
+<h3 id="Events-related-1"><a href="#Events-related-1" class="headerlink" title="Events related:"></a>Events related:</h3><ul>
+<li><code>initializeRequest</code></li>
+<li><code>beginRequest</code></li>
+<li><code>pageLoading</code></li>
+<li><code>pageLoaded</code></li>
+<li><code>endRequest</code></li>
+</ul>
+<blockquote>
+<p>  The <strong>pageLoaded</strong> event is raised after all content on the page is refreshed, whether it was refreshed because of a synchronous (full-page) postback or an asynchronous postback. You can use this event to provide a custom transition effect for updated content.</p>
+</blockquote>
+<h3 id="Usage-1"><a href="#Usage-1" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Sys.WebForms.PageRequestManager.getInstance().add_pageLoaded(MyPageLoaded);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyPageLoaded</span>(<span class="params">sender, args</span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"Sys.WebForms.PageRequestManager.PageLoaded. Time: "</span> + ((<span class="built_in">Date</span>.now()) - performance.timing.navigationStart));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Source: <a href="https://msdn.microsoft.com/en-us/library/bb397523(v=vs.100" target="_blank" rel="noopener">https://msdn.microsoft.com/en-us/library/bb397523(v=vs.100).aspx</a>.aspx) and <a href="http://www.codeproject.com/Articles/26033/The-Page-Life-Cycle-of-Client-Browser" target="_blank" rel="noopener">http://www.codeproject.com/Articles/26033/The-Page-Life-Cycle-of-Client-Browser</a></p>
+</blockquote>
+<h2 id="jQuery-document-ready"><a href="#jQuery-document-ready" class="headerlink" title="jQuery(document).ready"></a>jQuery(document).ready</h2><p>This technique relies on <a href="http://www.jquery.com/" target="_blank" rel="noopener">The jQuery Library</a> and it is the technique that most Web designers and developers prefer but in my opinion we should evaluate carefully its usage. It will depends on the other needs we have because this technique depends upon a library that is not automatically integrated into the pages in a SharePoint site.</p>
+<blockquote>
+<p>NOTE: You need to have jQuery library to use this technique.</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"</span> type=<span class="string">"text/javascript"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script type="text/</span>javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">    // &lt;![CDATA[</span></span><br><span class="line"><span class="string">        jQuery(document).ready(jqueryLoad);</span></span><br><span class="line"><span class="string">        function jqueryLoad()&#123;</span></span><br><span class="line"><span class="string">            console.log("</span><span class="built_in">document</span>.ready Jquery. Time: <span class="string">" + ((Date.now()) - performance.timing.navigationStart));</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    // ]]&gt;</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="spBodyOnLoadFunctionNames-and-spBodyOnLoadFunctions"><a href="#spBodyOnLoadFunctionNames-and-spBodyOnLoadFunctions" class="headerlink" title="_spBodyOnLoadFunctionNames and _spBodyOnLoadFunctions"></a>_spBodyOnLoadFunctionNames and _spBodyOnLoadFunctions</h2><p><code>Pages</code> in a <strong>SharePoint environment</strong> load in a set of JavaScript files for a JavaScript library which goes by the name of the <strong>SharePoint JavaScript Class Library (JSOM)</strong>. This library <strong>contains more than 160 js files</strong> (<a href="http://www.spcaf.com/blog/sharepoint-javascript-context-dev-part-1" target="_blank" rel="noopener">http://www.spcaf.com/blog/sharepoint-javascript-context-dev-part-1/</a>).</p>
+<p>One of them is named <code>init.js</code> which contains a global variables named <code>_spBodyOnLoadFunctionNames</code> and <code>_spBodyOnLoadFunctions</code>.</p>
+<p>In fact, if we go further and see <code>init.js</code> file, we can found the function named <code>ProcessDefaultOnLoad()</code>:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ProcessDefaultOnLoad</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    ProcessPNGImages();</span><br><span class="line">    UpdateAccessibilityUI();</span><br><span class="line">    UpdateAnimationUserControl(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">window</span>.setTimeout(<span class="string">'ProcessImn()'</span>, <span class="number">10</span>);</span><br><span class="line">	ProcessOnLoadFunctionNames(_spBodyOnLoadFunctionNames);</span><br><span class="line">    ProcessOnLoadFunctions(_spBodyOnLoadFunctions);</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">typeof</span> _spUseDefaultFocus != <span class="string">"undefined"</span>)</span><br><span class="line">	DefaultFocus();</span><br><span class="line">	<span class="comment">//…</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>And that is <strong>really useful</strong>, because we can understand the order in which these functions are executed, first <code>_spBodyOnLoadFunctionNames</code>  and later  <code>_spBodyOnLoadFunctions</code>.</p>
+<h3 id="Usage-2"><a href="#Usage-2" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">_spBodyOnLoadFunctionNames.push(<span class="string">'OnPageLoad'</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">OnPageLoad</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"_spBodyOnLoadFunctionNames. Time: "</span> + ((<span class="built_in">Date</span>.now()) - performance.timing.navigationStart));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> raiseFunc = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"_spBodyOnLoadFunction. Time: "</span> + ((<span class="built_in">Date</span>.now()) - performance.timing.navigationStart));</span><br><span class="line">&#125;;</span><br><span class="line">_spBodyOnLoadFunctions.push(raiseFunc);</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Source: <a href="http://www.cyberbrutus.com/cyberbrutus/javascript-execution-after-page-load-in-sharepoint" target="_blank" rel="noopener">http://www.cyberbrutus.com/cyberbrutus/javascript-execution-after-page-load-in-sharepoint/</a></p>
+</blockquote>
+<h2 id="ExecuteOrDelayUntilScriptLoaded"><a href="#ExecuteOrDelayUntilScriptLoaded" class="headerlink" title="ExecuteOrDelayUntilScriptLoaded"></a>ExecuteOrDelayUntilScriptLoaded</h2><p><code>ExecuteOrDelayUntilScriptLoaded</code> run after <strong>internal SharePoint scripts are loaded</strong>. This function allows to wait until one of SharePoint js files is loaded.</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ExecuteOrDelayUntilScriptLoaded(MyFunction, <span class="string">"sp.core.js"</span>);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">MyFunction</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ExecuteOrDelayUntilScriptLoaded:sp.core.js. Time: "</span> + ((<span class="built_in">Date</span>.now()) - performance.timing.navigationStart));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>More information: <a href="http://yakovenkomax.com/sharepoint-2013-page-load-events" target="_blank" rel="noopener">http://yakovenkomax.com/sharepoint-2013-page-load-events/</a></p>
+</blockquote>
+<h2 id="SP-SOD-executeFunc"><a href="#SP-SOD-executeFunc" class="headerlink" title="SP.SOD.executeFunc"></a>SP.SOD.executeFunc</h2><p>Make sure the SharePoint script file <code>SP.js</code> is loaded before your code is executed.</p>
+<h3 id="Usage-3"><a href="#Usage-3" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">sharePointReady</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"SP.SOD.executeFunc: sp.js. Time: "</span> + ((<span class="built_in">Date</span>.now()) - performance.timing.navigationStart));</span><br><span class="line">&#125;</span><br><span class="line">SP.SOD.executeFunc(<span class="string">'sp.js'</span>, <span class="string">'SP.ClientContext'</span>, sharePointReady);</span><br></pre></td></tr></table></figure>
+<h2 id="ExecuteOrDelayUntilBodyLoaded"><a href="#ExecuteOrDelayUntilBodyLoaded" class="headerlink" title="ExecuteOrDelayUntilBodyLoaded"></a>ExecuteOrDelayUntilBodyLoaded</h2><p><code>ExecuteOrDelayUntilBodyLoaded</code> runs <strong>before</strong> internal SharePoint scripts are loaded. It runs at early stage in the OnLoad subprocess.</p>
+<h3 id="Usage-4"><a href="#Usage-4" class="headerlink" title="Usage"></a>Usage</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ExecuteOrDelayUntilBodyLoaded(delayBody);</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">delayBody</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">"ExecuteOrDelayUntilBodyLoaded. Time from NavStart: "</span> + ((<span class="built_in">Date</span>.now()) - performance.timing.navigationStart));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Download"><a href="#Download" class="headerlink" title="Download"></a>Download</h2><p>You can <strong>download</strong> the full JS file with all techniques implemented <a href="./JavaScriptCustomOnLoadFunctionInSharePoint2013.js.txt">here</a></p>
+<h2 id="Experiment-and-Results"><a href="#Experiment-and-Results" class="headerlink" title="Experiment and Results"></a>Experiment and Results</h2><p>In order to figure out which <strong>technique</strong> is better for each scenario, we can add all of them into a <strong>SharePoint Page</strong> and let’s see the execution order.</p>
+<p>I did two tests, one in a <strong>SharePoint On Prem environment</strong> using a <strong>Empty Team Site</strong> and other in a <strong>SharePoint Online environment</strong> using custom template based on publishing template.</p>
+<h3 id="On-Prem-IE10-Load-time-in-ms"><a href="#On-Prem-IE10-Load-time-in-ms" class="headerlink" title="On Prem + IE10 (Load time in ms)"></a>On Prem + IE10 (Load time in ms)</h3><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Empty SharePoint 2013 - OnPremise + IE10</strong></th>
+<th style="text-align:center">Run 1</th>
+<th style="text-align:center">Run 2</th>
+<th style="text-align:center">Run 3 (Clean Cache)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ExecuteOrDelayUntilBodyLoaded</td>
+<td style="text-align:center">148</td>
+<td style="text-align:center">147</td>
+<td style="text-align:center">122</td>
+</tr>
+<tr>
+<td style="text-align:left">Sys.Application.pageLoad</td>
+<td style="text-align:center">148</td>
+<td style="text-align:center">148</td>
+<td style="text-align:center">123</td>
+</tr>
+<tr>
+<td style="text-align:left">document.ready Jquery</td>
+<td style="text-align:center">154</td>
+<td style="text-align:center">152</td>
+<td style="text-align:center">126</td>
+</tr>
+<tr>
+<td style="text-align:left">_spBodyOnLoadFunctionNames</td>
+<td style="text-align:center">519</td>
+<td style="text-align:center">452</td>
+<td style="text-align:center">247</td>
+</tr>
+<tr>
+<td style="text-align:left">_spBodyOnLoadFunction</td>
+<td style="text-align:center">531</td>
+<td style="text-align:center">463</td>
+<td style="text-align:center">261</td>
+</tr>
+<tr>
+<td style="text-align:left">ExecuteOrDelayUntilScriptLoaded: sp.core.js</td>
+<td style="text-align:center">539</td>
+<td style="text-align:center">471</td>
+<td style="text-align:center">310</td>
+</tr>
+<tr>
+<td style="text-align:left">SP.SOD.executeFunc: sp.js</td>
+<td style="text-align:center">574</td>
+<td style="text-align:center">580</td>
+<td style="text-align:center">357</td>
+</tr>
+<tr>
+<td style="text-align:left">Sys.WebForms.PageRequestManager.PageLoaded</td>
+<td style="text-align:center">840</td>
+<td style="text-align:center">736</td>
+<td style="text-align:center">791</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h3 id="On-Prem-Chrome-43-0-Load-time-in-ms"><a href="#On-Prem-Chrome-43-0-Load-time-in-ms" class="headerlink" title="On Prem + Chrome 43.0 (Load time in ms)"></a>On Prem + Chrome 43.0 (Load time in ms)</h3><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Empty SharePoint 2013 - OnPremise + Chrome 43.0</strong></th>
+<th style="text-align:center">Run 1</th>
+<th style="text-align:center">Run 2</th>
+<th style="text-align:center">Run 3 (Clean Cache)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ExecuteOrDelayUntilBodyLoaded</td>
+<td style="text-align:center">199</td>
+<td style="text-align:center">239</td>
+<td style="text-align:center">156</td>
+</tr>
+<tr>
+<td style="text-align:left">Sys.Application.pageLoad</td>
+<td style="text-align:center">210</td>
+<td style="text-align:center">251</td>
+<td style="text-align:center">165</td>
+</tr>
+<tr>
+<td style="text-align:left">document.ready Jquery</td>
+<td style="text-align:center">217</td>
+<td style="text-align:center">263</td>
+<td style="text-align:center">174</td>
+</tr>
+<tr>
+<td style="text-align:left">SP.SOD.executeFunc: sp.js</td>
+<td style="text-align:center">506</td>
+<td style="text-align:center"><strong>628 </strong></td>
+<td style="text-align:center">359</td>
+</tr>
+<tr>
+<td style="text-align:left">_spBodyOnLoadFunctionNames</td>
+<td style="text-align:center">540</td>
+<td style="text-align:center">480</td>
+<td style="text-align:center">547</td>
+</tr>
+<tr>
+<td style="text-align:left">_spBodyOnLoadFunction</td>
+<td style="text-align:center">557</td>
+<td style="text-align:center">495</td>
+<td style="text-align:center">559</td>
+</tr>
+<tr>
+<td style="text-align:left">ExecuteOrDelayUntilScriptLoaded: sp.core.js</td>
+<td style="text-align:center">726</td>
+<td style="text-align:center">647</td>
+<td style="text-align:center">617</td>
+</tr>
+<tr>
+<td style="text-align:left">Sys.WebForms.PageRequestManager.PageLoaded</td>
+<td style="text-align:center">1280</td>
+<td style="text-align:center">1291</td>
+<td style="text-align:center">1050</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h3 id="Publishing-Custom-SP-Online-Chrome-43-0-Load-time-in-ms"><a href="#Publishing-Custom-SP-Online-Chrome-43-0-Load-time-in-ms" class="headerlink" title="Publishing Custom - SP Online + Chrome 43.0 (Load time in ms)"></a>Publishing Custom - SP Online + Chrome 43.0 (Load time in ms)</h3><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Publishing Custom - SP Online + Chrome 43.0</strong></th>
+<th style="text-align:center">Run 1</th>
+<th style="text-align:center">Run 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ExecuteOrDelayUntilBodyLoaded</td>
+<td style="text-align:center">84</td>
+<td style="text-align:center">81</td>
+</tr>
+<tr>
+<td style="text-align:left">Sys.Application.pageLoad</td>
+<td style="text-align:center">125</td>
+<td style="text-align:center">121</td>
+</tr>
+<tr>
+<td style="text-align:left">document.ready Jquery</td>
+<td style="text-align:center">140</td>
+<td style="text-align:center">135</td>
+</tr>
+<tr>
+<td style="text-align:left">_spBodyOnLoadFunctionNames</td>
+<td style="text-align:center">272</td>
+<td style="text-align:center">434</td>
+</tr>
+<tr>
+<td style="text-align:left">_spBodyOnLoadFunction</td>
+<td style="text-align:center">278</td>
+<td style="text-align:center">438</td>
+</tr>
+<tr>
+<td style="text-align:left">ExecuteOrDelayUntilScriptLoaded:sp.core.js</td>
+<td style="text-align:center">501</td>
+<td style="text-align:center">652</td>
+</tr>
+<tr>
+<td style="text-align:left">SP.SOD.executeFunc: sp.js</td>
+<td style="text-align:center">584</td>
+<td style="text-align:center"><strong>628</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Other loadings, AJAX, Yammer integration</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">Sys.WebForms.PageRequestManager.PageLoaded</td>
+<td style="text-align:center">1102</td>
+<td style="text-align:center">3777</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<h3 id="Publishing-Custom-SP-Online-IE11-Load-time-in-ms"><a href="#Publishing-Custom-SP-Online-IE11-Load-time-in-ms" class="headerlink" title="Publishing Custom - SP Online + IE11 (Load time in ms)"></a>Publishing Custom - SP Online + IE11 (Load time in ms)</h3><table>
+<thead>
+<tr>
+<th style="text-align:left"><strong>Publishing Custom - SP Online + IE11</strong></th>
+<th style="text-align:center">Run 1</th>
+<th style="text-align:center">Run 2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ExecuteOrDelayUntilBodyLoaded</td>
+<td style="text-align:center">142</td>
+<td style="text-align:center">159</td>
+</tr>
+<tr>
+<td style="text-align:left">Sys.Application.pageLoad</td>
+<td style="text-align:center">190</td>
+<td style="text-align:center">195</td>
+</tr>
+<tr>
+<td style="text-align:left">document.ready Jquery</td>
+<td style="text-align:center">225</td>
+<td style="text-align:center">217</td>
+</tr>
+<tr>
+<td style="text-align:left">_spBodyOnLoadFunctionNames</td>
+<td style="text-align:center">300</td>
+<td style="text-align:center">273</td>
+</tr>
+<tr>
+<td style="text-align:left">_spBodyOnLoadFunction</td>
+<td style="text-align:center">303</td>
+<td style="text-align:center">276</td>
+</tr>
+<tr>
+<td style="text-align:left">ExecuteOrDelayUntilScriptLoaded:sp.core.js</td>
+<td style="text-align:center">404</td>
+<td style="text-align:center">436</td>
+</tr>
+<tr>
+<td style="text-align:left">SP.SOD.executeFunc: sp.js</td>
+<td style="text-align:center">513</td>
+<td style="text-align:center"><strong>423</strong></td>
+</tr>
+<tr>
+<td style="text-align:left">Other loadings, AJAX, Yammer integration,</td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left">Sys.WebForms.PageRequestManager.PageLoaded</td>
+<td style="text-align:center">1950</td>
+<td style="text-align:center">3971</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<blockquote>
+<p>Note that the times are collected using Navigation Timing provided by JavaScript: <a href="http://www.w3.org/TR/navigation-timing/#introduction" target="_blank" rel="noopener">http://www.w3.org/TR/navigation-timing/#introduction</a>.</p>
+</blockquote>
+<p>&nbsp;</p>
+<h2 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h2><ul>
+<li><code>ExecuteOrDelayUntilBodyLoaded</code> function is always executed the first (but at this stage we can not access to <strong>SP methods</strong>). This could be useful to execute our custom code at really earlier stage in the <code>OnLoad</code> process.</li>
+<li>There are two SharePoint onLoad functions <code>_spBodyOnLoadFunctionNames</code> and <code>_spBodyOnLoadFunction</code>. Always executed in the order. So, if we want to execute some code after all functions included by us (or other devs) in <code>_spBodyOnLoadFunctionNames</code>, then is useful to use this one <code>_spBodyOnLoadFunction</code>, because is executed the last.</li>
+<li><code>ExecuteOrDelayUntilScriptLoaded: sp.core.js</code> and <code>SP.SOD.executeFunc: sp.js</code>. are swapping the order of execution in a random way.</li>
+<li>If we want to execute some functions after all functions (SP, after load functions, Yammer, etc.) we can use this function to attach the OnLoad event <code>Sys.WebForms.PageRequestManager.PageLoaded</code>.</li>
+</ul>
+<blockquote>
+<p>Note that these results are tested in my current scenario and probably isn’t the same that your scenario, but please feel free to add some conclusions, point of views, different scenarios, etc.</p>
+</blockquote>
+</div><div id="post-content-bottom-space"><p>&nbsp;</p></div><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="https://twitter.com/jquintozamora" target="_blank">José Quinto</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/">https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a> unless stating additionally.</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/category/SharePoint-2013/">SharePoint 2013</a><a class="post-meta__tags" href="/category/javascript/">javascript</a><a class="post-meta__tags" href="/category/OnLoad/">OnLoad</a></div></article><nav id="pagination"><div class="prev-post pull-left"><a href="/2015/07/01/sharepoint-2013-javascript-search-files-classes-reference-refinement-web-part-classes-in-detail/" title="previous page"><i class="fa fa-chevron-left" aria-hidden="true"></i><span>SharePoint 2013 JavaScript Search files classes reference - Refinement Web Part classes in detail</span></a></div><div class="next-post pull-right"><a href="/2015/05/19/me-movetolondon/" title="next page"><span>Me.MoveTo('London');</span><i class="fa fa-chevron-right" aria-hidden="true"></i></a></div></nav><div id="disqus_thread"></div><script>var disqus_config = function () {
+  this.page.url = 'https://blog.josequinto.com/2015/06/16/custom-javascript-function-loaded-after-the-ui-has-loaded-in-sharepoint-2013/';
+  this.page.identifier = '388';
+  this.page.title = 'Custom JavaScript function loaded after the UI has been loaded [onLoad] in SharePoint 2013';
+}
+var d = document, s = d.createElement('script');
+s.src = "https://https-blog-josequinto-com.disqus.com/embed.js";
+s.setAttribute('data-timestamp', '' + +new Date());
+(d.head || d.body).appendChild(s);</script><script id="dsq-count-src" src="//https-blog-josequinto-com.disqus.com/count.js" async></script></section></section></div></div><footer><div class="layout" id="footer"><div class="copyright">&copy;2013 - 2022 By José Quinto</div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i></div><script src="/js/third-party/jquery.min.js"></script><script src="/js/third-party/jquery.fancybox.min.js"></script><script src="/js/third-party/velocity.min.js"></script><script src="/js/third-party/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.5.1"></script><script src="/js/fancybox.js?version=1.5.1"></script><script src="/js/copy.js?version=1.5.1"></script><script src="/js/scroll.js?version=1.5.1"></script><script src="/js/head.js?version=1.5.1"></script><script src="/js/search/algolia.js"></script><script>window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-44570510-1', 'auto');
+ga('send', 'pageview');</script><script async src="https://www.google-analytics.com/analytics.js"></script><link rel="manifest" href="/manifest.json"><script async src="/js/registerServiceWorker.js"></script></body></html>
