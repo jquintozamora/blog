@@ -200,6 +200,6 @@ Originally I'm from **Albatera**, a little town from **Spain**.
 
 As part of my hobbies I like cycling and playing football, and I've got some skills for cooking `spanish omelette`.
   
-Currently I'm working as a `Senior Software Engineer - Full Stack JavaScript Developer` at **Concentra Analytics** in London, United Kingdom.
+I'm working as a `Senior Software Engineer - Full Stack JavaScript Developer` at **Concentra Analytics** in London, United Kingdom.
 
 <br>
